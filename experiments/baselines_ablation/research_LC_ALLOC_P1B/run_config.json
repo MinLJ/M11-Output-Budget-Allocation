@@ -1,0 +1,167 @@
+{
+  "baseline_analysis_status": "BASELINE_ANALYSIS_COMPLETE_M11_RETAINS_INCREMENT",
+  "bootstrap": {
+    "indices_path": "external_assets/research_LC_ALLOC_P1/outputs/bootstrap_group_indices.npy",
+    "resamples": 5000,
+    "seed": 530002,
+    "unit": "frozen 40-image group"
+  },
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "candidate_asset_ids": {
+    "DEV": "9593aa3196f0eb89d9662c1b15ca7d912fb1480ac188dace30ea0a70d4869edd",
+    "TRAIN": "7353d41864b09df704714043479567b6459fbf18cf0a74d226fea7fba92b8031"
+  },
+  "confirmation_status": "NOT_AUTHORIZED",
+  "dev_boundary": "previously observed DEV; allocation entrypoint has no GT path",
+  "execution_status": "COMPLETE",
+  "groups": 50,
+  "historical_timing_status": "PARTIALLY_EXPLAINED",
+  "images_per_group": 40,
+  "input_bindings": {
+    "candidate_asset_identity": {
+      "path": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1/CANDIDATE_ASSET_IDENTITY.json",
+      "sha256": "d13d95812175b51e26084c9d5857200cc0b3a4a060d571c807b4eca73ae69db9"
+    },
+    "p1_class_weights": {
+      "path": "external_assets/research_LC_ALLOC_P1/models/class_weights.json",
+      "sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237"
+    },
+    "p1_dev_allocations": {
+      "path": "external_assets/research_LC_ALLOC_P1/cache/dev_allocations.parquet",
+      "sha256": "81c516688b299ea179644a5e94d47c0f90f761d455bcc08f50638b243d5af422"
+    },
+    "p1_dev_predictions": {
+      "path": "external_assets/research_LC_ALLOC_P1/dev_predictions.parquet",
+      "sha256": "ea880c8643c01efc40d336f00be65b5c01ded65e81939c694b695bfb957b951c"
+    },
+    "p1_exact_dp": {
+      "path": "external_assets/research_LC_ALLOC_P1/scripts/dp_solver.py",
+      "sha256": "f230626580575e256576e1be92ca1ad409a57c9d725202f2b364f78dbca0c317"
+    },
+    "p1_feature_schema": {
+      "path": "external_assets/research_LC_ALLOC_P1/feature_schema.json",
+      "sha256": "8613d979ab6393c5d0524f1451e80329f60d0caa7a514ae256be4022d70096f7"
+    },
+    "p1_run_config": {
+      "path": "external_assets/research_LC_ALLOC_P1/run_config.json",
+      "sha256": "40d0510baa868f0130921dbe0211319875f4a401d3abf3f923be7f59271163ef"
+    },
+    "p1a_run_config": {
+      "path": "external_assets/research_LC_ALLOC_P1A/run_config.json",
+      "sha256": "4e68bdef58bd51912aa0a620fabdf2afd731e55548603e97251540dff1da16d9"
+    },
+    "release_manifest": {
+      "path": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1/RELEASE_MANIFEST.json",
+      "sha256": "238d99770aaf7fd424dc11e16bde1dab4800c222ee197af06d0eeec3776acfa2"
+    }
+  },
+  "k_bounds": [
+    5,
+    50
+  ],
+  "model_preprocessor_bindings": {
+    "models": [
+      {
+        "path": "external_assets/research_LC_ALLOC_P1/models/marginal_mlp_seed_530101.pt",
+        "seed": 530101,
+        "sha256": "cb9732dbc828eff968b96294ab541b925eacc0d57472faf5a11f4bb246597aa8",
+        "temperature_path": "external_assets/research_LC_ALLOC_P1/models/temperature_seed_530101.json",
+        "temperature_sha256": "e321ba3385d8eb7260d36164f13c401e89750ec35e5d590ebffe29a98aee4b03"
+      },
+      {
+        "path": "external_assets/research_LC_ALLOC_P1/models/marginal_mlp_seed_530102.pt",
+        "seed": 530102,
+        "sha256": "7b60f0f4d9ef5fc63941ed61398086ee7c82abf3c928a0db7b8c905f27c20996",
+        "temperature_path": "external_assets/research_LC_ALLOC_P1/models/temperature_seed_530102.json",
+        "temperature_sha256": "d54c68323d16179d8e78a125cabaa247d1303c8f3867871f1967ec1996827501"
+      },
+      {
+        "path": "external_assets/research_LC_ALLOC_P1/models/marginal_mlp_seed_530103.pt",
+        "seed": 530103,
+        "sha256": "890cf82a9cf654d6b44816b2111d51e86ee84ba1f35050b299c3473a17d0b6b8",
+        "temperature_path": "external_assets/research_LC_ALLOC_P1/models/temperature_seed_530103.json",
+        "temperature_sha256": "ad4805b6566ab24eb15e0b44f9a01d01908e493dd4307c27c2e52e0afd1341da"
+      }
+    ],
+    "pca32": {
+      "path": "external_assets/research_LC_ALLOC_P1/models/pca32.joblib",
+      "sha256": "12d8e656d53bdad54e498125993f437f77d874e97be38ffe29a0c969e1ff41af"
+    },
+    "scaler": {
+      "path": "external_assets/research_LC_ALLOC_P1/models/feature_scaler.joblib",
+      "sha256": "9d3da8c36b3b5a2cf8c8ab2deb963e3595c313b4d13f6d3e7fb8c27d923ced6d"
+    }
+  },
+  "new_policy": {
+    "action": "original road8_rank prefix 1..K_i only",
+    "name": "S_CLASS_ADAPT",
+    "optional_ranks": [
+      6,
+      50
+    ],
+    "slot_value": "frozen_FIT_class_weight[predicted_class] * original_detector_score"
+  },
+  "optimization_status": "ACCEPTED",
+  "p1_root": "external_assets/research_LC_ALLOC_P1",
+  "p1a_root": "external_assets/research_LC_ALLOC_P1A",
+  "read_scope_deviation": "A delegated read-only audit opened R0 group_manifest; P1B implementation does not use it and no scientific data/model was read there.",
+  "release_root": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1",
+  "restricted_scientific_splits_accessed": 0,
+  "reused_science_bindings": {
+    "bootstrap_indices": {
+      "path": "external_assets/research_LC_ALLOC_P1/outputs/bootstrap_group_indices.npy",
+      "sha256": "afcff203c75c61b65f2271807379c15e7b553a6256b455a569b2b38bd3243232"
+    },
+    "p1a_class": {
+      "path": "external_assets/research_LC_ALLOC_P1A/outputs/ablation_class_results.parquet",
+      "sha256": "0820a9eaa410f5abd92c200f3e3f5329fc37617827492981f90965b00e681cb4"
+    },
+    "p1a_group": {
+      "path": "external_assets/research_LC_ALLOC_P1A/outputs/ablation_group_results.parquet",
+      "sha256": "7ac3ec1ba196df63c3f80548897dfb8fe497be9e7bde42025d19292dbe0524e1"
+    },
+    "p1a_main": {
+      "path": "external_assets/research_LC_ALLOC_P1A/outputs/ablation_main_results.parquet",
+      "sha256": "8c3c5026c1f692288c77b677dc8aaf50376e4acb3d389aecf05a25c663594caa"
+    },
+    "p1a_per_image": {
+      "path": "external_assets/research_LC_ALLOC_P1A/ablation_per_image_results.parquet",
+      "sha256": "6e8dbfca6d5e9cf33abbfbc26fc7962390437a1179136bf42b830380662af043"
+    },
+    "r0_runtime_table": {
+      "path": "external_assets/research_LC_ALLOC_R0/runtime_summary.csv",
+      "sha256": "2fcbb6cf16ff7e632dbbf2d122f8dcc4d84b882fe140063404860c5f0c907c8b"
+    },
+    "r0_timing_code": {
+      "path": "external_assets/research_LC_ALLOC_R0/scripts/alloc_solver.py",
+      "sha256": "c877be57e29a420b142a019e18b449315cbab8e23af51ea4f7a279d7456c3c4c"
+    }
+  },
+  "runtime_protocol": {
+    "boundary": "host-resident policy-required raw tensors to K and ordered record IDs",
+    "budgets": [
+      10,
+      15,
+      20
+    ],
+    "groups": 5,
+    "measurements_per_group_condition": 20,
+    "order_seed": 530003,
+    "profile_images": 200,
+    "profile_manifest": "external_assets/research_LC_ALLOC_P1A/qa/profile_manifest.parquet",
+    "warmups": 5
+  },
+  "solver": "P1 exact float64 multiple-choice DP; fixed row order sorted(image_id); frozen lexicographic tie rule",
+  "stage": "CLASS_WEIGHTED_SCORE_BASELINE_AND_EQUIVALENT_IMPLEMENTATION",
+  "task": "LC-ALLOC-P1B",
+  "tolerances": {
+    "atol": 1e-06,
+    "rtol": 1e-05
+  }
+}

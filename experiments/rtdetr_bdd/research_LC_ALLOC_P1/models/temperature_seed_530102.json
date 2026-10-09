@@ -1,0 +1,15 @@
+{
+  "bounds": [
+    0.25,
+    4.0
+  ],
+  "calibrated_bce": 0.1363266340888649,
+  "calibrated_brier": 0.03867830212259175,
+  "fallback_tolerance": 1e-12,
+  "optimizer_message": "Solution found.",
+  "optimizer_success": true,
+  "raw_bce": 0.13635519031436594,
+  "raw_brier": 0.038681898408322056,
+  "seed": 530102,
+  "temperature": 1.017592050678593
+}

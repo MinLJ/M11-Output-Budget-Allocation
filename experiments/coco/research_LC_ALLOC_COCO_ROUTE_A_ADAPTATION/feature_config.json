@@ -1,0 +1,987 @@
+{
+  "candidate_pool": "canonical original road8_rank Top100; ranks 6..50 form model rows",
+  "columns": [
+    {
+      "block": "candidate",
+      "formula": "release detector sigmoid score",
+      "index": 0,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "raw_score",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "logit(clip(raw_score,1e-6,1-1e-6))",
+      "index": 1,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "score_logit",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "road8_rank / 100",
+      "index": 2,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "rank_normalized",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "1[predicted class is person]",
+      "index": 3,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "class_onehot_person",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "1[predicted class is bicycle]",
+      "index": 4,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "class_onehot_bicycle",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "1[predicted class is car]",
+      "index": 5,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "class_onehot_car",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "1[predicted class is motorcycle]",
+      "index": 6,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "class_onehot_motorcycle",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "1[predicted class is bus]",
+      "index": 7,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "class_onehot_bus",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "1[predicted class is train]",
+      "index": 8,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "class_onehot_train",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "1[predicted class is truck]",
+      "index": 9,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "class_onehot_truck",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "1[predicted class is traffic light]",
+      "index": 10,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "class_onehot_traffic_light",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "bbox_cx / image_width",
+      "index": 11,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "bbox_cx_norm",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "bbox_cy / image_height",
+      "index": 12,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "bbox_cy_norm",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "bbox_w / image_width",
+      "index": 13,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "bbox_w_norm",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "bbox_h / image_height",
+      "index": 14,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "bbox_h_norm",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "bbox_w*bbox_h/(image_width*image_height)",
+      "index": 15,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "bbox_area_norm",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "log(max(bbox_w/image_width,1e-6)/max(bbox_h/image_height,1e-6))",
+      "index": 16,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "bbox_log_aspect",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L3 native Road8 logit gathered by (image_id,query_index)",
+      "index": 17,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "native_road8_logit_person",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L3 native Road8 logit gathered by (image_id,query_index)",
+      "index": 18,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "native_road8_logit_bicycle",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L3 native Road8 logit gathered by (image_id,query_index)",
+      "index": 19,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "native_road8_logit_car",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L3 native Road8 logit gathered by (image_id,query_index)",
+      "index": 20,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "native_road8_logit_motorcycle",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L3 native Road8 logit gathered by (image_id,query_index)",
+      "index": 21,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "native_road8_logit_bus",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L3 native Road8 logit gathered by (image_id,query_index)",
+      "index": 22,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "native_road8_logit_train",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L3 native Road8 logit gathered by (image_id,query_index)",
+      "index": 23,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "native_road8_logit_truck",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L3 native Road8 logit gathered by (image_id,query_index)",
+      "index": 24,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "native_road8_logit_traffic_light",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 25,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_00",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 26,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_01",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 27,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_02",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 28,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_03",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 29,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_04",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 30,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_05",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 31,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_06",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 32,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_07",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 33,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_08",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 34,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_09",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 35,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_10",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 36,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_11",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 37,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_12",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 38,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_13",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 39,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_14",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 40,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_15",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 41,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_16",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 42,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_17",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 43,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_18",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 44,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_19",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 45,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_20",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 46,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_21",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 47,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_22",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 48,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_23",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 49,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_24",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 50,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_25",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 51,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_26",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 52,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_27",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 53,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_28",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 54,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_29",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 55,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_30",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "FIT-only PCA32 transform of stored float16 embedding cast to float32",
+      "index": 56,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_pca_31",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "candidate",
+      "formula": "L2 norm of stored float16 embedding after float32 cast",
+      "index": 57,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "embedding_norm",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "k-1",
+      "index": 58,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "prefix_length",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "mean score ranks 1..k-1",
+      "index": 59,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "prefix_score_mean",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "max score ranks 1..k-1",
+      "index": 60,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "prefix_score_max",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "min score ranks 1..k-1",
+      "index": 61,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "prefix_score_min",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "count prefix candidates with current predicted class",
+      "index": 62,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "same_class_prefix_count",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "same_class_prefix_count/(k-1)",
+      "index": 63,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "same_class_prefix_fraction",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "max IoU(current,prefix same class); 0 if empty",
+      "index": 64,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "same_class_iou_max",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "mean IoU(current,prefix same class); 0 if empty",
+      "index": 65,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "same_class_iou_mean",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "count same-class IoU >= .30",
+      "index": 66,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "same_class_iou_count_ge_030",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "count same-class IoU >= .50",
+      "index": 67,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "same_class_iou_count_ge_050",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "min Euclidean distance in normalized xy; 0 if empty",
+      "index": 68,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "same_class_center_distance_min",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "prefix",
+      "formula": "1 iff same-class prefix exists",
+      "index": 69,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "same_class_prefix_exists",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": false,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 mean score",
+      "index": 70,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_score_mean",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 population std ddof=0",
+      "index": 71,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_score_std",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 25th percentile, linear",
+      "index": 72,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_score_p25",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 median, linear",
+      "index": 73,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_score_p50",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 75th percentile, linear",
+      "index": 74,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_score_p75",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top5 mean score",
+      "index": 75,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_top5_score_mean",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top20 mean score",
+      "index": 76,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_top20_score_mean",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top50 mean score",
+      "index": 77,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_top50_score_mean",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction score > .10",
+      "index": 78,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_score_fraction_gt_010",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction score > .25",
+      "index": 79,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_score_fraction_gt_025",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction score > .50",
+      "index": 80,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_score_fraction_gt_050",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction predicted class person",
+      "index": 81,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_class_fraction_person",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction predicted class bicycle",
+      "index": 82,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_class_fraction_bicycle",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction predicted class car",
+      "index": 83,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_class_fraction_car",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction predicted class motorcycle",
+      "index": 84,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_class_fraction_motorcycle",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction predicted class bus",
+      "index": 85,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_class_fraction_bus",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction predicted class train",
+      "index": 86,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_class_fraction_train",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction predicted class truck",
+      "index": 87,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_class_fraction_truck",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 fraction predicted class traffic light",
+      "index": 88,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_class_fraction_traffic_light",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    },
+    {
+      "block": "image",
+      "formula": "Top100 median normalized bbox area, linear",
+      "index": 89,
+      "missing_rule": "none; explicit zero only where formula states it",
+      "name": "image_bbox_area_median",
+      "source": "release candidate/native state and fixed raw-score prefix",
+      "standardize_fit_only": true,
+      "unit": "unitless"
+    }
+  ],
+  "dataset_version": "COCO2017-Road8-v1",
+  "dimension": 90,
+  "input_bindings": {
+    "canonical_completion_marker": {
+      "path": "external_assets/research_LC_ALLOC_COCO_TRAIN_CANONICAL_EXPORT/CANONICAL_EXPORT_COMPLETE.json",
+      "sha256": "8924b740c85d7e2b30cffe72058fe38150fb368a466a6ce6e76482d49db1ecfb"
+    },
+    "p1_core": {
+      "path": "external_assets/research_LC_ALLOC_P1/scripts/p1_core.py",
+      "sha256": "fd3daa06e363848c48685511ac4bd91189dea3cd82b7dbcc83748a1b3d0292f0"
+    },
+    "train_gt": {
+      "path": "external_assets/COCO2017/annotations/instances_train2017.json",
+      "sha256": "610fce4944abdeb15354cc765333805529359d12d88f2f711393ca586901d01d"
+    }
+  },
+  "label_target": {
+    "candidate_matchability_target": false,
+    "gt_filter": "COCO Road8 categories; exclude iscrowd, ignore, invalid/nonpositive boxes exactly as frozen Route-B M11 evaluation",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "ranks": [
+      6,
+      50
+    ],
+    "target": "prefix extension maximum-cardinality same-class matching gain M(k)-M(k-1)"
+  },
+  "pca": {
+    "components": 32,
+    "explained_variance_ratio_sum_diagnostic_only": 0.6689012050628662,
+    "fit_role": "FIT",
+    "input_storage": "canonical float16 embedding cast to float32",
+    "model_path": "pca_model.joblib",
+    "model_sha256": "a7c71f29dde9e02b9d9dd8fa8229b3489cba6b5676622f62e38d80890990f07a",
+    "namespace": "LC_ALLOC_COCO_ROUTE_A_PCA_V1|",
+    "random_state": 530100,
+    "sample_cap": 200000,
+    "sample_manifest_path": "working/pca_sample_manifest.parquet",
+    "sample_manifest_sha256": "5c30a086579afb2f1862d83230e58d2c2f7d428835b91cb7431e72a29b7b5f6f",
+    "svd_solver": "randomized",
+    "unique_key": [
+      "canonical_image_id",
+      "query_index"
+    ],
+    "whiten": false
+  },
+  "role_counts_images": {
+    "CALIBRATION": 11829,
+    "EARLY_STOP": 11829,
+    "FIT": 94629
+  },
+  "role_counts_rows": {
+    "CALIBRATION": 532305,
+    "EARLY_STOP": 532305,
+    "FIT": 4258305
+  },
+  "route": "A_COCO_ADAPTED_M11",
+  "route_a_config_sha256": "8f84b448969c252e4b3925e3ef939860a111594b71e9dc5401019792fc780f20",
+  "scaler": {
+    "excluded": "eight class-onehot columns and same_class_prefix_exists",
+    "fit_role": "FIT",
+    "implementation": "sklearn StandardScaler population variance",
+    "model_path": "scaler.joblib",
+    "model_sha256": "7c24eaf49bbe69a351d0b9b5d385c5e89b752697217fac7d6ecc574c740eea0a",
+    "standardized_columns": 81,
+    "unstandardized_columns": 9,
+    "zero_variance_scale": 1.0
+  },
+  "split_manifest_sha256": "a5edae7bb81b7552ae9d2544acd8eec097e4bef848e2059fdeb2440816bfeec5",
+  "task": "LC-ALLOC-COCO-ROUTE-A-ADAPTATION",
+  "train_candidate_asset_id": "964077b8b128c693d1bffeb627609d5a3b1da50b88e0bdcf0d6d469947f84b99",
+  "train_split": "TRAIN2017"
+}

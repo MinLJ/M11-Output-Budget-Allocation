@@ -1,0 +1,19 @@
+{
+  "cuda": "12.8",
+  "device": "cuda",
+  "elapsed_seconds": 295.33950830006506,
+  "file_read_seconds_excluded": 10.421379299950786,
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "model_preprocessor_load_seconds_excluded": 2.038477599970065,
+  "order_seed": 530003,
+  "os": "Windows-10-10.0.26200-SP0",
+  "profile_groups": 5,
+  "profile_images": 200,
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+  "selection_rule": "SHA256('LC_ALLOC_P1A_PROFILE_V1|'+image_id), then image_id; first 200",
+  "source_role": "FIT",
+  "status": "PASS",
+  "torch": "2.11.0+cu128",
+  "torch_num_interop_threads": 12,
+  "torch_num_threads": 12
+}

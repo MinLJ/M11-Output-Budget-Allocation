@@ -1,0 +1,75 @@
+{
+  "bounds": [
+    0.25,
+    4.0
+  ],
+  "fallback": "T=1 if best BCE improvement over T=1 is <=1e-12",
+  "feature_config_sha256": "fc40ecf733d885b75212782c0a08e043e496d25f8b2762f1b959d0b9e11a9951",
+  "fit_role": "CALIBRATION",
+  "objective": "pooled natural BCE over all CALIBRATION rows and ten IoU outputs",
+  "one_parameter_per_seed": true,
+  "route": "A_COCO_ADAPTED_M11",
+  "route_a_config_sha256": "8f84b448969c252e4b3925e3ef939860a111594b71e9dc5401019792fc780f20",
+  "seeds": [
+    {
+      "best_epoch": 8,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.03446786407109352,
+      "calibrated_brier": 0.009320609443662949,
+      "early_stop_natural_bce": 0.03419055690123072,
+      "fallback_tolerance": 1e-12,
+      "model_path": "model_checkpoints/marginal_mlp_seed_630101.pt",
+      "model_sha256": "c0e674fce24be87a1cd1e83f3effbacf864391c0ac6c7db109a566f4bac7de98",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.03446985528059674,
+      "raw_brier": 0.009320676049941218,
+      "seed": 630101,
+      "temperature": 1.008254529482454
+    },
+    {
+      "best_epoch": 9,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.0344363977738597,
+      "calibrated_brier": 0.009320307723398806,
+      "early_stop_natural_bce": 0.03413926692952515,
+      "fallback_tolerance": 1e-12,
+      "model_path": "model_checkpoints/marginal_mlp_seed_630102.pt",
+      "model_sha256": "55baf68272ac2822cc008d16fd9837df35446d7ac0a5a2d12da653b4ecf248a9",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.03443699054292733,
+      "raw_brier": 0.00932019066227967,
+      "seed": 630102,
+      "temperature": 1.0045231479064112
+    },
+    {
+      "best_epoch": 12,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.0344216709364465,
+      "calibrated_brier": 0.009312942613163743,
+      "early_stop_natural_bce": 0.0341518571734845,
+      "fallback_tolerance": 1e-12,
+      "model_path": "model_checkpoints/marginal_mlp_seed_630103.pt",
+      "model_sha256": "936b72fdb0a0572cc741cb01d073eed7181c78ba93e766a4ee86b84a2563d1b3",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.034427771639774264,
+      "raw_brier": 0.009312711967624987,
+      "seed": 630103,
+      "temperature": 1.0146029533131402
+    }
+  ],
+  "shared_across_outputs": true,
+  "task": "LC-ALLOC-COCO-ROUTE-A-ADAPTATION",
+  "val_accessed": false
+}

@@ -1,0 +1,17 @@
+{
+  "cuda": "12.8",
+  "device": "cuda",
+  "elapsed_seconds": 171.68991640000604,
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "measured_per_group_condition": 20,
+  "order_seed": 530003,
+  "os": "Windows-10-10.0.26200-SP0",
+  "profile_groups": 5,
+  "profile_images": 200,
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+  "source_role": "FIT",
+  "torch": "2.11.0+cu128",
+  "torch_num_interop_threads": 12,
+  "torch_num_threads": 12,
+  "warmups_per_condition": 5
+}

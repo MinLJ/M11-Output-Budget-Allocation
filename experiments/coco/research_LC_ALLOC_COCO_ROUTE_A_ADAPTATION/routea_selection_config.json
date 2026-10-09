@@ -1,0 +1,148 @@
+{
+  "access_boundary": {
+    "gt_or_annotation_argument": false,
+    "gt_read": false,
+    "matching": false,
+    "scientific_evaluation": false
+  },
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "cal_temp": 0.389210829318298,
+  "candidate_action": "canonical original Top100; original-score prefix rank 1..K only",
+  "candidate_asset_id": "5ff6497669d5b02c888f90451882d3c8e594b74a3aedd136639a9c0c8621c707",
+  "canonical_marker_status": "COCO_CANONICAL_EXPORT_COMPLETE",
+  "class_weights": [
+    1.8699882874195148,
+    2.709559108889892,
+    0.677389777222473,
+    2.709559108889892,
+    2.709559108889892,
+    2.709559108889892,
+    2.709559108889892,
+    1.3215126572702414
+  ],
+  "created_at_utc": "2026-09-27T09:50:34.633290Z",
+  "curve_semantics": "k<5 undefined; U(5)=0; modeled calibrated weighted deltas and cumulative relative U for k=6..50",
+  "dataset_version": "COCO2017-Road8-v1",
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.2.6",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "pyarrow": "24.0.0",
+    "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128"
+  },
+  "feature_config_sha256": "fc40ecf733d885b75212782c0a08e043e496d25f8b2762f1b959d0b9e11a9951",
+  "group_count": 125,
+  "group_size": 40,
+  "input_bindings": {
+    "allocator_asset_manifest": {
+      "allocator_asset_id": "7cecbaa5ba516dadc8f4a8da57d80fe11deedbc6cf8a3e2a241dfc0b140fff1e",
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/allocator_asset_manifest.json",
+      "sha256": "4350dcd94863ac23de85f258e9221df3d30205b672758e0b10096a13fa402d38"
+    },
+    "canonical_completion_marker": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/CANONICAL_EXPORT_COMPLETE.json",
+      "sha256": "f11f7074d3e87b8b5d0fb8ddd404cafae1f0e91a76c41ea0284490e43487d16d"
+    },
+    "class_weight_config": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/class_weight_config.json",
+      "sha256": "3f859d6f6ab413ec92492535f9997b6f47788632ad1a1de19c6b61f77e3ca9e8"
+    },
+    "dp_solver": {
+      "path": "external_assets/research_LC_ALLOC_P1/scripts/dp_solver.py",
+      "sha256": "f230626580575e256576e1be92ca1ad409a57c9d725202f2b364f78dbca0c317"
+    },
+    "feature_config": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/feature_config.json",
+      "sha256": "fc40ecf733d885b75212782c0a08e043e496d25f8b2762f1b959d0b9e11a9951"
+    },
+    "group_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_groups.csv",
+      "sha256": "b1346893ba70c1b6f1904f83530aa956253badefc8b227473cc8660ab78a5cc6"
+    },
+    "models": {
+      "630101": {
+        "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/model_checkpoints/marginal_mlp_seed_630101.pt",
+        "sha256": "c0e674fce24be87a1cd1e83f3effbacf864391c0ac6c7db109a566f4bac7de98",
+        "temperature": 1.008254529482454
+      },
+      "630102": {
+        "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/model_checkpoints/marginal_mlp_seed_630102.pt",
+        "sha256": "55baf68272ac2822cc008d16fd9837df35446d7ac0a5a2d12da653b4ecf248a9",
+        "temperature": 1.0045231479064112
+      },
+      "630103": {
+        "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/model_checkpoints/marginal_mlp_seed_630103.pt",
+        "sha256": "936b72fdb0a0572cc741cb01d073eed7181c78ba93e766a4ee86b84a2563d1b3",
+        "temperature": 1.0146029533131402
+      }
+    },
+    "p1_core": {
+      "path": "external_assets/research_LC_ALLOC_P1/scripts/p1_core.py",
+      "sha256": "fd3daa06e363848c48685511ac4bd91189dea3cd82b7dbcc83748a1b3d0292f0"
+    },
+    "pca_model": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/pca_model.joblib",
+      "sha256": "a7c71f29dde9e02b9d9dd8fa8229b3489cba6b5676622f62e38d80890990f07a"
+    },
+    "routea_selection_runner": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/routea_select_val.py",
+      "sha256": "fef86185ff48008e34ca3257dd9546d7549f8dd44f29522694a22183cec846a5"
+    },
+    "routeb_selection_runner_readonly": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/working/route_b_selection_runner.py",
+      "sha256": "b2c247d71498f941f111f6434172d0e18e52462cfb91da5f203867a2e8470c1a"
+    },
+    "scaler": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/scaler.joblib",
+      "sha256": "7c24eaf49bbe69a351d0b9b5d385c5e89b752697217fac7d6ecc574c740eea0a"
+    },
+    "temperature_params": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/temperature_params.json",
+      "sha256": "f59446f1db4ecf0d474193c4f36dc771aa8c773b2b9b4ccbb9ad5ef69ebd8985"
+    },
+    "training_complete": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/training_complete.json",
+      "sha256": "aad89a489c54c5e71c7529f301b54b29cb24d768d587960b50dafdc27b93d3ab"
+    },
+    "training_history": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/training_history.csv",
+      "sha256": "c1a209adc9e2fdf1842cac0158d950162a6b304b0994b58a26ec6b8362754e93"
+    },
+    "training_ledger": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/training_sha256_ledger.csv",
+      "sha256": "3993aed4ba48e92220622b7ecb517adb6a04f0c1fe1f75cec9e87df2b6a7f4b2"
+    }
+  },
+  "k_bounds": [
+    5,
+    50
+  ],
+  "m11_seed_predictions_averaged": false,
+  "m11_seeds": [
+    630101,
+    630102,
+    630103
+  ],
+  "methods": [
+    "S_FIXED",
+    "S_ADAPT",
+    "CAL_TEMP_ALLOC",
+    "M11-COCO"
+  ],
+  "route": "A_COCO_ADAPTED_M11",
+  "solver": "frozen exact float64 multiple-choice DP with lexicographically smallest K-vector tie break",
+  "split": "VAL2017",
+  "task": "LC-ALLOC-COCO-ROUTE-A-VAL-SELECTION",
+  "temperatures": {
+    "630101": 1.008254529482454,
+    "630102": 1.0045231479064112,
+    "630103": 1.0146029533131402
+  }
+}

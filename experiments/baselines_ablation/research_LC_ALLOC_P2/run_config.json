@@ -1,0 +1,167 @@
+{
+  "task": "LC-ALLOC-P2",
+  "name": "External Baseline Validation + TEST Confirmation Preparation",
+  "execution_boundary": "DEV-only calibration baseline validation; TEST remains locked and unread",
+  "frozen_candidate": {
+    "name": "LEARN_QUALITY",
+    "alias": "M11",
+    "candidate_freeze_path": "external_assets/research_LC_ALLOC_P1A/candidate_freeze.json",
+    "candidate_freeze_sha256": "8889fe172a90a98572fdd9e1fddced2fbf9a4bf0ded65841f5a19b1c625180d7",
+    "definition": "frozen class weight times mean of ten calibrated prefix-marginal probabilities at IoU .50:.95",
+    "seeds": [
+      530101,
+      530102,
+      530103
+    ]
+  },
+  "binding": {
+    "eff_audit_frozen_binding_path": "external_assets/research_LC_ALLOC_EFF_AUDIT/qa/frozen_binding.json",
+    "eff_audit_frozen_binding_sha256": "37d7dd046681cf0450a203ba55f7d18b974fd489db7f73311daf3137cd459b8f",
+    "feature_schema_sha256": "8613d979ab6393c5d0524f1451e80329f60d0caa7a514ae256be4022d70096f7",
+    "pca_sha256": "12d8e656d53bdad54e498125993f437f77d874e97be38ffe29a0c969e1ff41af",
+    "scaler_sha256": "9d3da8c36b3b5a2cf8c8ab2deb963e3595c313b4d13f6d3e7fb8c27d923ced6d",
+    "class_weights_sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237",
+    "exact_dp_sha256": "f230626580575e256576e1be92ca1ad409a57c9d725202f2b364f78dbca0c317",
+    "candidate_schema_sha256": "0698a9f64e44c91940e5950e1be622c2c0895b3083d600fa6a3852b823c9792d",
+    "dev_candidate_asset_id": "9593aa3196f0eb89d9662c1b15ca7d912fb1480ac188dace30ea0a70d4869edd",
+    "train_candidate_asset_id": "7353d41864b09df704714043479567b6459fbf18cf0a74d226fea7fba92b8031"
+  },
+  "inputs": {
+    "p1_root": "external_assets/research_LC_ALLOC_P1",
+    "p1a_root": "external_assets/research_LC_ALLOC_P1A",
+    "p1b_root": "external_assets/research_LC_ALLOC_P1B",
+    "eff_audit_root": "external_assets/research_LC_ALLOC_EFF_AUDIT",
+    "release_root": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1",
+    "train_labels_path": "external_assets/research_LC_ALLOC_P1/train_labels.parquet",
+    "train_labels_sha256": "ae7b62210c4b2843116b7f49f40f198b185d105f0850929c1e059c39aa58c370",
+    "dev_predictions_path": "external_assets/research_LC_ALLOC_P1/dev_predictions.parquet",
+    "dev_predictions_sha256": "ea880c8643c01efc40d336f00be65b5c01ded65e81939c694b695bfb957b951c",
+    "bootstrap_indices_path": "external_assets/research_LC_ALLOC_P1/outputs/bootstrap_group_indices.npy",
+    "bootstrap_indices_sha256": "afcff203c75c61b65f2271807379c15e7b553a6256b455a569b2b38bd3243232"
+  },
+  "candidate_action": {
+    "pool": "release original road8_rank Top100 candidate records",
+    "selection": "original score prefix road8_rank 1..K_i only",
+    "query_deduplication": false,
+    "reranking": false,
+    "nms": false,
+    "k_bounds": [
+      5,
+      50
+    ],
+    "budgets": [
+      10,
+      15,
+      20,
+      30,
+      40
+    ],
+    "group_count": 50,
+    "images_per_group": 40,
+    "group_budget": "sum_i K_i = 40 * mean_budget exactly",
+    "solver": "frozen exact float64 multiple-choice DP with lexicographically smallest K-vector tie-break"
+  },
+  "calibration_target": {
+    "fit_role_only": true,
+    "fit_rows_expected": 360000,
+    "optional_ranks": [
+      6,
+      50
+    ],
+    "definition": "row-wise mean of ten frozen class-aware maximum-cardinality score-prefix marginal labels",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "legacy_tp_is_evaluation_only": true
+  },
+  "calibration_baselines": {
+    "CAL_TEMP_ALLOC": {
+      "input": "raw detector score only",
+      "formula": "sigmoid(logit(clip(score,1e-6,1-1e-6))/T)",
+      "fit": "one global positive temperature on FIT only by pooled natural BCE over ten labels",
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "fallback": "T=1 if best bounded fit improves BCE by no more than 1e-12",
+      "intercept": false,
+      "class_specific": false,
+      "slot_value": "calibrated probability only"
+    },
+    "CAL_ISO_ALLOC": {
+      "input": "raw detector score only",
+      "fit": "one global increasing isotonic regression on FIT score to row-mean ten-label target",
+      "out_of_bounds": "clip",
+      "y_bounds": [
+        0.0,
+        1.0
+      ],
+      "class_specific": false,
+      "slot_value": "isotonic probability only"
+    },
+    "interpretation": "No frozen class weight is multiplied into either calibration baseline. This implements the stated score-calibration-only comparator; frozen class weights remain part of M11 and the shared QUALITY evaluation metric."
+  },
+  "evaluation": {
+    "dev_is_previously_observed": true,
+    "selection_entrypoint_has_dev_gt_argument": false,
+    "selections_hashed_before_gt_evaluation": true,
+    "coverage": "maximum-cardinality same-class IoU>=0.50",
+    "quality": "frozen FIT class weights times mean maximum-matching coverage over IoU .50:.95",
+    "coco": "bbox AP/AP50/AP75/AR100; IoU .50:.05:.95; maxDets [1,10,100]",
+    "evaluation_score": "original detector score",
+    "class_count": 8
+  },
+  "bootstrap": {
+    "unit": "frozen complete 40-image group",
+    "groups": 50,
+    "resamples": 5000,
+    "seed": 530002,
+    "reuse_frozen_indices": true,
+    "metrics": [
+      "coverage_per_image",
+      "quality_per_image"
+    ],
+    "positive_fraction_is_not_p_value": true
+  },
+  "confirmation_baseline_selection_rule": {
+    "primary": "higher DEV core-budget (10,15,20) mean frozen QUALITY per image",
+    "first_tie_break": "higher DEV core-budget mean IoU.50 coverage per image",
+    "second_tie_break": "CAL_TEMP_ALLOC before CAL_ISO_ALLOC",
+    "purpose": "freeze one calibration comparator for a future separately authorized TEST confirmation; not method tuning"
+  },
+  "runtime": {
+    "scope": "allocator only; detector excluded",
+    "profile_images": 40,
+    "budgets": [
+      10,
+      20,
+      40
+    ],
+    "warmup_per_group_condition": 5,
+    "measured_per_group_condition": 20,
+    "order_seed": 530003
+  },
+  "restrictions": {
+    "test_access": false,
+    "detector_forward": false,
+    "m11_training": false,
+    "feature_change": false,
+    "quality_change": false,
+    "coverage_model": false,
+    "second_detector": false,
+    "dev_parameter_tuning": false
+  },
+  "planned_status": {
+    "execution_status": "COMPLETE_if_all_required_checks_and_outputs_pass",
+    "confirmation_status": "PREPARED_NOT_AUTHORIZED"
+  }
+}

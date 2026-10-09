@@ -1,0 +1,29 @@
+{
+  "allocator_asset_id": "7cecbaa5ba516dadc8f4a8da57d80fe11deedbc6cf8a3e2a241dfc0b140fff1e",
+  "detector_retrained": false,
+  "identity_bindings": {
+    "class_weight_config_sha256": "3f859d6f6ab413ec92492535f9997b6f47788632ad1a1de19c6b61f77e3ca9e8",
+    "feature_config_sha256": "fc40ecf733d885b75212782c0a08e043e496d25f8b2762f1b959d0b9e11a9951",
+    "model_sha256_by_seed": {
+      "630101": "c0e674fce24be87a1cd1e83f3effbacf864391c0ac6c7db109a566f4bac7de98",
+      "630102": "55baf68272ac2822cc008d16fd9837df35446d7ac0a5a2d12da653b4ecf248a9",
+      "630103": "936b72fdb0a0572cc741cb01d073eed7181c78ba93e766a4ee86b84a2563d1b3"
+    },
+    "pca_sha256": "a7c71f29dde9e02b9d9dd8fa8229b3489cba6b5676622f62e38d80890990f07a",
+    "route": "A_COCO_ADAPTED_M11",
+    "route_a_config_sha256": "8f84b448969c252e4b3925e3ef939860a111594b71e9dc5401019792fc780f20",
+    "scaler_sha256": "7c24eaf49bbe69a351d0b9b5d385c5e89b752697217fac7d6ecc574c740eea0a",
+    "seeds": [
+      630101,
+      630102,
+      630103
+    ],
+    "temperature_params_sha256": "f59446f1db4ecf0d474193c4f36dc771aa8c773b2b9b4ccbb9ad5ef69ebd8985",
+    "train_candidate_asset_id": "964077b8b128c693d1bffeb627609d5a3b1da50b88e0bdcf0d6d469947f84b99",
+    "train_gt_sha256": "610fce4944abdeb15354cc765333805529359d12d88f2f711393ca586901d01d"
+  },
+  "identity_hash": "SHA256(canonical compact UTF-8 JSON of identity_bindings)",
+  "models_are_independent_not_ensemble": true,
+  "status": "COCO_ROUTE_A_ALLOCATOR_ASSET_COMPLETE",
+  "val_accessed": false
+}

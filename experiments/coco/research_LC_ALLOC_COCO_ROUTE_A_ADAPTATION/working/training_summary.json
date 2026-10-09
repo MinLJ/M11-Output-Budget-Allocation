@@ -1,0 +1,80 @@
+{
+  "allocator_asset_id": "7cecbaa5ba516dadc8f4a8da57d80fe11deedbc6cf8a3e2a241dfc0b140fff1e",
+  "allocator_asset_manifest_sha256": "4350dcd94863ac23de85f258e9221df3d30205b672758e0b10096a13fa402d38",
+  "calibration_rows": 532305,
+  "cuda_version": "12.8",
+  "detector_forward": false,
+  "device": "cuda:0",
+  "early_stop_rows": 532305,
+  "elapsed_seconds": 79.86165820003953,
+  "fit_rows": 4258305,
+  "no_final_refit": true,
+  "seeds": [
+    {
+      "best_epoch": 8,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.03446786407109352,
+      "calibrated_brier": 0.009320609443662949,
+      "early_stop_natural_bce": 0.03419055690123072,
+      "elapsed_seconds": 23.640259700012393,
+      "epochs_run": 13,
+      "fallback_tolerance": 1e-12,
+      "model_path": "model_checkpoints/marginal_mlp_seed_630101.pt",
+      "model_sha256": "c0e674fce24be87a1cd1e83f3effbacf864391c0ac6c7db109a566f4bac7de98",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.03446985528059674,
+      "raw_brier": 0.009320676049941218,
+      "seed": 630101,
+      "temperature": 1.008254529482454
+    },
+    {
+      "best_epoch": 9,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.0344363977738597,
+      "calibrated_brier": 0.009320307723398806,
+      "early_stop_natural_bce": 0.03413926692952515,
+      "elapsed_seconds": 22.87539940001443,
+      "epochs_run": 14,
+      "fallback_tolerance": 1e-12,
+      "model_path": "model_checkpoints/marginal_mlp_seed_630102.pt",
+      "model_sha256": "55baf68272ac2822cc008d16fd9837df35446d7ac0a5a2d12da653b4ecf248a9",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.03443699054292733,
+      "raw_brier": 0.00932019066227967,
+      "seed": 630102,
+      "temperature": 1.0045231479064112
+    },
+    {
+      "best_epoch": 12,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.0344216709364465,
+      "calibrated_brier": 0.009312942613163743,
+      "early_stop_natural_bce": 0.0341518571734845,
+      "elapsed_seconds": 26.814522600034252,
+      "epochs_run": 17,
+      "fallback_tolerance": 1e-12,
+      "model_path": "model_checkpoints/marginal_mlp_seed_630103.pt",
+      "model_sha256": "936b72fdb0a0572cc741cb01d073eed7181c78ba93e766a4ee86b84a2563d1b3",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.034427771639774264,
+      "raw_brier": 0.009312711967624987,
+      "seed": 630103,
+      "temperature": 1.0146029533131402
+    }
+  ],
+  "status": "ROUTE_A_MODEL_TRAINING_COMPLETE",
+  "torch_version": "2.11.0+cu128",
+  "val_accessed": false
+}

@@ -1,0 +1,104 @@
+{
+  "contract_type": "COCO2017_ROAD8_CANDIDATE_ASSET_IDENTITY_V1",
+  "status": "IDENTITY_CONTRACT_FROZEN_ASSETS_NOT_MATERIALIZED",
+  "dataset_version": "COCO2017-Road8-v1",
+  "representation_name": "COCO2017_Road8CartesianTop300_v1",
+  "detector_id": "RT-DETRv2-R18VD",
+  "checkpoint_sha256": "2ace52184b620204004509b72752ac7bfe64aadaf7fc1d076b18df8ab5a5c77e",
+  "export_config": {
+    "path": "COCO2017_Road8_RTDETRv2_R18VD_EXPORT_CONFIG.json",
+    "sha256": "f6a91e9d6879357fc10095c182689e43ee73bca2c10ec6926f93960cc68d98f2"
+  },
+  "candidate_and_native_schema": {
+    "path": "COCO2017_Road8_CandidateSchema_v1.json",
+    "sha256": "e977e02fe638a8ac44e98919d76225306eb88fa7385d3ec0793342112ec8c53b",
+    "native_binding": "$defs.native_row and x-serialization in the same exact-byte schema"
+  },
+  "candidate_asset_id_contract": {
+    "hash": "SHA256",
+    "ordered_fields": [
+      "dataset_version",
+      "split_manifest_sha256",
+      "detector_id",
+      "checkpoint_sha256",
+      "export_config_sha256",
+      "candidate_schema_sha256"
+    ],
+    "formula": "SHA256(dataset_version + split_manifest_sha256 + detector_id + checkpoint_sha256 + export_config_sha256 + candidate_schema_sha256)",
+    "encoding": "UTF-8",
+    "delimiter": "",
+    "trim": false,
+    "case_folding": false,
+    "unicode_normalization": false,
+    "sha_input_format": "exactly 64 lowercase hexadecimal characters",
+    "output_format": "exactly 64 lowercase hexadecimal characters"
+  },
+  "split_assets": {
+    "TRAIN2017": {
+      "split_manifest_path": "D:/AOP_DETR/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/TRAIN2017_images.csv",
+      "split_manifest_sha256": "edbe4c4fe3b181a239a7390b8a21459a7d9a2bb679671cf85186487a1852d45b",
+      "image_count": 118287,
+      "candidate_asset_id": "964077b8b128c693d1bffeb627609d5a3b1da50b88e0bdcf0d6d469947f84b99",
+      "asset_state": "PLANNED_IDENTITY_NO_SHARDS_EXPORTED"
+    },
+    "VAL2017": {
+      "split_manifest_path": "D:/AOP_DETR/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_images.csv",
+      "split_manifest_sha256": "9e0c1ac3d4a2c3b8e61246f8ec147745ca937c8830dc88b98bd4879342503ad2",
+      "image_count": 5000,
+      "candidate_asset_id": "5ff6497669d5b02c888f90451882d3c8e594b74a3aedd136639a9c0c8621c707",
+      "asset_state": "PLANNED_IDENTITY_NO_SHARDS_EXPORTED"
+    }
+  },
+  "candidate_record_id_contract": {
+    "hash": "SHA256",
+    "ordered_fields": [
+      "candidate_asset_id",
+      "image_id",
+      "road8_rank"
+    ],
+    "formula": "SHA256(len8(asset_utf8) || asset_utf8 || len8(image_utf8) || image_utf8 || len8(rank_ascii) || rank_ascii)",
+    "length_prefix": "unsigned 8-byte big-endian byte length for each encoded field",
+    "candidate_asset_id_encoding": "UTF-8 lowercase 64-hex",
+    "image_id_definition": "canonical_image_id; never numeric COCO ID, image filename, array index, row position or rank-only identity",
+    "image_id_encoding": "UTF-8 with no trim or normalization",
+    "road8_rank_encoding": "canonical base-10 ASCII integer with no sign and no leading zeros",
+    "road8_rank_domain": "1..300",
+    "output_format": "exactly 64 lowercase hexadecimal characters"
+  },
+  "join_contract": {
+    "key": [
+      "canonical_image_id",
+      "query_index"
+    ],
+    "image_id_alias_rule": "image_id must exactly equal canonical_image_id",
+    "forbidden_join_keys": [
+      "road8_rank",
+      "candidate row position",
+      "source_order alone",
+      "array index",
+      "reshape position"
+    ],
+    "query_deduplication": false,
+    "same_query_different_class_records_retained": true
+  },
+  "implementation_identity_boundary": {
+    "candidate_asset_id_includes_runner_code_sha": false,
+    "reason": "The mandated six-field CandidateAssetID formula is unchanged.",
+    "future_asset_manifest_must_bind": [
+      "export_runner_contract_sha256",
+      "actual_runner_source_bundle_sha256",
+      "actual_qa_validator_source_bundle_sha256",
+      "actual_runtime_environment_identity",
+      "candidate_and_native_shard_sha256",
+      "index_and_manifest_sha256"
+    ],
+    "runner_implementation_status": "NOT_MATERIALIZED_IN_THIS_SPEC_FREEZE",
+    "qa_validator_implementation_status": "NOT_MATERIALIZED_IN_THIS_SPEC_FREEZE"
+  },
+  "evaluation_asset_exclusion": {
+    "annotation_or_GT_path_in_runner_input": false,
+    "annotation_or_GT_sha_in_candidate_asset_id": false,
+    "rule": "Annotation and GT identities belong only to a separately authorized evaluation binding."
+  },
+  "freeze_rule": "These split-specific IDs name the future assets generated under the exact bound manifest/config/schema. They do not assert that candidate/native shards exist. Only successful export, full serialized readback, all-checks-pass QA and a complete SHA ledger may set COCO2017_CANDIDATE_ASSET_FROZEN."
+}

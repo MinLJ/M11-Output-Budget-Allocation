@@ -1,0 +1,159 @@
+{
+  "task": "LC-ALLOC-COCO-ROUTE-A-ADAPTATION",
+  "route": "A_COCO_ADAPTED_M11",
+  "dataset_version": "COCO2017-Road8-v1",
+  "train_split": "TRAIN2017",
+  "validation_split": "VAL2017",
+  "train_ground_truth": {
+    "path": "external_assets/COCO2017/annotations/instances_train2017.json",
+    "sha256": "610fce4944abdeb15354cc765333805529359d12d88f2f711393ca586901d01d",
+    "usage": "TRAIN2017 prefix-extension labels only; never allocator inference or VAL selection"
+  },
+  "candidate_protocol": {
+    "expected_train_candidate_asset_id": "964077b8b128c693d1bffeb627609d5a3b1da50b88e0bdcf0d6d469947f84b99",
+    "expected_train_images": 118287,
+    "pool": "canonical original road8_rank Top100",
+    "action": "original-score prefix rank 1..K_i",
+    "query_deduplication": false,
+    "rerank": false,
+    "nms": false
+  },
+  "role_split": {
+    "namespace": "LC_ALLOC_COCO_ROUTE_A_SPLIT_V1|",
+    "hash": "SHA256(namespace + canonical_image_id)",
+    "ordering": [
+      "hash ascending",
+      "canonical_image_id ascending"
+    ],
+    "ratios": {
+      "FIT": 0.8,
+      "EARLY_STOP": 0.1,
+      "CALIBRATION": 0.1
+    },
+    "rounding": "Hamilton largest remainder; floor each ideal count, distribute residual by descending fractional remainder with role_order as tie-break",
+    "role_order": [
+      "FIT",
+      "EARLY_STOP",
+      "CALIBRATION"
+    ],
+    "expected_counts": {
+      "FIT": 94629,
+      "EARLY_STOP": 11829,
+      "CALIBRATION": 11829
+    },
+    "unit": "canonical image identity; every candidate of one image inherits its image split"
+  },
+  "labels": {
+    "ranks": [
+      6,
+      50
+    ],
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "target": "prefix extension maximum-cardinality same-class matching gain M(k)-M(k-1)",
+    "gt_filter": "COCO Road8 categories; exclude iscrowd, ignore, invalid/nonpositive boxes exactly as frozen Route-B M11 evaluation",
+    "candidate_matchability_target": false
+  },
+  "features": {
+    "dimension": 90,
+    "schema": "same P1 58 candidate + 12 prefix + 20 image-context columns",
+    "pca": {
+      "namespace": "LC_ALLOC_COCO_ROUTE_A_PCA_V1|",
+      "fit_role": "FIT",
+      "unique_key": [
+        "canonical_image_id",
+        "query_index"
+      ],
+      "sample_cap": 200000,
+      "components": 32,
+      "svd_solver": "randomized",
+      "random_state": 530100,
+      "whiten": false,
+      "input_storage": "canonical float16 embedding cast to float32"
+    },
+    "scaler": {
+      "fit_role": "FIT",
+      "implementation": "sklearn StandardScaler population variance",
+      "excluded": "eight class-onehot columns and same_class_prefix_exists",
+      "zero_variance_scale": 1.0
+    }
+  },
+  "class_weights": {
+    "strategy": "KEEP_LC_CLASS_WEIGHTS",
+    "source": "research_LC_ALLOC_P1/models/class_weights.json",
+    "source_sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237",
+    "selection_time": "frozen before Route-A training and VAL access"
+  },
+  "model": {
+    "architecture": "Linear(90,128)-LayerNorm-GELU-Linear(128,64)-GELU-Linear(64,10)",
+    "loss": "unweighted natural BCEWithLogitsLoss mean over rows and outputs",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 4096,
+    "inference_batch_size": 16384,
+    "max_epochs": 30,
+    "early_stop_patience": 5,
+    "early_stop_min_delta": 0.0,
+    "early_stop_tie_rule": "earliest strict best",
+    "final_refit": false,
+    "seeds": [
+      630101,
+      630102,
+      630103
+    ]
+  },
+  "calibration": {
+    "role": "CALIBRATION",
+    "parameter": "one shared positive scalar temperature per seed",
+    "objective": "pooled natural BCE over all CALIBRATION rows and ten IoU outputs",
+    "bounds": [
+      0.25,
+      4.0
+    ],
+    "optimizer": "scipy.optimize.minimize_scalar bounded",
+    "xatol": 1e-08,
+    "fallback": "T=1 if best BCE improvement over T=1 is <=1e-12",
+    "validation_access": false
+  },
+  "allocation_contract": {
+    "class_weighted_value": "weight[predicted Road8 class] * mean of ten calibrated marginal probabilities",
+    "k_bounds": [
+      5,
+      50
+    ],
+    "budgets": [
+      10,
+      15,
+      20,
+      30,
+      40
+    ],
+    "group_size": 40,
+    "solver": "frozen P1 exact float64 multiple-choice dynamic programming",
+    "tie_break": "canonical image id ascending caller order; lexicographically smallest complete K vector on exact objective ties"
+  },
+  "predicted_curve_contract": {
+    "rows_per_image_seed": 50,
+    "k_1_to_4": "predicted_delta=null; predicted_U=null; outside feasible action space and not modeled",
+    "k_5": "predicted_delta=null; predicted_U=0.0 fixed omitted base utility",
+    "k_6_to_50": "predicted_delta=class-weighted mean calibrated probability; predicted_U=cumulative sum from rank 6"
+  },
+  "references": {
+    "p1_core": "research_LC_ALLOC_P1/scripts/p1_core.py",
+    "p1_core_sha256": "fd3daa06e363848c48685511ac4bd91189dea3cd82b7dbcc83748a1b3d0292f0",
+    "dp_solver": "research_LC_ALLOC_P1/scripts/dp_solver.py",
+    "dp_solver_sha256": "f230626580575e256576e1be92ca1ad409a57c9d725202f2b364f78dbca0c317",
+    "route_b_evaluator": "research_LC_ALLOC_COCO_ROUTE_B_EVALUATION/working/evaluate_route_b.py"
+  }
+}
