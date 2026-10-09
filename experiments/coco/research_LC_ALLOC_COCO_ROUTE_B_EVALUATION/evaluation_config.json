@@ -1,0 +1,246 @@
+{
+  "task": "LC-ALLOC-COCO-ROUTE-B-EVALUATION",
+  "created_at_utc": "2026-09-26T10:56:13.8864955Z",
+  "execution_boundary": {
+    "detector_forward": false,
+    "candidate_export": false,
+    "feature_construction": false,
+    "allocator_inference": false,
+    "selection_regeneration": false,
+    "evaluation_only": true,
+    "gt_open_after_selection_validation": true
+  },
+  "dataset": {
+    "dataset_version": "COCO2017-Road8-v1",
+    "split": "VAL2017",
+    "image_count": 5000,
+    "candidate_asset_id": "5ff6497669d5b02c888f90451882d3c8e594b74a3aedd136639a9c0c8621c707",
+    "road8_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "train",
+      "truck",
+      "traffic light"
+    ],
+    "coco_category_ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      10
+    ]
+  },
+  "methods": {
+    "deterministic": [
+      "S_FIXED",
+      "S_ADAPT",
+      "CAL_TEMP_ALLOC"
+    ],
+    "deterministic_seed_sentinel": -1,
+    "m11": "M11",
+    "m11_seeds": [
+      530101,
+      530102,
+      530103
+    ],
+    "m11_seed_predictions_averaged": false
+  },
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "groups": {
+    "group_count": 125,
+    "group_size": 40,
+    "exact_budget": "sum K_i = 40 * budget",
+    "k_bounds": [
+      5,
+      50
+    ]
+  },
+  "m11_evaluation": {
+    "coverage": "same-class maximum-cardinality one-to-one matching at IoU >= 0.50",
+    "coverage_denominator": "valid noncrowd Road8 GT",
+    "quality": "mean over IoU .50:.05:.95 of sum_c frozen_LC_weight[c] * maximum_matching_count[c]",
+    "iou_semantics": "continuous half-open XYXY float64; inclusive threshold; no clipping",
+    "zero_gt_image_recall": null
+  },
+  "coco_evaluation": {
+    "type": "bbox",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "recall_threshold_count": 101,
+    "max_dets": [
+      1,
+      10,
+      100
+    ],
+    "area": "all for reported AP/AP50/AP75/AR100",
+    "score": "original detector score",
+    "category_ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      10
+    ],
+    "image_ids": "all 5000 VAL2017 image IDs",
+    "crowd_ignore": "official COCO semantics"
+  },
+  "bootstrap": {
+    "unit": "frozen 40-image group",
+    "group_count": 125,
+    "resamples": 5000,
+    "generator": "numpy.default_rng PCG64",
+    "seed": 530002,
+    "dtype": "little-endian int16",
+    "indices_sha256": "895fbbbe33169a2567aee34422d1dfdb8445ec5b6f64734ae819af06816af84a",
+    "interval": "95% percentile",
+    "primary_m11_scope": "arithmetic mean of three seed group metrics; not prediction ensemble",
+    "metrics": [
+      "coverage_per_image",
+      "quality_per_image"
+    ]
+  },
+  "expected_hashes": {
+    "selection_sha256": "b1c75d96292f4c6a8aaac5208b6b50ad261eb9da6d419aa18e79f8e69c0b8639",
+    "gt_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f"
+  },
+  "paths": {
+    "selected_records": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/selected_records.parquet",
+    "selection_manifest": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/selection_manifest.csv",
+    "allocation_summary": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/allocation_summary.csv",
+    "candidate_asset_root": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT",
+    "candidate_manifest": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate_manifest.csv",
+    "image_manifest": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/image_manifest.csv",
+    "group_manifest": "external_assets/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_groups.csv",
+    "gt": "external_assets/COCO2017/annotations/instances_val2017.json",
+    "class_weights": "external_assets/research_LC_ALLOC_P1/models/class_weights.json",
+    "p1_core": "external_assets/research_LC_ALLOC_P1/scripts/p1_core.py",
+    "shared_evaluator": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1/evaluator/shared_evaluator.py",
+    "pycocotools_site_packages": "external_environment/envs/aop_detr/Lib/site-packages"
+  },
+  "evaluator_adapter_sha256": "e3b3c229ffc7f75e80ab66de2821ea4971cd35e4c692ddeb9959f7f65e1737fd",
+  "output_root": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_EVALUATION",
+  "input_bindings": {
+    "selected_records": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/selected_records.parquet",
+      "sha256": "b1c75d96292f4c6a8aaac5208b6b50ad261eb9da6d419aa18e79f8e69c0b8639"
+    },
+    "selection_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/selection_manifest.csv",
+      "sha256": "d7c455a3faff3447387d31affe7b79764d4d47caec54583ebfabb92866215d9d"
+    },
+    "allocation_summary": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/allocation_summary.csv",
+      "sha256": "9c1751a72e33bb171c5fc50bc09f48f592d469ea162874f7ccd2bc1082609f54"
+    },
+    "candidate_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate_manifest.csv",
+      "sha256": "64fd480744618a64cfb329facf115e173c875ba1e2d619339d58cd75216588f0"
+    },
+    "image_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/image_manifest.csv",
+      "sha256": "5c309cd09273298254067161988b19a2e25a77587abc2ef294a08dbbc9dc5990"
+    },
+    "group_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_groups.csv",
+      "sha256": "b1346893ba70c1b6f1904f83530aa956253badefc8b227473cc8660ab78a5cc6"
+    },
+    "road8_mapping": {
+      "path": "external_assets/research_LC_ALLOC_COCO2017_PREP/coco2017_road8_mapping.csv",
+      "sha256": "ee5f59eaa02c5c6f3b67f735b404ec9f94d223983d24534e24ff5682f45c300a"
+    },
+    "evaluation_freeze": {
+      "path": "external_assets/research_LC_ALLOC_COCO_EXECUTION_GATE/evaluation_freeze_report.md",
+      "sha256": "a789d09e9f93933b49952ddc31eb3842e88943c4c6f3d51e8869a4529b769e22"
+    },
+    "class_weights": {
+      "path": "external_assets/research_LC_ALLOC_P1/models/class_weights.json",
+      "sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237"
+    },
+    "p1_core": {
+      "path": "external_assets/research_LC_ALLOC_P1/scripts/p1_core.py",
+      "sha256": "fd3daa06e363848c48685511ac4bd91189dea3cd82b7dbcc83748a1b3d0292f0"
+    },
+    "shared_evaluator": {
+      "path": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1/evaluator/shared_evaluator.py",
+      "sha256": "e4106c4aaa0f63c0104409fe66c722fd9085ee4f8801e73992f6a4435d372d2a"
+    },
+    "pycocotools_coco": {
+      "path": "external_environment/envs/aop_detr/Lib/site-packages/pycocotools/coco.py",
+      "sha256": "8d70b2b3a3d8d788d6d5889898a44c7d441da7eb25b734dbcd6e0e2cf9158a96"
+    },
+    "pycocotools_cocoeval": {
+      "path": "external_environment/envs/aop_detr/Lib/site-packages/pycocotools/cocoeval.py",
+      "sha256": "84b0e75c6e972ca8b6fa3219fb03c1993dc9a3509df28447ca112c3f91828d61"
+    },
+    "candidate_shard_0000": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0000.parquet",
+      "sha256": "76e3c7a33ece03f73c333334ba55e32e16e9273c14c59a106bd4cb89c5850035"
+    },
+    "candidate_shard_0001": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0001.parquet",
+      "sha256": "3d4fe8527e67dc1c939a0d622095fd07d3de101e0e0367eaa2196fa5c639be3a"
+    },
+    "candidate_shard_0002": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0002.parquet",
+      "sha256": "3fd415334075de5c7e752889f21df938032b3bfdaa7527f32634c8fd5c2d770d"
+    },
+    "candidate_shard_0003": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0003.parquet",
+      "sha256": "1f8fde6b78adca62cea482c4b853a657044cd4e215e4289da1605eddee69f7b1"
+    },
+    "candidate_shard_0004": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0004.parquet",
+      "sha256": "c28002b0e976a6b2fc731c21f4ec0fdf77e81f9e6cc1702bad88a1af0fd1d16e"
+    },
+    "candidate_shard_0005": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0005.parquet",
+      "sha256": "81e7ec7c309c1f352cb1b3bc5847936685a656d0d24bf87defdc6eb708ec3f7e"
+    },
+    "candidate_shard_0006": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0006.parquet",
+      "sha256": "9a2723a12deb6737aae505f38f82ed9265664086ddd8641ed14d1d6e309e39d0"
+    },
+    "candidate_shard_0007": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0007.parquet",
+      "sha256": "db7f0f9a167920144f15337236d7b271325ef1ac8635b51a044fa35357a9a133"
+    },
+    "candidate_shard_0008": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0008.parquet",
+      "sha256": "222d18e0646d370a1127ad4d30361987d36878ac094c5ac3f212b68d3aa38986"
+    },
+    "candidate_shard_0009": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate/VAL2017_candidates_0009.parquet",
+      "sha256": "eb89a55d60d27289bb55396ce137fed759dadf29d02f1348b40c64985e8a0233"
+    },
+    "gt_instances_val2017": {
+      "path": "external_assets/COCO2017/annotations/instances_val2017.json",
+      "sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+      "defer_until_after_selection_validation": true
+    }
+  }
+}

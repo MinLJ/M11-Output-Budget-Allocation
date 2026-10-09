@@ -1,0 +1,162 @@
+{
+  "task": "LC-ALLOC-BENCH-P0",
+  "stage": "GROUP_PROTOCOL_ROBUSTNESS_EXTERNAL_CALIBRATION_BASELINE_AND_EXTERNAL_PREPARATION",
+  "execution_scope": {
+    "run_A_group_robustness": true,
+    "run_B_external_calibration_baseline": true,
+    "run_C_external_benchmark": false,
+    "prepare_C_protocol_and_interface_only": true,
+    "detector_forward": false,
+    "candidate_export": false,
+    "m11_retraining": false,
+    "test_access": 0,
+    "restricted_scientific_splits": [
+      "TEST",
+      "RESERVE",
+      "old holdout",
+      "Road1000"
+    ]
+  },
+  "project_root": "external_assets/research_LC_ALLOC_BENCH_P0",
+  "frozen_inputs": {
+    "p1_root": "external_assets/research_LC_ALLOC_P1",
+    "p1a_root": "external_assets/research_LC_ALLOC_P1A",
+    "p1b_root": "external_assets/research_LC_ALLOC_P1B",
+    "p2_root": "external_assets/research_LC_ALLOC_P2",
+    "ablation_root": "external_assets/research_LC_ALLOC_ABLATION_P0",
+    "method_audit_root": "external_assets/review_LC_ALLOC_METHOD/run_20260925_130443",
+    "release_root": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1",
+    "candidate_asset_id_dev": "9593aa3196f0eb89d9662c1b15ca7d912fb1480ac188dace30ea0a70d4869edd",
+    "candidate_asset_id_train": "7353d41864b09df704714043479567b6459fbf18cf0a74d226fea7fba92b8031",
+    "p1_run_config_sha256": "40d0510baa868f0130921dbe0211319875f4a401d3abf3f923be7f59271163ef",
+    "feature_schema_sha256": "8613d979ab6393c5d0524f1451e80329f60d0caa7a514ae256be4022d70096f7",
+    "dev_predictions_sha256": "ea880c8643c01efc40d336f00be65b5c01ded65e81939c694b695bfb957b951c",
+    "class_weights_sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237",
+    "p1_dev_allocations_sha256": "81c516688b299ea179644a5e94d47c0f90f761d455bcc08f50638b243d5af422",
+    "r0_group_manifest_sha256": "780365243223dda8d831c6bcb19b0a646afc0503e605541b5a932450eb32b6dd",
+    "p1b_weighted_score_allocations_sha256": "928e9e5cdccea955d94e5c5404f15cb8ef5a21c2f68866678ba82b8f3d357907",
+    "candidate_freeze_sha256": "8889fe172a90a98572fdd9e1fddced2fbf9a4bf0ded65841f5a19b1c625180d7"
+  },
+  "method_identity": {
+    "name": "LEARN_QUALITY",
+    "variant": "M11",
+    "seeds": [
+      530101,
+      530102,
+      530103
+    ],
+    "candidate_pool": "release raw road8_rank Top100 candidate records",
+    "action": "raw-score prefix ranks 1..K_i only",
+    "k_bounds": [
+      5,
+      50
+    ],
+    "quality": "mean over IoU 0.50:0.05:0.95 prefix marginal probabilities multiplied by frozen FIT class weight",
+    "prediction_reuse": "P1 stored post-temperature ten-threshold DEV probabilities; no second scaling and no across-seed prediction averaging"
+  },
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "group_robustness": {
+    "sizes": [
+      10,
+      20,
+      40,
+      80
+    ],
+    "permutations": {
+      "R0": "frozen LC_ALLOC_R0_GROUP_V1 global order recovered from group_id then position_in_group",
+      "R1": "SHA256('LC_ALLOC_BENCH_P0_R1|' + image_id), then image_id",
+      "R2": "SHA256('LC_ALLOC_BENCH_P0_R2|' + image_id), then image_id"
+    },
+    "nested_within_permutation": true,
+    "dp_caller_order": "image_id ascending inside each group",
+    "methods": [
+      "M11 seed530101",
+      "M11 seed530102",
+      "M11 seed530103",
+      "S_ADAPT",
+      "S_FIXED"
+    ],
+    "exact_group_budget": true,
+    "n1_check_only": true,
+    "threshold_check": "budget-matched ordered optional slots after mandatory ranks1..5; frozen tie semantics"
+  },
+  "external_baseline": {
+    "paper": "On Calibration of Object Detectors: Pitfalls, Evaluation and Baselines",
+    "venue": "ECCV 2024",
+    "official_pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03148.pdf",
+    "official_repository": "https://github.com/fiveai/detection_calibration",
+    "local_pdf_sha256": "a1af8b8ee022a735713f1860df9bc7f0585615abdde3a3dc3769a9e91543ee72",
+    "fit_role": "FIT8000 only",
+    "diagnostic_role": "CALIBRATION1000 only; no refit or model selection",
+    "official_code_commit": "bf59c92f5416ac4b66a7c2c67b44487777ff2ea4",
+    "mapping": "class-specific Platt sigmoid(abs(a_raw_c)*logit(clip(score,float64_eps,1-float64_eps))+b_c)",
+    "official_defaults": {
+      "tau": 0.0,
+      "max_dets_per_image": 100,
+      "class_agnostic": false,
+      "pre_and_post_thresholds": "per-class empirical LRP optimum on FIT",
+      "optimizer": "PyTorch LBFGS lr=0.1 max_iter=100",
+      "loss": "mean BCE/NLL with matched IoU continuous target; unmatched target 0",
+      "scale_initial": 1.0,
+      "bias_initial": 0.0,
+      "grid_search": false,
+      "quality_focal_loss": false
+    },
+    "predeclared_degenerate_fallback": "identity mapping for fewer than two retained samples, nonfinite/NaN threshold, optimizer exception, or nonfinite fitted parameter; every fallback and reason recorded; never selected using DEV",
+    "budget_adapters": {
+      "PS_PREFIX": "p_cal",
+      "PS_CLASS_PREFIX": "frozen_class_weight[predicted_class] * p_cal"
+    },
+    "evaluation_group": "R0 n=40 only",
+    "fit_semantics_gate": "BLOCKED_WITH_REASON if official matching/filtering/LRP/optimization semantics cannot be recovered from paper plus official source"
+  },
+  "solver": {
+    "type": "P1 exact float64 multiple-choice dynamic programming",
+    "tie_break": "caller image_id order; strict objective comparison; lexicographically smallest K vector",
+    "no_gt_input": true
+  },
+  "evaluation": {
+    "split": "DEV2000",
+    "gt_open_order": "all allocations/selections committed and SHA-recorded before DEV GT evaluation",
+    "coverage": "maximum-cardinality same-class matching at IoU>=0.50",
+    "quality": "frozen class-weighted mean maximum matching over IoU 0.50:0.05:0.95",
+    "coco": "full DEV2000; original detector score; IoU 0.50:0.05:0.95; maxDets [1,10,100]",
+    "bootstrap": {
+      "resamples": 5000,
+      "base_seed": 530002,
+      "unit": "complete allocation group for each fixed permutation and group size",
+      "r0_n40": "reuse frozen P1 bootstrap indices",
+      "other_configs": "deterministic seed derived from config identity before results",
+      "no_cross_permutation_pooling": true
+    }
+  },
+  "runtime": {
+    "profile_identity_key": "SHA256('LC_ALLOC_BENCH_P0_PROFILE_V1|' + image_id)",
+    "fit_images": 400,
+    "nested_blocks": "five fixed 80-image blocks, subdivided to 10/20/40/80",
+    "budget": 15,
+    "m11_seed": 530101,
+    "warmups_per_actual_group": 3,
+    "measurements_per_actual_group": 10,
+    "boundary": "host-resident raw policy-required candidate/native tensors through K and candidate record IDs",
+    "excluded": [
+      "detector",
+      "disk read",
+      "model/preprocessor load",
+      "GT evaluation",
+      "result save"
+    ],
+    "order_seed": 530003
+  },
+  "statuses_declared": {
+    "external_data_status": "PREPARED_NOT_RUN",
+    "second_detector_status": "PREPARED_NOT_RUN",
+    "m11_confirmation_status": "UNCHANGED"
+  }
+}

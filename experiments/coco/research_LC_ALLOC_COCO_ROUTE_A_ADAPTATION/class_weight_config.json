@@ -1,0 +1,41 @@
+{
+  "allocation_utility_weighted": true,
+  "classes": [
+    "person",
+    "bicycle",
+    "car",
+    "motorcycle",
+    "bus",
+    "train",
+    "truck",
+    "traffic light"
+  ],
+  "copied_exactly": true,
+  "frozen_before_training_and_val": true,
+  "source_fit_gt_counts": [
+    10741,
+    856,
+    81855,
+    312,
+    1362,
+    7,
+    3399,
+    21507
+  ],
+  "source_formula": "a_c=min(4,sqrt(n_max/max(n_c,1))); Z=sum(n_c*a_c)/sum(n_c); w_c=a_c/Z",
+  "source_path": "external_assets/research_LC_ALLOC_P1/models/class_weights.json",
+  "source_sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237",
+  "strategy": "KEEP_LC_CLASS_WEIGHTS",
+  "task": "LC-ALLOC-COCO-ROUTE-A-ADAPTATION",
+  "training_loss_weighted": false,
+  "weights": [
+    1.8699882874195148,
+    2.709559108889892,
+    0.677389777222473,
+    2.709559108889892,
+    2.709559108889892,
+    2.709559108889892,
+    2.709559108889892,
+    1.3215126572702414
+  ]
+}

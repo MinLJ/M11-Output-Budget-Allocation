@@ -1,0 +1,114 @@
+{
+  "bootstrap": {
+    "groups": 50,
+    "resamples": 5000,
+    "seed": 530002,
+    "unit": "frozen 40-image group"
+  },
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "calibration": {
+    "bounds": [
+      0.25,
+      4.0
+    ],
+    "fallback": "T=1 if BCE improvement <=1e-12",
+    "reliability_bins": "10 equal-width probability bins",
+    "role": "CALIBRATION",
+    "temperature": "one shared positive scalar per seed"
+  },
+  "candidate_asset_ids": {
+    "DEV": "9593aa3196f0eb89d9662c1b15ca7d912fb1480ac188dace30ea0a70d4869edd",
+    "TRAIN": "7353d41864b09df704714043479567b6459fbf18cf0a74d226fea7fba92b8031"
+  },
+  "candidate_pool": "raw road8_rank 1..100",
+  "dev_boundary": "prediction/allocation entrypoint has no DEV GT argument; selections hashed before separate evaluation",
+  "dev_gt_declared_sha256": "aead664f0d826b61a2f0ef190bb71b43af5b9ca45729ea467353680d3dcbe437",
+  "dp": {
+    "group_rule": "frozen R0 group_manifest; no cross-group borrowing",
+    "solver": "exact multiple-choice dynamic programming float64",
+    "tie_break": "process image_id ascending; exact objective ties choose the lexicographically smallest complete K vector"
+  },
+  "execution_stage": "TRAIN_PREPARATION",
+  "feature_schema_sha256": "8613d979ab6393c5d0524f1451e80329f60d0caa7a514ae256be4022d70096f7",
+  "high_budget_warning_rule": "apply the same AP/AR/class-recall engineering thresholds at K30 and K40",
+  "iou_thresholds": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.8500000000000001,
+    0.9,
+    0.95
+  ],
+  "k_bounds": [
+    5,
+    50
+  ],
+  "model": {
+    "architecture": "Linear(90,128)-LayerNorm-GELU-Linear(128,64)-GELU-Linear(64,10)",
+    "batch_size": 4096,
+    "early_stop_metric": "EARLY_STOP natural BCE; min_delta=0; earliest strict best",
+    "early_stop_patience": 5,
+    "learning_rate": 0.001,
+    "loss": "unweighted natural BCEWithLogitsLoss mean over rows and outputs",
+    "max_epochs": 30,
+    "optimizer": "AdamW",
+    "seeds": [
+      530101,
+      530102,
+      530103
+    ],
+    "weight_decay": 0.0001
+  },
+  "objective_negative_rule": "97.5% CI upper bound <0; otherwise unsupported result is UNCONFIRMED",
+  "quality_weight": "min(4,sqrt(nmax/max(nc,1))) normalized by FIT GT-weighted mean",
+  "release_manifest_sha256": "238d99770aaf7fd424dc11e16bde1dab4800c222ee197af06d0eeec3776acfa2",
+  "release_root": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1",
+  "release_verify_status": "SHARED_ASSET_VERIFY_PASS",
+  "restricted_scientific_splits_accessed": 0,
+  "role_rule": "SHA256('LC_ALLOC_P1_SPLIT|'+image_id), image_id; first8000/next1000/last1000",
+  "roles": {
+    "CALIBRATION": 1000,
+    "EARLY_STOP": 1000,
+    "FIT": 8000
+  },
+  "runtime_repeats": {
+    "cached_40_image_measured": 20,
+    "cached_40_image_warmup": 5
+  },
+  "table": {
+    "cell": "(positive_count+20*rank_prior)/(row_count+20)",
+    "fit_role": "FIT",
+    "rank_bins": [
+      "6-10",
+      "11-15",
+      "16-20",
+      "21-30",
+      "31-50"
+    ],
+    "rank_prior": "(positive_count+1)/(row_count+2)",
+    "score_bins": [
+      "[0,.05)",
+      "[.05,.1)",
+      "[.1,.2)",
+      "[.2,.5)",
+      "[.5,1]"
+    ]
+  },
+  "task": "LC-ALLOC-P1",
+  "train_gt_sha256": "afc7178693db7e14566aa82513a28113e3c93a1f6a33abc2d843ce3b390b0427",
+  "train_manifest_sha256": "a23735124aae4aec0872fcbb8071fff76de58993b5e53661a2f1db2428b5f1c7",
+  "variable_label_ranks": [
+    6,
+    50
+  ]
+}

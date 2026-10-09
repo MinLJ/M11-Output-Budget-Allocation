@@ -1,0 +1,75 @@
+{
+  "action": "output raw-score prefix ranks 1..K_i only",
+  "analysis_type": "post-confirmation DEV ablation",
+  "bootstrap": {
+    "groups": 50,
+    "resamples": 5000,
+    "seed": 530002
+  },
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "candidate_export": false,
+  "candidate_pool": "original road8_rank Top100 candidate records",
+  "detector_forward": false,
+  "exact_group_budget": true,
+  "groups": "frozen DEV 50x40 groups",
+  "k_bounds": [
+    5,
+    50
+  ],
+  "method_audit_root": "external_assets/review_LC_ALLOC_METHOD/run_20260925_130443",
+  "new_training_variants": [
+    "NO_EMBED",
+    "NO_PREFIX",
+    "MATCHABILITY_TARGET"
+  ],
+  "p1_root": "external_assets/research_LC_ALLOC_P1",
+  "p1b_root": "external_assets/research_LC_ALLOC_P1B",
+  "project_root": "external_assets/research_LC_ALLOC_ABLATION_P0",
+  "release_root": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1",
+  "restricted_splits_forbidden": [
+    "TEST",
+    "RESERVE",
+    "old holdout",
+    "Road1000"
+  ],
+  "runtime": {
+    "budget": 15,
+    "groups": 5,
+    "measurements_per_group": 20,
+    "order_seed": 530003,
+    "seed": 530101,
+    "warmups": 5
+  },
+  "seeds": [
+    530101,
+    530102,
+    530103
+  ],
+  "solver_control": "NEXT_SLOT_GREEDY on frozen FULL/M11 probabilities",
+  "task": "LC-ALLOC-ABLATION-P0",
+  "temperature": {
+    "bounds": [
+      0.25,
+      4.0
+    ],
+    "fit_role": "CALIBRATION",
+    "one_per_variant_seed": true
+  },
+  "test_access": 0,
+  "training": {
+    "architecture": "90-128-LayerNorm-GELU-64-GELU-10",
+    "batch_size": 4096,
+    "loss": "unweighted natural BCE mean",
+    "lr": 0.001,
+    "max_epochs": 30,
+    "optimizer": "AdamW",
+    "patience": 5,
+    "weight_decay": 0.0001
+  }
+}

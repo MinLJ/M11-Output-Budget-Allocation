@@ -1,0 +1,491 @@
+{
+  "assets": [
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/new_allocations_and_selections.parquet",
+      "purpose": "new_allocations_and_selections.parquet",
+      "size_bytes": 17851698,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/matchability_target_seed_530101.parquet",
+      "purpose": "matchability_target_seed_530101.parquet",
+      "size_bytes": 12409185,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/matchability_target_seed_530102.parquet",
+      "purpose": "matchability_target_seed_530102.parquet",
+      "size_bytes": 12413246,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/matchability_target_seed_530103.parquet",
+      "purpose": "matchability_target_seed_530103.parquet",
+      "size_bytes": 12405402,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/no_embed_seed_530101.parquet",
+      "purpose": "no_embed_seed_530101.parquet",
+      "size_bytes": 12409007,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/no_embed_seed_530102.parquet",
+      "purpose": "no_embed_seed_530102.parquet",
+      "size_bytes": 12411720,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/no_embed_seed_530103.parquet",
+      "purpose": "no_embed_seed_530103.parquet",
+      "size_bytes": 12406437,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/no_prefix_seed_530101.parquet",
+      "purpose": "no_prefix_seed_530101.parquet",
+      "size_bytes": 12408971,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/no_prefix_seed_530102.parquet",
+      "purpose": "no_prefix_seed_530102.parquet",
+      "size_bytes": 12417272,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/dev_predictions_and_selections/predictions/no_prefix_seed_530103.parquet",
+      "purpose": "no_prefix_seed_530103.parquet",
+      "size_bytes": 12410193,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/MATCHABILITY_TARGET/marginal_mlp_seed_530101.pt",
+      "purpose": "marginal_mlp_seed_530101.pt",
+      "size_bytes": 87291,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/MATCHABILITY_TARGET/marginal_mlp_seed_530102.pt",
+      "purpose": "marginal_mlp_seed_530102.pt",
+      "size_bytes": 87291,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/MATCHABILITY_TARGET/marginal_mlp_seed_530103.pt",
+      "purpose": "marginal_mlp_seed_530103.pt",
+      "size_bytes": 87291,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/NO_EMBED/marginal_mlp_seed_530101.pt",
+      "purpose": "marginal_mlp_seed_530101.pt",
+      "size_bytes": 87355,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/NO_EMBED/marginal_mlp_seed_530102.pt",
+      "purpose": "marginal_mlp_seed_530102.pt",
+      "size_bytes": 87355,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/NO_EMBED/marginal_mlp_seed_530103.pt",
+      "purpose": "marginal_mlp_seed_530103.pt",
+      "size_bytes": 87355,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/NO_PREFIX/marginal_mlp_seed_530101.pt",
+      "purpose": "marginal_mlp_seed_530101.pt",
+      "size_bytes": 87291,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/NO_PREFIX/marginal_mlp_seed_530102.pt",
+      "purpose": "marginal_mlp_seed_530102.pt",
+      "size_bytes": 87291,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/models/NO_PREFIX/marginal_mlp_seed_530103.pt",
+      "purpose": "marginal_mlp_seed_530103.pt",
+      "size_bytes": 87291,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/outputs/ablation_group_results.parquet",
+      "purpose": "ablation_group_results.parquet",
+      "size_bytes": 93947,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/outputs/ablation_per_image_results.parquet",
+      "purpose": "ablation_per_image_results.parquet",
+      "size_bytes": 1241219,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/outputs/runtime_implementation_parity.parquet",
+      "purpose": "runtime_implementation_parity.parquet",
+      "size_bytes": 8574,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_ABLATION_P0/outputs/runtime_upstream_parity.parquet",
+      "purpose": "runtime_upstream_parity.parquet",
+      "size_bytes": 5654,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/model_checkpoints/marginal_mlp_seed_630101.pt",
+      "purpose": "marginal_mlp_seed_630101.pt",
+      "size_bytes": 87907,
+      "existing_sha256": "c0e674fce24be87a1cd1e83f3effbacf864391c0ac6c7db109a566f4bac7de98",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/model_checkpoints/marginal_mlp_seed_630102.pt",
+      "purpose": "marginal_mlp_seed_630102.pt",
+      "size_bytes": 87907,
+      "existing_sha256": "55baf68272ac2822cc008d16fd9837df35446d7ac0a5a2d12da653b4ecf248a9",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/model_checkpoints/marginal_mlp_seed_630103.pt",
+      "purpose": "marginal_mlp_seed_630103.pt",
+      "size_bytes": 87907,
+      "existing_sha256": "936b72fdb0a0572cc741cb01d073eed7181c78ba93e766a4ee86b84a2563d1b3",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/pca_model.joblib",
+      "purpose": "pca_model.joblib",
+      "size_bytes": 35130,
+      "existing_sha256": "a7c71f29dde9e02b9d9dd8fa8229b3489cba6b5676622f62e38d80890990f07a",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/predicted_utility_curves.parquet",
+      "purpose": "predicted_utility_curves.parquet",
+      "size_bytes": 10975168,
+      "existing_sha256": "8b180222635a743565cbdf21ed026bc8a472226d005c238569f65908859e861d",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/scaler.joblib",
+      "purpose": "scaler.joblib",
+      "size_bytes": 4763,
+      "existing_sha256": "7c24eaf49bbe69a351d0b9b5d385c5e89b752697217fac7d6ecc574c740eea0a",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/selected_records.parquet",
+      "purpose": "selected_records.parquet",
+      "size_bytes": 148280750,
+      "existing_sha256": "9162413ffd8859563322860fedc63a666cc7ea583985b6460e109cb5b834008c",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/cache/train_role.npy",
+      "purpose": "train_role.npy",
+      "size_bytes": 5323043,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/cache/train_X_scaled.npy",
+      "purpose": "train_X_scaled.npy",
+      "size_bytes": 1916249528,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/cache/train_y.npy",
+      "purpose": "train_y.npy",
+      "size_bytes": 53229278,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/evaluation_outputs/adapted_m11_metrics_raw.parquet",
+      "purpose": "adapted_m11_metrics_raw.parquet",
+      "size_bytes": 574239,
+      "existing_sha256": "f5f0f72fd4805668c0b2a79bbc19ce715c729dc79093756ee43dc7760a57eb8b",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/train_labels.parquet",
+      "purpose": "train_labels.parquet",
+      "size_bytes": 231169603,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_COCO_ROUTE_B_SELECTION/selected_records.parquet",
+      "purpose": "selected_records.parquet",
+      "size_bytes": 148160733,
+      "existing_sha256": "b1c75d96292f4c6a8aaac5208b6b50ad261eb9da6d419aa18e79f8e69c0b8639",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/cache/dev_allocations.parquet",
+      "purpose": "dev_allocations.parquet",
+      "size_bytes": 110893,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/cache/dev_X_scaled.npy",
+      "purpose": "dev_X_scaled.npy",
+      "size_bytes": 32400128,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/cache/train_role.npy",
+      "purpose": "train_role.npy",
+      "size_bytes": 450128,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/cache/train_X_raw.npy",
+      "purpose": "train_X_raw.npy",
+      "size_bytes": 162000128,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/cache/train_X_scaled.npy",
+      "purpose": "train_X_scaled.npy",
+      "size_bytes": 162000128,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/cache/train_y.npy",
+      "purpose": "train_y.npy",
+      "size_bytes": 4500128,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/dev_allocations_and_selections.parquet",
+      "purpose": "dev_allocations_and_selections.parquet",
+      "size_bytes": 216494781,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/dev_predictions.parquet",
+      "purpose": "dev_predictions.parquet",
+      "size_bytes": 30214282,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/models/feature_scaler.joblib",
+      "purpose": "feature_scaler.joblib",
+      "size_bytes": 4763,
+      "existing_sha256": "9d3da8c36b3b5a2cf8c8ab2deb963e3595c313b4d13f6d3e7fb8c27d923ced6d",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/models/marginal_mlp_seed_530101.pt",
+      "purpose": "marginal_mlp_seed_530101.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "cb9732dbc828eff968b96294ab541b925eacc0d57472faf5a11f4bb246597aa8",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/models/marginal_mlp_seed_530102.pt",
+      "purpose": "marginal_mlp_seed_530102.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "7b60f0f4d9ef5fc63941ed61398086ee7c82abf3c928a0db7b8c905f27c20996",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/models/marginal_mlp_seed_530103.pt",
+      "purpose": "marginal_mlp_seed_530103.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "890cf82a9cf654d6b44816b2111d51e86ee84ba1f35050b299c3473a17d0b6b8",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/models/pca32.joblib",
+      "purpose": "pca32.joblib",
+      "size_bytes": 35130,
+      "existing_sha256": "12d8e656d53bdad54e498125993f437f77d874e97be38ffe29a0c969e1ff41af",
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/models/pca_sample_manifest.parquet",
+      "purpose": "pca_sample_manifest.parquet",
+      "size_bytes": 7980248,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/outputs/bootstrap_group_indices.npy",
+      "purpose": "bootstrap_group_indices.npy",
+      "size_bytes": 500128,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/outputs/group_results.parquet",
+      "purpose": "group_results.parquet",
+      "size_bytes": 60874,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/train_labels.parquet",
+      "purpose": "train_labels.parquet",
+      "size_bytes": 19623577,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "research_LC_ALLOC_P1/train_role_split.parquet",
+      "purpose": "train_role_split.parquet",
+      "size_bytes": 505045,
+      "existing_sha256": null,
+      "checksum_source": "Previously saved asset binding; not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    }
+  ],
+  "download_status": "No public asset download is established in this batch. Exact missing payloads must be obtained under their original permissions."
+}

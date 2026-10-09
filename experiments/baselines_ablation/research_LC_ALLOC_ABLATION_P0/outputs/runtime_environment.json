@@ -1,0 +1,33 @@
+{
+  "budget": 15,
+  "cuda": "12.8",
+  "detector_timing_included": false,
+  "device": "cuda",
+  "elapsed_seconds": 90.26236239999707,
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "main_boundary": "host-resident policy-required raw state through K and ordered record IDs",
+  "measured_per_condition_group": 20,
+  "no_embed_skips": [
+    "embedding read",
+    "embedding gather",
+    "PCA transform",
+    "embedding norm"
+  ],
+  "no_prefix_skips": [
+    "prefix XYXY extraction",
+    "same-class search",
+    "prefix IoU",
+    "prefix center distance",
+    "all 12 explicit prefix statistics"
+  ],
+  "order_seed": 530003,
+  "os": "Windows-10-10.0.26200-SP0",
+  "profile_groups": 5,
+  "profile_images": 200,
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+  "source_role": "FIT",
+  "torch": "2.11.0+cu128",
+  "torch_num_interop_threads": 12,
+  "torch_num_threads": 12,
+  "warmups_per_condition_group": 5
+}

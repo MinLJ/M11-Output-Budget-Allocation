@@ -1,0 +1,2150 @@
+{
+  "scope": "Lejian initial publication copy; historical algorithms retained by branch",
+  "source_identity_convention": "Historical original SHA and release-copy SHA are separate; path-normalized configs are archival templates.",
+  "files": [
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/scripts/dp_solver.py",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "scripts/dp_solver.py",
+      "historical_source_sha256": "f230626580575e256576e1be92ca1ad409a57c9d725202f2b364f78dbca0c317",
+      "release_copy_sha256": "f230626580575e256576e1be92ca1ad409a57c9d725202f2b364f78dbca0c317",
+      "bytes": 26487,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/scripts/p1_core.py",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "scripts/p1_core.py",
+      "historical_source_sha256": "fd3daa06e363848c48685511ac4bd91189dea3cd82b7dbcc83748a1b3d0292f0",
+      "release_copy_sha256": "fd3daa06e363848c48685511ac4bd91189dea3cd82b7dbcc83748a1b3d0292f0",
+      "bytes": 21103,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/scripts/release_io.py",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "scripts/release_io.py",
+      "historical_source_sha256": "2ac7b91ce4f8734248913e6b1bc5bc87dae57b25bc890ce2819dde0a1281b842",
+      "release_copy_sha256": "2ac7b91ce4f8734248913e6b1bc5bc87dae57b25bc890ce2819dde0a1281b842",
+      "bytes": 6608,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/scripts/prepare_train.py",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "scripts/prepare_train.py",
+      "historical_source_sha256": "9e5fe5522da6a08f08daa9265c2fe9c25c702d9921e1647ab957ef1c9104f5b8",
+      "release_copy_sha256": "9e5fe5522da6a08f08daa9265c2fe9c25c702d9921e1647ab957ef1c9104f5b8",
+      "bytes": 22658,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/scripts/train_models.py",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "scripts/train_models.py",
+      "historical_source_sha256": "58358b2bcc371d4a4724da90a9bbe6a3199f157d90ec5c5f40e98a793b92e1bc",
+      "release_copy_sha256": "58358b2bcc371d4a4724da90a9bbe6a3199f157d90ec5c5f40e98a793b92e1bc",
+      "bytes": 7867,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/scripts/predict_allocate.py",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "scripts/predict_allocate.py",
+      "historical_source_sha256": "3930ea1475b71f9b3b45ff37a23bda1aee7f99d41ace43cf9355aa7ce52a989f",
+      "release_copy_sha256": "3930ea1475b71f9b3b45ff37a23bda1aee7f99d41ace43cf9355aa7ce52a989f",
+      "bytes": 15461,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/scripts/evaluate_p1.py",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "scripts/evaluate_p1.py",
+      "historical_source_sha256": "1a885d9c23ed30cbd9a2f967a87247a7a46c9e3fd9d2c630bfc40d1e57266ddb",
+      "release_copy_sha256": "1a885d9c23ed30cbd9a2f967a87247a7a46c9e3fd9d2c630bfc40d1e57266ddb",
+      "bytes": 18349,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/scripts/summarize_results.py",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "scripts/summarize_results.py",
+      "historical_source_sha256": "b034189315a0874a789d9f219896ececd4fab1f48a9d9bd03043608484d14034",
+      "release_copy_sha256": "b034189315a0874a789d9f219896ececd4fab1f48a9d9bd03043608484d14034",
+      "bytes": 25956,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/feature_schema.json",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "feature_schema.json",
+      "historical_source_sha256": "8613d979ab6393c5d0524f1451e80329f60d0caa7a514ae256be4022d70096f7",
+      "release_copy_sha256": "8613d979ab6393c5d0524f1451e80329f60d0caa7a514ae256be4022d70096f7",
+      "bytes": 35690,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/run_config.json",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "run_config.json",
+      "historical_source_sha256": "40d0510baa868f0130921dbe0211319875f4a401d3abf3f923be7f59271163ef",
+      "release_copy_sha256": "85bbbfa2f118b682f6449f9022bd5d37a22290a01c539a6cb53b7679660725ea",
+      "bytes": 3503,
+      "changes": [
+        {
+          "field": ".release_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/training_history.csv",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "training_history.csv",
+      "historical_source_sha256": "b41c142d413f5022207c1e0935aeaf64b9318ac054d48bee43f91816a2fcb566",
+      "release_copy_sha256": "b41c142d413f5022207c1e0935aeaf64b9318ac054d48bee43f91816a2fcb566",
+      "bytes": 4107,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/models/class_weights.json",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "models/class_weights.json",
+      "historical_source_sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237",
+      "release_copy_sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237",
+      "bytes": 611,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/models/training_summary.json",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "models/training_summary.json",
+      "historical_source_sha256": "f1a00a979da26993bb6e9da7da33b28ac1048939502616676d59490462023f09",
+      "release_copy_sha256": "f1a00a979da26993bb6e9da7da33b28ac1048939502616676d59490462023f09",
+      "bytes": 2528,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/models/temperature_seed_530101.json",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "models/temperature_seed_530101.json",
+      "historical_source_sha256": "e321ba3385d8eb7260d36164f13c401e89750ec35e5d590ebffe29a98aee4b03",
+      "release_copy_sha256": "e321ba3385d8eb7260d36164f13c401e89750ec35e5d590ebffe29a98aee4b03",
+      "bytes": 365,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/models/temperature_seed_530102.json",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "models/temperature_seed_530102.json",
+      "historical_source_sha256": "d54c68323d16179d8e78a125cabaa247d1303c8f3867871f1967ec1996827501",
+      "release_copy_sha256": "d54c68323d16179d8e78a125cabaa247d1303c8f3867871f1967ec1996827501",
+      "bytes": 365,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/models/temperature_seed_530103.json",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "models/temperature_seed_530103.json",
+      "historical_source_sha256": "ad4805b6566ab24eb15e0b44f9a01d01908e493dd4307c27c2e52e0afd1341da",
+      "release_copy_sha256": "ad4805b6566ab24eb15e0b44f9a01d01908e493dd4307c27c2e52e0afd1341da",
+      "bytes": 366,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/main_results.csv",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "main_results.csv",
+      "historical_source_sha256": "21651f6e12d09b9d9a215fd4856e32e5a7639ecdf2db38a4b9bce4925426ff43",
+      "release_copy_sha256": "21651f6e12d09b9d9a215fd4856e32e5a7639ecdf2db38a4b9bce4925426ff43",
+      "bytes": 13654,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/class_results.csv",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "class_results.csv",
+      "historical_source_sha256": "efb591efc7d8478e2aaba23ac0b5184e1e3a3883a2a365f45500a1d95f69d8c9",
+      "release_copy_sha256": "efb591efc7d8478e2aaba23ac0b5184e1e3a3883a2a365f45500a1d95f69d8c9",
+      "bytes": 75401,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/rtdetr_bdd/research_LC_ALLOC_P1/comparisons_and_bootstrap.csv",
+      "source_project": "research_LC_ALLOC_P1",
+      "source_relative_path": "comparisons_and_bootstrap.csv",
+      "historical_source_sha256": "04abf448c9f116ea56a0e2f96a6a21c3b0e23bd951a7f48670bea19c6eda8a6b",
+      "release_copy_sha256": "04abf448c9f116ea56a0e2f96a6a21c3b0e23bd951a7f48670bea19c6eda8a6b",
+      "bytes": 28640,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1A/scripts/allocate_ablation.py",
+      "source_project": "research_LC_ALLOC_P1A",
+      "source_relative_path": "scripts/allocate_ablation.py",
+      "historical_source_sha256": "5c194a0585c53a5c342f56fd3e97ff48ae76474ff1961058397dd1bc22eb552b",
+      "release_copy_sha256": "5c194a0585c53a5c342f56fd3e97ff48ae76474ff1961058397dd1bc22eb552b",
+      "bytes": 16302,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1A/scripts/evaluate_ablation.py",
+      "source_project": "research_LC_ALLOC_P1A",
+      "source_relative_path": "scripts/evaluate_ablation.py",
+      "historical_source_sha256": "b9d7ed3cc457c5bf38cc64d2c7156fea052e5bd6f55b6c80846e1d1d30d641c0",
+      "release_copy_sha256": "b9d7ed3cc457c5bf38cc64d2c7156fea052e5bd6f55b6c80846e1d1d30d641c0",
+      "bytes": 22093,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1A/scripts/summarize_p1a.py",
+      "source_project": "research_LC_ALLOC_P1A",
+      "source_relative_path": "scripts/summarize_p1a.py",
+      "historical_source_sha256": "81f201c10bac431b5a1ac42415fc9c4d860504aa5029748ff5d0bab8306799a8",
+      "release_copy_sha256": "81f201c10bac431b5a1ac42415fc9c4d860504aa5029748ff5d0bab8306799a8",
+      "bytes": 29592,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1A/run_config.json",
+      "source_project": "research_LC_ALLOC_P1A",
+      "source_relative_path": "run_config.json",
+      "historical_source_sha256": "4e68bdef58bd51912aa0a620fabdf2afd731e55548603e97251540dff1da16d9",
+      "release_copy_sha256": "99259e3e3545d2175fdd28b6ccac4e647341d0bccd8fe3b4040d2fff361a6261",
+      "bytes": 5065,
+      "changes": [
+        {
+          "field": ".input_bindings.candidate_asset_identity.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_allocations.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_class_weights.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_dev_predictions.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_feature_schema.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_run_config.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_selections.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.release_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_bindings[0].model_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_bindings[0].temperature_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_bindings[1].model_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_bindings[1].temperature_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_bindings[2].model_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_bindings[2].temperature_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".p1_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".pca.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".release_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".scaler.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1A/ablation_main_results.csv",
+      "source_project": "research_LC_ALLOC_P1A",
+      "source_relative_path": "ablation_main_results.csv",
+      "historical_source_sha256": "014a70aa366843fb9802bcf6ac60faed696aebe160afb6bb055a854b458361ff",
+      "release_copy_sha256": "014a70aa366843fb9802bcf6ac60faed696aebe160afb6bb055a854b458361ff",
+      "bytes": 23276,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1A/ablation_class_results.csv",
+      "source_project": "research_LC_ALLOC_P1A",
+      "source_relative_path": "ablation_class_results.csv",
+      "historical_source_sha256": "918c49b709cb4526e8894ff116e140f7299f6a18a23a088363ed1bf9a041bac6",
+      "release_copy_sha256": "918c49b709cb4526e8894ff116e140f7299f6a18a23a088363ed1bf9a041bac6",
+      "bytes": 111706,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1A/ablation_bootstrap.csv",
+      "source_project": "research_LC_ALLOC_P1A",
+      "source_relative_path": "ablation_bootstrap.csv",
+      "historical_source_sha256": "fa05307b50aa69e312c61be50d559da8bdd70d340c4ba5d2d0a7c4a2c89640ce",
+      "release_copy_sha256": "fa05307b50aa69e312c61be50d559da8bdd70d340c4ba5d2d0a7c4a2c89640ce",
+      "bytes": 17622,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1A/ablation_contrasts.csv",
+      "source_project": "research_LC_ALLOC_P1A",
+      "source_relative_path": "ablation_contrasts.csv",
+      "historical_source_sha256": "07943e3c62ac6df7a1e9480f30e95fde71bc3bd28ec29a8df7668e43b8962fe3",
+      "release_copy_sha256": "07943e3c62ac6df7a1e9480f30e95fde71bc3bd28ec29a8df7668e43b8962fe3",
+      "bytes": 122941,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1B/scripts/allocate_weighted_score.py",
+      "source_project": "research_LC_ALLOC_P1B",
+      "source_relative_path": "scripts/allocate_weighted_score.py",
+      "historical_source_sha256": "4f3bda79b3f446d5fbf246cec3bd3ea3eaa9f3d7e180d6c9eff31a74a05aefe1",
+      "release_copy_sha256": "4f3bda79b3f446d5fbf246cec3bd3ea3eaa9f3d7e180d6c9eff31a74a05aefe1",
+      "bytes": 12812,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1B/run_config.json",
+      "source_project": "research_LC_ALLOC_P1B",
+      "source_relative_path": "run_config.json",
+      "historical_source_sha256": "5b103264c1b48a4ae28e060dac35a0d5c7f33e89c9726bf0205ee2ba2282ca3f",
+      "release_copy_sha256": "535bcb6f45e8e163e7be8c30caa9b90917b0d9b9f43be480edc75eb0d7d7e141",
+      "bytes": 7295,
+      "changes": [
+        {
+          "field": ".bootstrap.indices_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_asset_identity.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_class_weights.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_dev_allocations.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_dev_predictions.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_exact_dp.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_feature_schema.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_run_config.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1a_run_config.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.release_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_preprocessor_bindings.models[0].path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_preprocessor_bindings.models[0].temperature_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_preprocessor_bindings.models[1].path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_preprocessor_bindings.models[1].temperature_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_preprocessor_bindings.models[2].path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_preprocessor_bindings.models[2].temperature_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_preprocessor_bindings.pca32.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".model_preprocessor_bindings.scaler.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".p1_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".p1a_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".release_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".reused_science_bindings.bootstrap_indices.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".reused_science_bindings.p1a_class.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".reused_science_bindings.p1a_group.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".reused_science_bindings.p1a_main.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".reused_science_bindings.p1a_per_image.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".reused_science_bindings.r0_runtime_table.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".reused_science_bindings.r0_timing_code.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".runtime_protocol.profile_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1B/baseline_comparison_main.csv",
+      "source_project": "research_LC_ALLOC_P1B",
+      "source_relative_path": "baseline_comparison_main.csv",
+      "historical_source_sha256": "f9519e1a7fd219fe724e878934fae899f7f3f44a9f6ee2a375bb6f1c071b3965",
+      "release_copy_sha256": "f9519e1a7fd219fe724e878934fae899f7f3f44a9f6ee2a375bb6f1c071b3965",
+      "bytes": 14204,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1B/baseline_class_results.csv",
+      "source_project": "research_LC_ALLOC_P1B",
+      "source_relative_path": "baseline_class_results.csv",
+      "historical_source_sha256": "4e96ed0e131bd7fff85f80e3779cc7944899cf68ad1f4135e69db1d9192650f3",
+      "release_copy_sha256": "4e96ed0e131bd7fff85f80e3779cc7944899cf68ad1f4135e69db1d9192650f3",
+      "bytes": 68876,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P1B/baseline_comparisons_bootstrap.csv",
+      "source_project": "research_LC_ALLOC_P1B",
+      "source_relative_path": "baseline_comparisons_bootstrap.csv",
+      "historical_source_sha256": "cdcd35413310e1a2a1356b465552a8fae0b151bf3c1f2da42b18a1b64f067973",
+      "release_copy_sha256": "cdcd35413310e1a2a1356b465552a8fae0b151bf3c1f2da42b18a1b64f067973",
+      "bytes": 10908,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P2/scripts/fit_and_allocate.py",
+      "source_project": "research_LC_ALLOC_P2",
+      "source_relative_path": "scripts/fit_and_allocate.py",
+      "historical_source_sha256": "c556756aad23e9ed19b77820f6ce206c5573f39d13e148c6b984fd8a255d2175",
+      "release_copy_sha256": "c556756aad23e9ed19b77820f6ce206c5573f39d13e148c6b984fd8a255d2175",
+      "bytes": 18586,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P2/run_config.json",
+      "source_project": "research_LC_ALLOC_P2",
+      "source_relative_path": "run_config.json",
+      "historical_source_sha256": "64d6f900a7bec04417000b1584cadba918541d3905b7f357cdee9498e2b849e0",
+      "release_copy_sha256": "2595a4ef30f5ee99748b37c774f9211677bcd0e24295bb8108baf4051de409f4",
+      "bytes": 6532,
+      "changes": [
+        {
+          "field": ".frozen_candidate.candidate_freeze_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".binding.eff_audit_frozen_binding_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".inputs.p1_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".inputs.p1a_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".inputs.p1b_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".inputs.eff_audit_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".inputs.release_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".inputs.train_labels_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".inputs.dev_predictions_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".inputs.bootstrap_indices_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P2/environment.json",
+      "source_project": "research_LC_ALLOC_P2",
+      "source_relative_path": "environment.json",
+      "historical_source_sha256": "046a96e3dd1c01949e6b3cfc64f5e26922b4ffa8270099ecbfb7f92c6648b24d",
+      "release_copy_sha256": "f56920f2edbd79e7a90cc3c51b27c9419871ce0127a7767279a29fe0f2e12702",
+      "bytes": 1403,
+      "changes": [
+        {
+          "field": ".python_environment",
+          "action": "omit local interpreter directory; versions retained"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P2/models/calibration_parameters.json",
+      "source_project": "research_LC_ALLOC_P2",
+      "source_relative_path": "models/calibration_parameters.json",
+      "historical_source_sha256": "f36ef64e62de555464bf0eb3ee865e8f97941fa287380e6bc538ea1c00ab3c92",
+      "release_copy_sha256": "a9b48259cb18576189244c7dbc65e40a4735199f751360116c9ac27f07157ef3",
+      "bytes": 5397,
+      "changes": [
+        {
+          "field": ".isotonic_parameters_npz",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P2/baseline_comparison.csv",
+      "source_project": "research_LC_ALLOC_P2",
+      "source_relative_path": "baseline_comparison.csv",
+      "historical_source_sha256": "576ad62a99f2bc1e2e27f525cdd106b0718e4b9367573e6d8e57339c254c391a",
+      "release_copy_sha256": "576ad62a99f2bc1e2e27f525cdd106b0718e4b9367573e6d8e57339c254c391a",
+      "bytes": 33073,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P2/baseline_class_results.csv",
+      "source_project": "research_LC_ALLOC_P2",
+      "source_relative_path": "baseline_class_results.csv",
+      "historical_source_sha256": "fa4a4388d3ecd71e725fdd6128597957d56d99ce6404cfa2c3fdd2949a777d26",
+      "release_copy_sha256": "fa4a4388d3ecd71e725fdd6128597957d56d99ce6404cfa2c3fdd2949a777d26",
+      "bytes": 52681,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_P2/calibration_results.csv",
+      "source_project": "research_LC_ALLOC_P2",
+      "source_relative_path": "calibration_results.csv",
+      "historical_source_sha256": "3a8b1ee44715f5c322e9637b30647ccf011cbcccb2631ad87ab2bc60574ae991",
+      "release_copy_sha256": "3a8b1ee44715f5c322e9637b30647ccf011cbcccb2631ad87ab2bc60574ae991",
+      "bytes": 11083,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/scripts/common.py",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "scripts/common.py",
+      "historical_source_sha256": "51f01f938bc17555fb434953ca88c0107e491aac458881a9d013cc7f09b73756",
+      "release_copy_sha256": "1e3355fa5040ccf5b22f7e591ea1aa4a6486d6e55ef1568328e8f9e2535fc671",
+      "bytes": 7217,
+      "changes": [
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P1"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P1A"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P1B"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_R0"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/scripts/allocate_external_baseline.py",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "scripts/allocate_external_baseline.py",
+      "historical_source_sha256": "341d1f7bcc7132b8a09dcea8263b1ac577138595853253213c3cee13a469d3d7",
+      "release_copy_sha256": "341d1f7bcc7132b8a09dcea8263b1ac577138595853253213c3cee13a469d3d7",
+      "bytes": 11563,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/scripts/allocate_groups.py",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "scripts/allocate_groups.py",
+      "historical_source_sha256": "e57ceaf34aab62fa24865076a625e853aecdc3d93f0a77eba87ec692121c200a",
+      "release_copy_sha256": "e57ceaf34aab62fa24865076a625e853aecdc3d93f0a77eba87ec692121c200a",
+      "bytes": 10208,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/scripts/prepare_groups.py",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "scripts/prepare_groups.py",
+      "historical_source_sha256": "a3086dc009a00aafd62492b6dfb847e49d4736fad2a7fbea183333400968aade",
+      "release_copy_sha256": "a3086dc009a00aafd62492b6dfb847e49d4736fad2a7fbea183333400968aade",
+      "bytes": 3732,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/scripts/evaluate_bench.py",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "scripts/evaluate_bench.py",
+      "historical_source_sha256": "5f223228eaa032f86952d202cca950d848677d856718a1fb86e5830c5596994f",
+      "release_copy_sha256": "330c238c1a71ce88753a8c41166ee15405201ab2742cf9d225ac7b09b0e334f2",
+      "bytes": 37641,
+      "changes": [
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_ENVIRONMENT_ROOT",
+          "suffix": "envs/aop_detr/Lib/site-packages"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/scripts/summarize.py",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "scripts/summarize.py",
+      "historical_source_sha256": "2535944429142e3e4042205ca37a0a360c5955678e76a80be475748a9f6450e4",
+      "release_copy_sha256": "2535944429142e3e4042205ca37a0a360c5955678e76a80be475748a9f6450e4",
+      "bytes": 14643,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/scripts/profile_runtime.py",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "scripts/profile_runtime.py",
+      "historical_source_sha256": "1f8fe49b4e1040ee80ac797e77dac4c34871e15a90a702fe775409424719d076",
+      "release_copy_sha256": "eecdaf09bfba38134a1d79c20c700dcd3a8cedd8e67a2771dec053a726e9d648",
+      "bytes": 15413,
+      "changes": [
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P1"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P1B"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_R0"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/run_config.json",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "run_config.json",
+      "historical_source_sha256": "10418256018a56432c0af22eda981f73497364a81bf306626291910a0ba3ccb3",
+      "release_copy_sha256": "789f96ecebd3ae48a284d2df26f23be65eb0025d0901151a497857ca12e443da",
+      "bytes": 7010,
+      "changes": [
+        {
+          "field": ".project_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".frozen_inputs.p1_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".frozen_inputs.p1a_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".frozen_inputs.p1b_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".frozen_inputs.p2_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".frozen_inputs.ablation_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".frozen_inputs.method_audit_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".frozen_inputs.release_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/calibrator_parameters.json",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "calibrator_parameters.json",
+      "historical_source_sha256": "8687d6070e4a4ca3e1671bf18a27faebde212663e34964d3e0957cf22a92d08e",
+      "release_copy_sha256": "a09d60518113083c1002625013df6185739ee281dfdfd2f06e6ab9543a02620b",
+      "bytes": 7640,
+      "changes": [
+        {
+          "field": ".source_files.official_coco_calibration.py.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".source_files.official_platt_scaling.py.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".source_files.official_utils.py.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".source_files.train_gt.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".source_files.train_role_split.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/external_baseline_results.csv",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "external_baseline_results.csv",
+      "historical_source_sha256": "eb7aa379ce5ce18d152d73079dd9ab59ca2f9b8c9f0da5403896aee03032feba",
+      "release_copy_sha256": "eb7aa379ce5ce18d152d73079dd9ab59ca2f9b8c9f0da5403896aee03032feba",
+      "bytes": 13980,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/external_baseline_comparisons.csv",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "external_baseline_comparisons.csv",
+      "historical_source_sha256": "c006bd55fcdfa042097b066cbf32f360f7e1f2ecf031ccac4ee5144f851b5a74",
+      "release_copy_sha256": "c006bd55fcdfa042097b066cbf32f360f7e1f2ecf031ccac4ee5144f851b5a74",
+      "bytes": 53564,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/group_robustness_main.csv",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "group_robustness_main.csv",
+      "historical_source_sha256": "90dd16b5c01526a8a7a68ef6df25d6acabfc0c71c96b0cb655397debfe118b3f",
+      "release_copy_sha256": "90dd16b5c01526a8a7a68ef6df25d6acabfc0c71c96b0cb655397debfe118b3f",
+      "bytes": 91030,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/group_robustness_comparisons.csv",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "group_robustness_comparisons.csv",
+      "historical_source_sha256": "3eb9d1c0d3d713ad5b0adc2863639cff03326f242684659e3b6c1e9139d38e1e",
+      "release_copy_sha256": "3eb9d1c0d3d713ad5b0adc2863639cff03326f242684659e3b6c1e9139d38e1e",
+      "bytes": 315806,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/group_robustness_class.csv",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "group_robustness_class.csv",
+      "historical_source_sha256": "4f543ca3ebd44cc1e30c2f2f505b6de6a5d1c0b9e2e19905a3fc63bcc3aa5ca1",
+      "release_copy_sha256": "4f543ca3ebd44cc1e30c2f2f505b6de6a5d1c0b9e2e19905a3fc63bcc3aa5ca1",
+      "bytes": 508715,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/runtime_summary.csv",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "runtime_summary.csv",
+      "historical_source_sha256": "d8fd198cb487d1edd80fb758d93f887e9e1d115e5be301cfbd2bd232718d1723",
+      "release_copy_sha256": "d8fd198cb487d1edd80fb758d93f887e9e1d115e5be301cfbd2bd232718d1723",
+      "bytes": 3324,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/runtime_samples.csv",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "runtime_samples.csv",
+      "historical_source_sha256": "0448e94571bf86e3535009c3c2ecdeb1be934a17b2a47730e314c42992196e8f",
+      "release_copy_sha256": "0448e94571bf86e3535009c3c2ecdeb1be934a17b2a47730e314c42992196e8f",
+      "bytes": 371775,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_BENCH_P0/outputs/runtime_environment.json",
+      "source_project": "research_LC_ALLOC_BENCH_P0",
+      "source_relative_path": "outputs/runtime_environment.json",
+      "historical_source_sha256": "99c7c6af13a99388425fcfbbcba9ee11fc91bdb3d2bdcdccd1eb9369e4cf5a9a",
+      "release_copy_sha256": "99c7c6af13a99388425fcfbbcba9ee11fc91bdb3d2bdcdccd1eb9369e4cf5a9a",
+      "bytes": 1052,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/scripts/common.py",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "scripts/common.py",
+      "historical_source_sha256": "e6508ee77bbee1c5bfe2b410933b75f7bfcb7bf681f42eeeceefb7beab2e7c15",
+      "release_copy_sha256": "e6508ee77bbee1c5bfe2b410933b75f7bfcb7bf681f42eeeceefb7beab2e7c15",
+      "bytes": 4000,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/scripts/prepare_inputs.py",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "scripts/prepare_inputs.py",
+      "historical_source_sha256": "e8fb5dcca5a09e9be7a6596f9e61054d88d890a86f52cfe5aca9c4a5b77ce095",
+      "release_copy_sha256": "e8fb5dcca5a09e9be7a6596f9e61054d88d890a86f52cfe5aca9c4a5b77ce095",
+      "bytes": 13152,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/scripts/train_variants.py",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "scripts/train_variants.py",
+      "historical_source_sha256": "5a727af949724d32c6ab8a6b77a9f91e31dd56462f90af2b7ea448ad8c19f773",
+      "release_copy_sha256": "5a727af949724d32c6ab8a6b77a9f91e31dd56462f90af2b7ea448ad8c19f773",
+      "bytes": 9520,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/scripts/predict_allocate.py",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "scripts/predict_allocate.py",
+      "historical_source_sha256": "b3d2e8f425b2c4dd889de0ce281c02cb4e27d317d1ca484b81a1bb5d8eb33f3b",
+      "release_copy_sha256": "b3d2e8f425b2c4dd889de0ce281c02cb4e27d317d1ca484b81a1bb5d8eb33f3b",
+      "bytes": 18702,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/scripts/evaluate_ablations.py",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "scripts/evaluate_ablations.py",
+      "historical_source_sha256": "cd734f1fb017440604495451d3d0997076e79490138ad836138c8eab0eee631d",
+      "release_copy_sha256": "cd734f1fb017440604495451d3d0997076e79490138ad836138c8eab0eee631d",
+      "bytes": 23902,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/scripts/profile_runtime.py",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "scripts/profile_runtime.py",
+      "historical_source_sha256": "6a793bab98f77ae46e5987e98f3d307e166fc70aa7a81d6e9c9d591aad485591",
+      "release_copy_sha256": "6a793bab98f77ae46e5987e98f3d307e166fc70aa7a81d6e9c9d591aad485591",
+      "bytes": 32603,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/scripts/summarize_ablations.py",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "scripts/summarize_ablations.py",
+      "historical_source_sha256": "bd66bf43c49d3d0ad733794a0b540d35f757f9702b689ecfdfc8a8e8d1ce648d",
+      "release_copy_sha256": "bd66bf43c49d3d0ad733794a0b540d35f757f9702b689ecfdfc8a8e8d1ce648d",
+      "bytes": 9008,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/run_config.json",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "run_config.json",
+      "historical_source_sha256": "0dbbc61dcf17d468a2d60fe880c35c65aa8a70fc37ef0698dce007fc5ff9c6f3",
+      "release_copy_sha256": "18b943be77a4469517701b8c41ae815064b7b2e6c868bfa6e3acc5a9dea1b49f",
+      "bytes": 1803,
+      "changes": [
+        {
+          "field": ".method_audit_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".p1_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".p1b_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".project_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".release_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/feature_masks.json",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "feature_masks.json",
+      "historical_source_sha256": "dd6d4b5d27ecafb71554cccd0c1a9627e48939b08621cf36a3de4ae0165afc67",
+      "release_copy_sha256": "a719d3c9c146192268eb2b418f112d2be963bc541fcddd2575fe26762984f69a",
+      "bytes": 2430,
+      "changes": [
+        {
+          "field": ".schema_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/ablation_main_results.csv",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "ablation_main_results.csv",
+      "historical_source_sha256": "c55e99bd419ed5767ecb5bc7c6e6fec9cf2648ad3fe30833363cb6df6d706f42",
+      "release_copy_sha256": "c55e99bd419ed5767ecb5bc7c6e6fec9cf2648ad3fe30833363cb6df6d706f42",
+      "bytes": 27373,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/ablation_comparisons.csv",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "ablation_comparisons.csv",
+      "historical_source_sha256": "aca1be0c2d7cfcc608cfea37a9695839ffe035d4c9f04416267e8b409f99bac2",
+      "release_copy_sha256": "aca1be0c2d7cfcc608cfea37a9695839ffe035d4c9f04416267e8b409f99bac2",
+      "bytes": 217134,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/ablation_class_results.csv",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "ablation_class_results.csv",
+      "historical_source_sha256": "1c548ef064a5f4e9c725605a3708014d500d14613a71613ec56efb670637c855",
+      "release_copy_sha256": "1c548ef064a5f4e9c725605a3708014d500d14613a71613ec56efb670637c855",
+      "bytes": 166004,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/solver_objective_gap.csv",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "solver_objective_gap.csv",
+      "historical_source_sha256": "d2dda6de482d5d02c66728d38d1b014243e92277cd76a1c9942e97513d4fc931",
+      "release_copy_sha256": "d2dda6de482d5d02c66728d38d1b014243e92277cd76a1c9942e97513d4fc931",
+      "bytes": 108537,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/runtime_summary.csv",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "runtime_summary.csv",
+      "historical_source_sha256": "60141455b115a0bcf8d31ce6bfe74f1e744348710eaa3c5a578e46e3b798c755",
+      "release_copy_sha256": "60141455b115a0bcf8d31ce6bfe74f1e744348710eaa3c5a578e46e3b798c755",
+      "bytes": 3202,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/runtime_samples.csv",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "runtime_samples.csv",
+      "historical_source_sha256": "c7e51df0cf419f0c4de99373fb11753b2692d1b3b079390d5fba1d807e52cb55",
+      "release_copy_sha256": "c7e51df0cf419f0c4de99373fb11753b2692d1b3b079390d5fba1d807e52cb55",
+      "bytes": 113441,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/models/training_summary.json",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "models/training_summary.json",
+      "historical_source_sha256": "fe463610feeb28adedf8d65bf47691adda49a5626c725fa2c16f628785d220d6",
+      "release_copy_sha256": "fe463610feeb28adedf8d65bf47691adda49a5626c725fa2c16f628785d220d6",
+      "bytes": 7361,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/baselines_ablation/research_LC_ALLOC_ABLATION_P0/outputs/runtime_environment.json",
+      "source_project": "research_LC_ALLOC_ABLATION_P0",
+      "source_relative_path": "outputs/runtime_environment.json",
+      "historical_source_sha256": "e6d1dff1b7235b89239a8dd13200949d26bfe000edd98fd611e21ea73e2523eb",
+      "release_copy_sha256": "e6d1dff1b7235b89239a8dd13200949d26bfe000edd98fd611e21ea73e2523eb",
+      "bytes": 1003,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/scripts/route_a_common.py",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "scripts/route_a_common.py",
+      "historical_source_sha256": "56c406b9e9890185c829d80d09dc49d6e2428f3ca12c1ff3384c6f62d59b6dd3",
+      "release_copy_sha256": "56c406b9e9890185c829d80d09dc49d6e2428f3ca12c1ff3384c6f62d59b6dd3",
+      "bytes": 26447,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/scripts/prepare_route_a.py",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "scripts/prepare_route_a.py",
+      "historical_source_sha256": "d3bc77eed0d6969d6aa9d5afec263f255da0c0e07254e49489c4c4e4e93782d1",
+      "release_copy_sha256": "d3bc77eed0d6969d6aa9d5afec263f255da0c0e07254e49489c4c4e4e93782d1",
+      "bytes": 22154,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/scripts/train_route_a.py",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "scripts/train_route_a.py",
+      "historical_source_sha256": "3a173842082f8a84e85d9c0a4d20100870a34e2b770d78679538dfde4b757cca",
+      "release_copy_sha256": "3a173842082f8a84e85d9c0a4d20100870a34e2b770d78679538dfde4b757cca",
+      "bytes": 17471,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/routea_pipeline_common.py",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/routea_pipeline_common.py",
+      "historical_source_sha256": "b79c06a6aeb4c081db6b810c40e50a3944789a55f4bc23f46c9ed06d8d319ae1",
+      "release_copy_sha256": "a3dddddb36b80ae2764a77bb8156b466d55c73f54016739c86d6fd7eb2136144",
+      "bytes": 16181,
+      "changes": [
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_COCO_CANONICAL_EXPORT"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_groups.csv"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P1"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_COCO_ROUTE_B_SELECTION"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_COCO_ROUTE_B_EVALUATION"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_ENVIRONMENT_ROOT",
+          "suffix": "envs/aop_detr/Lib/site-packages"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_COCO_ROOT",
+          "suffix": "annotations/instances_val2017.json"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/routea_select_val.py",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/routea_select_val.py",
+      "historical_source_sha256": "fef86185ff48008e34ca3257dd9546d7549f8dd44f29522694a22183cec846a5",
+      "release_copy_sha256": "fef86185ff48008e34ca3257dd9546d7549f8dd44f29522694a22183cec846a5",
+      "bytes": 36765,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/routea_evaluate_val.py",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/routea_evaluate_val.py",
+      "historical_source_sha256": "9bece6ea45cc6d66d66c20c825ad6a9d582cbbfe6afaf623b1009a72a26dfdf6",
+      "release_copy_sha256": "9bece6ea45cc6d66d66c20c825ad6a9d582cbbfe6afaf623b1009a72a26dfdf6",
+      "bytes": 30339,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/route_a_pipeline_config.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/route_a_pipeline_config.json",
+      "historical_source_sha256": "846fb7adb604fff40826f25e6269c9aaa9999f8f14566a701914bd8b9bd2bb03",
+      "release_copy_sha256": "ed6466ceeb278095b1fc6fdff124d18ac96b520f6299daf170a2d1016957e4fa",
+      "bytes": 5319,
+      "changes": [
+        {
+          "field": ".train_ground_truth.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/route_a_config.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "route_a_config.json",
+      "historical_source_sha256": "8f84b448969c252e4b3925e3ef939860a111594b71e9dc5401019792fc780f20",
+      "release_copy_sha256": "cef36904ffd9aae31e4c6f15a7b610228483ea4a4633bccaef72f681b04d62a9",
+      "bytes": 5319,
+      "changes": [
+        {
+          "field": ".train_ground_truth.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/feature_config.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "feature_config.json",
+      "historical_source_sha256": "fc40ecf733d885b75212782c0a08e043e496d25f8b2762f1b959d0b9e11a9951",
+      "release_copy_sha256": "fda315fe140f0c4f3b39fb72c712e7ccf5172d86db7df99ce3e55ffeb9b8bb27",
+      "bytes": 36750,
+      "changes": [
+        {
+          "field": ".input_bindings.canonical_completion_marker.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_core.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.train_gt.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/class_weight_config.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "class_weight_config.json",
+      "historical_source_sha256": "3f859d6f6ab413ec92492535f9997b6f47788632ad1a1de19c6b61f77e3ca9e8",
+      "release_copy_sha256": "8917746eab9b72bdf132537049b49624dcb5dd4189426d84861fbee30ddd10e2",
+      "bytes": 943,
+      "changes": [
+        {
+          "field": ".source_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/temperature_params.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "temperature_params.json",
+      "historical_source_sha256": "f59446f1db4ecf0d474193c4f36dc771aa8c773b2b9b4ccbb9ad5ef69ebd8985",
+      "release_copy_sha256": "f59446f1db4ecf0d474193c4f36dc771aa8c773b2b9b4ccbb9ad5ef69ebd8985",
+      "bytes": 2539,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/training_history.csv",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "training_history.csv",
+      "historical_source_sha256": "c1a209adc9e2fdf1842cac0158d950162a6b304b0994b58a26ec6b8362754e93",
+      "release_copy_sha256": "c1a209adc9e2fdf1842cac0158d950162a6b304b0994b58a26ec6b8362754e93",
+      "bytes": 2613,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/training_summary.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/training_summary.json",
+      "historical_source_sha256": "8cbdbf2d970a33b557db046e88d0eb1cbf224713cf3963cdff34510b5fa69ffa",
+      "release_copy_sha256": "8cbdbf2d970a33b557db046e88d0eb1cbf224713cf3963cdff34510b5fa69ffa",
+      "bytes": 2699,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/routea_selection_config.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "routea_selection_config.json",
+      "historical_source_sha256": "01fcea32742052ccf7325b9975c25080de2a0f5bee6394604342b3eaccc8afdd",
+      "release_copy_sha256": "4bb2b2381533d3faac366ee63ca45bfc5c9c243a61395af82cbe4c5671aeedd8",
+      "bytes": 6071,
+      "changes": [
+        {
+          "field": ".input_bindings.allocator_asset_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.canonical_completion_marker.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.class_weight_config.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.dp_solver.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.feature_config.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.group_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.models.630101.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.models.630102.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.models.630103.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_core.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.pca_model.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.routea_selection_runner.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.routeb_selection_runner_readonly.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.scaler.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.temperature_params.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.training_complete.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.training_history.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.training_ledger.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/allocator_asset_manifest.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "allocator_asset_manifest.json",
+      "historical_source_sha256": "4350dcd94863ac23de85f258e9221df3d30205b672758e0b10096a13fa402d38",
+      "release_copy_sha256": "4350dcd94863ac23de85f258e9221df3d30205b672758e0b10096a13fa402d38",
+      "bytes": 1509,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/evaluation_outputs/adapted_main_results.csv",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/evaluation_outputs/adapted_main_results.csv",
+      "historical_source_sha256": "3d11156684998354f278c701dc7b1d5ae585e88805db502fa22b4348129fb4a2",
+      "release_copy_sha256": "3d11156684998354f278c701dc7b1d5ae585e88805db502fa22b4348129fb4a2",
+      "bytes": 12329,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/evaluation_outputs/adapted_bootstrap_results.csv",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/evaluation_outputs/adapted_bootstrap_results.csv",
+      "historical_source_sha256": "abbe5641f60379cd8d44a2f8c1ae4719bad814293b628176b7d14eaa12fe5ad7",
+      "release_copy_sha256": "abbe5641f60379cd8d44a2f8c1ae4719bad814293b628176b7d14eaa12fe5ad7",
+      "bytes": 12256,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/evaluation_outputs/domain_adaptation_bootstrap.csv",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/evaluation_outputs/domain_adaptation_bootstrap.csv",
+      "historical_source_sha256": "1a19c023c67f6ced9d742f686e0fcec34d3e7b7c0f3ba521716b4de78abe1462",
+      "release_copy_sha256": "1a19c023c67f6ced9d742f686e0fcec34d3e7b7c0f3ba521716b4de78abe1462",
+      "bytes": 2889,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/evaluation_outputs/routeb_readonly_bindings.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/evaluation_outputs/routeb_readonly_bindings.json",
+      "historical_source_sha256": "63c8b0f88d26ef8b16a9a975a99acc0985d5b3b0440679953d342bc176248bf2",
+      "release_copy_sha256": "63c8b0f88d26ef8b16a9a975a99acc0985d5b3b0440679953d342bc176248bf2",
+      "bytes": 269,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/evaluation_outputs/routea_evaluation_config.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/evaluation_outputs/routea_evaluation_config.json",
+      "historical_source_sha256": "58c1bcac4ccb1741e1ea906ecaff9bd51c15d5ec4e41a11342732c199ca11e1b",
+      "release_copy_sha256": "8cbc659ce9cfe64bf3e7a957746fe7b3ceb680af7b1c00fb3d3dd39718b5e398",
+      "bytes": 4400,
+      "changes": [
+        {
+          "field": ".input_bindings.candidate_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.group_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.gt_deferred.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.image_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.routea_evaluator.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.routeb_evaluator_readonly.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.selected_records.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.selection_completion_marker.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.selection_config.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.selection_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".output_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.candidate_asset_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.candidate_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.group_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.gt",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.image_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.pycocotools_site_packages",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.selected_records",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.selection_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/evaluation_outputs/adapted_coco_metrics_raw.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/evaluation_outputs/adapted_coco_metrics_raw.json",
+      "historical_source_sha256": "6c595b47ebe5f2b17b68a44bd152aac3099f0e5d03e57181b527c715695df6c1",
+      "release_copy_sha256": "6c595b47ebe5f2b17b68a44bd152aac3099f0e5d03e57181b527c715695df6c1",
+      "bytes": 56305,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/evaluation_outputs/adapted_class_results.csv",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+      "source_relative_path": "working/evaluation_outputs/adapted_class_results.csv",
+      "historical_source_sha256": "395067f0cf3713e5e10fdee4755a1b9e8da5951423a925e69c16c293ba313276",
+      "release_copy_sha256": "395067f0cf3713e5e10fdee4755a1b9e8da5951423a925e69c16c293ba313276",
+      "bytes": 67963,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/working/route_b_selection_runner.py",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_B_SELECTION",
+      "source_relative_path": "working/route_b_selection_runner.py",
+      "historical_source_sha256": "b2c247d71498f941f111f6434172d0e18e52462cfb91da5f203867a2e8470c1a",
+      "release_copy_sha256": "3751ebf94e3d24fc3bc9700beafb19ac2b5bff4e911109a8eeda7207b911b330",
+      "bytes": 78573,
+      "changes": [
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_COCO_ROUTE_B_SELECTION"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_COCO_CANONICAL_EXPORT"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_groups.csv"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P1"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P1A"
+        },
+        {
+          "action": "absolute Path default relocated",
+          "environment_variable": "M11_EXPERIMENT_ROOT",
+          "suffix": "research_LC_ALLOC_P2"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_B_SELECTION/run_config.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_B_SELECTION",
+      "source_relative_path": "run_config.json",
+      "historical_source_sha256": "baa1c4e3998dab7ccfa6b4f1f84c5fa389114be25e4ce244559025fecddb1422",
+      "release_copy_sha256": "2641e7a0cc4c67089d5f2826e9a7b5ed7b3b26f5acdeb374dc720be34f6d199c",
+      "bytes": 17109,
+      "changes": [
+        {
+          "field": ".input_bindings.calibration_parameters.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_freeze.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0000.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0001.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0002.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0003.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0004.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0005.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0006.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0007.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0008.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_VAL2017_shard_0009.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.canonical_candidate_manifest.csv.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.canonical_completion_marker.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.canonical_image_manifest.csv.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.canonical_native_manifest.csv.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.canonical_qa.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.canonical_sha256_ledger.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.canonical_shard_manifest.csv.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.class_weights.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.dp_solver.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.feature_scaler.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.feature_schema.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.group_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.model_530101.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.model_530102.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.model_530103.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0000.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0001.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0002.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0003.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0004.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0005.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0006.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0007.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0008.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_index_VAL2017_shard_0009.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0000.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0001.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0002.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0003.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0004.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0005.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0006.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0007.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0008.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.native_shard_VAL2017_shard_0009.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_core.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.pca32.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.runner.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.temperature_530101.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.temperature_530102.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.temperature_530103.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.train_X_raw.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.train_models.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.train_role.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_B_EVALUATION/working/evaluate_route_b.py",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_B_EVALUATION",
+      "source_relative_path": "working/evaluate_route_b.py",
+      "historical_source_sha256": "e3b3c229ffc7f75e80ab66de2821ea4971cd35e4c692ddeb9959f7f65e1737fd",
+      "release_copy_sha256": "e3b3c229ffc7f75e80ab66de2821ea4971cd35e4c692ddeb9959f7f65e1737fd",
+      "bytes": 49005,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_B_EVALUATION/evaluation_config.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_B_EVALUATION",
+      "source_relative_path": "evaluation_config.json",
+      "historical_source_sha256": "daad150716e93bc108358307f0d5e18ce3493daafad1c0604f4d8a11e43b2dbe",
+      "release_copy_sha256": "ddbea477b2ea7df6c60d441365f9972dd0c95af39e31f9a6c7be9efe545a4817",
+      "bytes": 9834,
+      "changes": [
+        {
+          "field": ".paths.selected_records",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.selection_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.allocation_summary",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.candidate_asset_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.candidate_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.image_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.group_manifest",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.gt",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.class_weights",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.p1_core",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.shared_evaluator",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".paths.pycocotools_site_packages",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".output_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.selected_records.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.selection_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.allocation_summary.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.image_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.group_manifest.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.road8_mapping.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.evaluation_freeze.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.class_weights.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.p1_core.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.shared_evaluator.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.pycocotools_coco.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.pycocotools_cocoeval.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0000.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0001.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0002.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0003.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0004.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0005.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0006.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0007.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0008.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.candidate_shard_0009.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".input_bindings.gt_instances_val2017.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_B_EVALUATION/main_results.csv",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_B_EVALUATION",
+      "source_relative_path": "main_results.csv",
+      "historical_source_sha256": "7e3a94635bdd1a54c4cc86f93149ed3760affa0cd56bcd411d9b50d516e5347f",
+      "release_copy_sha256": "7e3a94635bdd1a54c4cc86f93149ed3760affa0cd56bcd411d9b50d516e5347f",
+      "bytes": 12270,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_B_EVALUATION/bootstrap_results.csv",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_B_EVALUATION",
+      "source_relative_path": "bootstrap_results.csv",
+      "historical_source_sha256": "9bdb9dfd89ba0ee352caa1e4b532ffd1f584606a72a0c34705dfc6c4a631e50a",
+      "release_copy_sha256": "9bdb9dfd89ba0ee352caa1e4b532ffd1f584606a72a0c34705dfc6c4a631e50a",
+      "bytes": 12119,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_B_EVALUATION/coco_metrics_raw.json",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_B_EVALUATION",
+      "source_relative_path": "coco_metrics_raw.json",
+      "historical_source_sha256": "adab224c33176e4340602c1d0102feaf4da3205000dce8d3d2275327f23173b3",
+      "release_copy_sha256": "adab224c33176e4340602c1d0102feaf4da3205000dce8d3d2275327f23173b3",
+      "bytes": 94312,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/coco/research_LC_ALLOC_COCO_ROUTE_B_EVALUATION/class_results.csv",
+      "source_project": "research_LC_ALLOC_COCO_ROUTE_B_EVALUATION",
+      "source_relative_path": "class_results.csv",
+      "historical_source_sha256": "5bcb0797dbbb432c894564fbcae458a553284ef7877c3fa89914bc6b504bf63a",
+      "release_copy_sha256": "5bcb0797dbbb432c894564fbcae458a553284ef7877c3fa89914bc6b504bf63a",
+      "bytes": 67390,
+      "changes": [],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": true
+    }
+  ],
+  "deferred_components": [
+    "BDD confirmation aggregate tables and configuration (not included in this first submission)",
+    "internal-only handoff library",
+    "third-party calibration fitting source/Windows port pending separate license handling",
+    "models/preprocessors/candidate/native/selection/GT payloads and split identity lists",
+    "YOLO and Faster R-CNN member submissions"
+  ],
+  "validation": "Static publication checks only; no training/inference/evaluation/bootstrap/timing"
+}

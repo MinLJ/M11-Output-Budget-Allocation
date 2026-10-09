@@ -1,0 +1,3 @@
+# Preserve historical source/config/result bytes and their SHA256 identities.
+# In particular, CSV and hash-bound Python files must not undergo line conversion.
+* -text

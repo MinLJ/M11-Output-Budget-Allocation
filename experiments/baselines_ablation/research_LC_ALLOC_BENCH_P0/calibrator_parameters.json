@@ -1,0 +1,203 @@
+{
+  "candidate_counts": {
+    "CALIBRATION_after_post_threshold": 11493,
+    "CALIBRATION_after_pre_threshold": 11493,
+    "CALIBRATION_all": 100000,
+    "FIT_after_pre_threshold": 95378,
+    "FIT_all": 800000
+  },
+  "classes": [
+    {
+      "bias": -1.0402171611785889,
+      "class_id": 1,
+      "class_name": "person",
+      "effective_scale": 1.4029582738876343,
+      "fallback": null,
+      "fit_brier_after": 0.08460889228120429,
+      "fit_brier_before": 0.1171896450686149,
+      "fit_nll_after": 0.5931046195660723,
+      "fit_nll_before": 0.6643208075038437,
+      "fit_sample_count": 8219,
+      "fit_status": "FITTED",
+      "fit_target_mean": 0.48811560072408794,
+      "fit_valid_gt_count": 10741,
+      "post_threshold_v": 0.1982843276306736,
+      "pre_threshold_u": 0.436754435300827,
+      "raw_scale": 1.4029582738876343
+    },
+    {
+      "bias": -0.617074191570282,
+      "class_id": 2,
+      "class_name": "bicycle",
+      "effective_scale": 1.2634844779968262,
+      "fallback": null,
+      "fit_brier_after": 0.06662415394394916,
+      "fit_brier_before": 0.07980389277617286,
+      "fit_nll_after": 0.5992706032103224,
+      "fit_nll_before": 0.627411546614443,
+      "fit_sample_count": 419,
+      "fit_status": "FITTED",
+      "fit_target_mean": 0.5292847448757444,
+      "fit_valid_gt_count": 856,
+      "post_threshold_v": 0.27194190023793213,
+      "pre_threshold_u": 0.42775049805641174,
+      "raw_scale": 1.2634844779968262
+    },
+    {
+      "bias": -0.7959538698196411,
+      "class_id": 3,
+      "class_name": "car",
+      "effective_scale": 1.3434964418411255,
+      "fallback": null,
+      "fit_brier_after": 0.07187760265554348,
+      "fit_brier_before": 0.08939847703041673,
+      "fit_nll_after": 0.5462147809689846,
+      "fit_nll_before": 0.5846202175375457,
+      "fit_sample_count": 65967,
+      "fit_status": "FITTED",
+      "fit_target_mean": 0.5622180605794928,
+      "fit_valid_gt_count": 81855,
+      "post_threshold_v": 0.203563406322544,
+      "pre_threshold_u": 0.39581385254859924,
+      "raw_scale": 1.3434964418411255
+    },
+    {
+      "bias": -1.1710669994354248,
+      "class_id": 4,
+      "class_name": "motorcycle",
+      "effective_scale": 1.329132318496704,
+      "fallback": null,
+      "fit_brier_after": 0.10397023035857883,
+      "fit_brier_before": 0.15243390267760598,
+      "fit_nll_after": 0.610419082643596,
+      "fit_nll_before": 0.7151526896012611,
+      "fit_sample_count": 163,
+      "fit_status": "FITTED",
+      "fit_target_mean": 0.4400967123689626,
+      "fit_valid_gt_count": 312,
+      "post_threshold_v": 0.2259784591213608,
+      "pre_threshold_u": 0.4886988699436188,
+      "raw_scale": 1.329132318496704
+    },
+    {
+      "bias": -1.6657581329345703,
+      "class_id": 5,
+      "class_name": "bus",
+      "effective_scale": 1.1515798568725586,
+      "fallback": null,
+      "fit_brier_after": 0.1585272221622314,
+      "fit_brier_before": 0.25617407019472926,
+      "fit_nll_after": 0.5980900384493627,
+      "fit_nll_before": 0.8282026812241661,
+      "fit_sample_count": 1011,
+      "fit_status": "FITTED",
+      "fit_target_mean": 0.45073956620169503,
+      "fit_valid_gt_count": 1362,
+      "post_threshold_v": 0.18405621058920438,
+      "pre_threshold_u": 0.5382753014564514,
+      "raw_scale": 1.1515798568725586
+    },
+    {
+      "bias": -1.9934875965118408,
+      "class_id": 6,
+      "class_name": "train",
+      "effective_scale": 1.1348652573239804e-10,
+      "fallback": null,
+      "fit_brier_after": 0.10056567682605318,
+      "fit_brier_before": 0.6731991268387822,
+      "fit_nll_after": 0.3666468397710376,
+      "fit_nll_before": 1.873876079235259,
+      "fit_sample_count": 8,
+      "fit_status": "FITTED",
+      "fit_target_mean": 0.11986044030140375,
+      "fit_valid_gt_count": 7,
+      "post_threshold_v": 0.1198883800819361,
+      "pre_threshold_u": 0.84512859582901,
+      "raw_scale": -1.1348652573239804e-10
+    },
+    {
+      "bias": -1.7447123527526855,
+      "class_id": 7,
+      "class_name": "truck",
+      "effective_scale": 0.916462242603302,
+      "fallback": null,
+      "fit_brier_after": 0.17551743960251265,
+      "fit_brier_before": 0.32190577170609486,
+      "fit_nll_after": 0.639366124209939,
+      "fit_nll_before": 1.0191665199703042,
+      "fit_sample_count": 2180,
+      "fit_status": "FITTED",
+      "fit_target_mean": 0.4263541082388513,
+      "fit_valid_gt_count": 3399,
+      "post_threshold_v": 0.23339961156968667,
+      "pre_threshold_u": 0.647058367729187,
+      "raw_scale": 0.916462242603302
+    },
+    {
+      "bias": -1.0112497806549072,
+      "class_id": 8,
+      "class_name": "traffic light",
+      "effective_scale": 1.4940290451049805,
+      "fallback": null,
+      "fit_brier_after": 0.07287227227240171,
+      "fit_brier_before": 0.11654848835166631,
+      "fit_nll_after": 0.5749998339302155,
+      "fit_nll_before": 0.6713716146144434,
+      "fit_sample_count": 17411,
+      "fit_status": "FITTED",
+      "fit_target_mean": 0.3331639824700979,
+      "fit_valid_gt_count": 21507,
+      "post_threshold_v": 0.16302436135371162,
+      "pre_threshold_u": 0.39697277545928955,
+      "raw_scale": 1.4940290451049805
+    }
+  ],
+  "identity_counts": {
+    "CALIBRATION": 1000,
+    "FIT": 8000
+  },
+  "method": "ECCV 2024 class-specific Platt calibration with fixed-prefix budget adapter",
+  "official_commit": "bf59c92f5416ac4b66a7c2c67b44487777ff2ea4",
+  "official_repository": "https://github.com/fiveai/detection_calibration",
+  "roles": {
+    "diagnostic_only": "CALIBRATION",
+    "early_stop_used": false,
+    "fit": "FIT"
+  },
+  "schema_version": "LC_ALLOC_BENCH_P0_CLASS_SPECIFIC_PLATT_V1",
+  "source_equivalence": {
+    "class_agnostic": false,
+    "logit_clip_epsilon": 2.220446049250313e-16,
+    "matching": "source-inspected bbox-only port of official COCO greedy assignment at tau=0",
+    "max_dets_per_image_class": 100,
+    "optimizer": "official PlattScaling imported from pinned repository source",
+    "pre_and_post_threshold": "class-specific empirical oLRP optimum; stable mergesort; first minimum",
+    "reason": "official bundled pycocotools native extension unavailable in the Windows runtime",
+    "tau": 0.0,
+    "use_grid_search": false,
+    "use_quality_focal_loss": false,
+    "validation_scope": "static source audit; no saved exact-parity run against the unavailable native extension"
+  },
+  "source_files": {
+    "official_coco_calibration.py": {
+      "path": "external_assets/research_LC_ALLOC_BENCH_P0/third_party/detection_calibration/src/detection_calibration/coco_calibration.py",
+      "sha256": "5dfb7aed0ef78f0a39de550698da0a33c33b8fdf827db44b37c4579d88d04cd6"
+    },
+    "official_platt_scaling.py": {
+      "path": "external_assets/research_LC_ALLOC_BENCH_P0/third_party/detection_calibration/src/detection_calibration/platt_scaling.py",
+      "sha256": "fdac5d87fa6ecee3ce33d669da79a54b3b6120cbea3fc647880533ed17eea949"
+    },
+    "official_utils.py": {
+      "path": "external_assets/research_LC_ALLOC_BENCH_P0/third_party/detection_calibration/src/detection_calibration/utils.py",
+      "sha256": "99c065a8e8b81185d675f1ff7cbb69502cc51fddacecec63033ec540b46133c9"
+    },
+    "train_gt": {
+      "path": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1/gt/TRAIN10K_ROAD8_GT.json",
+      "sha256": "afc7178693db7e14566aa82513a28113e3c93a1f6a33abc2d843ce3b390b0427"
+    },
+    "train_role_split": {
+      "path": "external_assets/research_LC_ALLOC_P1/train_role_split.parquet",
+      "sha256": "ea832ef5ab34736f3c304c3410d220253595cdf276ca183896e542bf073b0d4e"
+    }
+  }
+}

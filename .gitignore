@@ -218,3 +218,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Initial M11 source/results archive: large assets stay outside ordinary Git.
+/external_assets/
+/external_environment/
+/external_materials/
+/runs/
+*.pt
+*.pth
+*.ckpt
+*.joblib
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.parquet
+*.h5
+*.hdf5
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.jpg
+*.jpeg
+*.png
+*.pem
+*.key

@@ -1,0 +1,102 @@
+{
+  "bootstrap": {
+    "group_count": 125,
+    "indices_sha256": "895fbbbe33169a2567aee34422d1dfdb8445ec5b6f64734ae819af06816af84a",
+    "resamples": 5000,
+    "seed": 530002,
+    "unit": "frozen 40-image group"
+  },
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "created_at_utc": "2026-09-27T09:52:03.300710Z",
+  "dataset": {
+    "candidate_asset_id": "5ff6497669d5b02c888f90451882d3c8e594b74a3aedd136639a9c0c8621c707",
+    "dataset_version": "COCO2017-Road8-v1",
+    "image_count": 5000,
+    "split": "VAL2017"
+  },
+  "execution_boundary": {
+    "evaluation_only": true,
+    "gt_open_after_selection_validation": true,
+    "selection_regeneration": false
+  },
+  "expected_hashes": {
+    "gt_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+    "selection_sha256": "9162413ffd8859563322860fedc63a666cc7ea583985b6460e109cb5b834008c"
+  },
+  "input_bindings": {
+    "candidate_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate_manifest.csv",
+      "sha256": "64fd480744618a64cfb329facf115e173c875ba1e2d619339d58cd75216588f0"
+    },
+    "group_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_groups.csv",
+      "sha256": "b1346893ba70c1b6f1904f83530aa956253badefc8b227473cc8660ab78a5cc6"
+    },
+    "gt_deferred": {
+      "defer_until_after_selection_validation": true,
+      "path": "external_assets/COCO2017/annotations/instances_val2017.json",
+      "sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f"
+    },
+    "image_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/image_manifest.csv",
+      "sha256": "5c309cd09273298254067161988b19a2e25a77587abc2ef294a08dbbc9dc5990"
+    },
+    "routea_evaluator": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/working/routea_evaluate_val.py",
+      "sha256": "9bece6ea45cc6d66d66c20c825ad6a9d582cbbfe6afaf623b1009a72a26dfdf6"
+    },
+    "routeb_evaluator_readonly": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_B_EVALUATION/working/evaluate_route_b.py",
+      "sha256": "e3b3c229ffc7f75e80ab66de2821ea4971cd35e4c692ddeb9959f7f65e1737fd"
+    },
+    "selected_records": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/selected_records.parquet",
+      "sha256": "9162413ffd8859563322860fedc63a666cc7ea583985b6460e109cb5b834008c"
+    },
+    "selection_completion_marker": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/ROUTE_A_SELECTION_COMPLETE.json",
+      "sha256": "6d426a2d5763667c6a0b87fb04082b56efaee03ff2f065f9e38ed1e4d167a90b"
+    },
+    "selection_config": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/routea_selection_config.json",
+      "sha256": "01fcea32742052ccf7325b9975c25080de2a0f5bee6394604342b3eaccc8afdd"
+    },
+    "selection_manifest": {
+      "path": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/selection_manifest.csv",
+      "sha256": "f97ef0360d62d6154061c20d10c8ea3962bdfb0894c646534b29cf2d58f74c30"
+    },
+    "selection_time_canonical_marker_sha256": "f11f7074d3e87b8b5d0fb8ddd404cafae1f0e91a76c41ea0284490e43487d16d"
+  },
+  "methods": {
+    "deterministic": [
+      "S_FIXED",
+      "S_ADAPT",
+      "CAL_TEMP_ALLOC"
+    ],
+    "m11": "M11-COCO",
+    "m11_seeds": [
+      630101,
+      630102,
+      630103
+    ],
+    "seed_predictions_averaged": false
+  },
+  "output_root": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION",
+  "paths": {
+    "candidate_asset_root": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT",
+    "candidate_manifest": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/candidate_manifest.csv",
+    "group_manifest": "external_assets/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_groups.csv",
+    "gt": "external_assets/COCO2017/annotations/instances_val2017.json",
+    "image_manifest": "external_assets/research_LC_ALLOC_COCO_CANONICAL_EXPORT/image_manifest.csv",
+    "pycocotools_site_packages": "external_environment/envs/aop_detr/Lib/site-packages",
+    "selected_records": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/selected_records.parquet",
+    "selection_manifest": "external_assets/research_LC_ALLOC_COCO_ROUTE_A_ADAPTATION/selection_manifest.csv"
+  },
+  "task": "LC-ALLOC-COCO-ROUTE-A-VAL-EVALUATION"
+}

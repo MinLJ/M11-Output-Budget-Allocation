@@ -1,0 +1,107 @@
+{
+  "action": "raw road8_rank prefix 1..K_i only",
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "candidate_asset_ids": {
+    "DEV": "9593aa3196f0eb89d9662c1b15ca7d912fb1480ac188dace30ea0a70d4869edd",
+    "TRAIN": "7353d41864b09df704714043479567b6459fbf18cf0a74d226fea7fba92b8031"
+  },
+  "dev_boundary": "previously observed DEV; allocation entrypoint has no GT path",
+  "grouping": "reuse P1 frozen DEV 50 groups x 40 images; no cross-group borrowing",
+  "input_bindings": {
+    "candidate_asset_identity": {
+      "path": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1/CANDIDATE_ASSET_IDENTITY.json",
+      "sha256": "d13d95812175b51e26084c9d5857200cc0b3a4a060d571c807b4eca73ae69db9"
+    },
+    "p1_allocations": {
+      "path": "external_assets/research_LC_ALLOC_P1/cache/dev_allocations.parquet",
+      "sha256": "81c516688b299ea179644a5e94d47c0f90f761d455bcc08f50638b243d5af422"
+    },
+    "p1_class_weights": {
+      "path": "external_assets/research_LC_ALLOC_P1/models/class_weights.json",
+      "sha256": "2ee6f8d1a7daddd298c7874429d954d21885aefcab9a7a67bb1b49eba7f9c237"
+    },
+    "p1_dev_predictions": {
+      "path": "external_assets/research_LC_ALLOC_P1/dev_predictions.parquet",
+      "sha256": "ea880c8643c01efc40d336f00be65b5c01ded65e81939c694b695bfb957b951c"
+    },
+    "p1_feature_schema": {
+      "path": "external_assets/research_LC_ALLOC_P1/feature_schema.json",
+      "sha256": "8613d979ab6393c5d0524f1451e80329f60d0caa7a514ae256be4022d70096f7"
+    },
+    "p1_run_config": {
+      "path": "external_assets/research_LC_ALLOC_P1/run_config.json",
+      "sha256": "40d0510baa868f0130921dbe0211319875f4a401d3abf3f923be7f59271163ef"
+    },
+    "p1_selections": {
+      "path": "external_assets/research_LC_ALLOC_P1/dev_allocations_and_selections.parquet",
+      "sha256": "f27de1d87ac81a6fe5b21c09d78583f5dd0ee3a2a39dc62be466e820d23badc5"
+    },
+    "release_manifest": {
+      "path": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1/RELEASE_MANIFEST.json",
+      "sha256": "238d99770aaf7fd424dc11e16bde1dab4800c222ee197af06d0eeec3776acfa2"
+    }
+  },
+  "k_bounds": [
+    5,
+    50
+  ],
+  "metadata_note": "P1 run_config dev_gt_declared_sha256 differs from the actual frozen release hash; P1 evaluation_summary and final ledger bind the actual release file. P1A uses the actual frozen release and does not alter P1.",
+  "model_bindings": [
+    {
+      "model_path": "external_assets/research_LC_ALLOC_P1/models/marginal_mlp_seed_530101.pt",
+      "model_sha256": "cb9732dbc828eff968b96294ab541b925eacc0d57472faf5a11f4bb246597aa8",
+      "seed": 530101,
+      "temperature": 1.0053284330481267,
+      "temperature_path": "external_assets/research_LC_ALLOC_P1/models/temperature_seed_530101.json",
+      "temperature_sha256": "e321ba3385d8eb7260d36164f13c401e89750ec35e5d590ebffe29a98aee4b03"
+    },
+    {
+      "model_path": "external_assets/research_LC_ALLOC_P1/models/marginal_mlp_seed_530102.pt",
+      "model_sha256": "7b60f0f4d9ef5fc63941ed61398086ee7c82abf3c928a0db7b8c905f27c20996",
+      "seed": 530102,
+      "temperature": 1.017592050678593,
+      "temperature_path": "external_assets/research_LC_ALLOC_P1/models/temperature_seed_530102.json",
+      "temperature_sha256": "d54c68323d16179d8e78a125cabaa247d1303c8f3867871f1967ec1996827501"
+    },
+    {
+      "model_path": "external_assets/research_LC_ALLOC_P1/models/marginal_mlp_seed_530103.pt",
+      "model_sha256": "890cf82a9cf654d6b44816b2111d51e86ee84ba1f35050b299c3473a17d0b6b8",
+      "seed": 530103,
+      "temperature": 1.0074616372046543,
+      "temperature_path": "external_assets/research_LC_ALLOC_P1/models/temperature_seed_530103.json",
+      "temperature_sha256": "ad4805b6566ab24eb15e0b44f9a01d01908e493dd4307c27c2e52e0afd1341da"
+    }
+  ],
+  "p1_root": "external_assets/research_LC_ALLOC_P1",
+  "pca": {
+    "path": "external_assets/research_LC_ALLOC_P1/models/pca32.joblib",
+    "sha256": "12d8e656d53bdad54e498125993f437f77d874e97be38ffe29a0c969e1ff41af"
+  },
+  "policies": {
+    "M00": "LEARN_MICRO: p@0.50",
+    "M01": "LEARN_MULTI: mean p over IoU .50:.95",
+    "M10": "LEARN_CLASS50: FIT class weight * p@0.50",
+    "M11": "LEARN_QUALITY: FIT class weight * mean p over IoU .50:.95"
+  },
+  "prediction_semantics": "read P1 post-temperature probabilities; no rescaling and no cross-seed allocation",
+  "release_root": "external_assets/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/release/AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1",
+  "restricted_scientific_splits_accessed": 0,
+  "scaler": {
+    "path": "external_assets/research_LC_ALLOC_P1/models/feature_scaler.joblib",
+    "sha256": "9d3da8c36b3b5a2cf8c8ab2deb963e3595c313b4d13f6d3e7fb8c27d923ced6d"
+  },
+  "seeds": [
+    530101,
+    530102,
+    530103
+  ],
+  "solver": "P1 exact float64 multiple-choice DP with frozen lexicographic tie rule",
+  "stage": "OBJECTIVE_ABLATION_AND_SINGLE_MODEL_PROFILE",
+  "task": "LC-ALLOC-P1A"
+}

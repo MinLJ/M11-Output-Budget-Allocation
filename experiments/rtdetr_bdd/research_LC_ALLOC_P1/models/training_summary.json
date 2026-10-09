@@ -1,0 +1,75 @@
+{
+  "calibration_rows": 45000,
+  "cuda_version": "12.8",
+  "device": "cuda",
+  "early_stop_rows": 45000,
+  "fit_rows": 360000,
+  "no_final_refit": true,
+  "seeds": [
+    {
+      "best_epoch": 17,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.1359919072956803,
+      "calibrated_brier": 0.03861509455582388,
+      "calibration_sha256": "e321ba3385d8eb7260d36164f13c401e89750ec35e5d590ebffe29a98aee4b03",
+      "early_stop_natural_bce": 0.13953080231613582,
+      "elapsed_seconds": 5.793758599989815,
+      "epochs_run": 22,
+      "fallback_tolerance": 1e-12,
+      "model_sha256": "cb9732dbc828eff968b96294ab541b925eacc0d57472faf5a11f4bb246597aa8",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.13599448995140545,
+      "raw_brier": 0.03861388655517676,
+      "seed": 530101,
+      "temperature": 1.0053284330481267
+    },
+    {
+      "best_epoch": 14,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.1363266340888649,
+      "calibrated_brier": 0.03867830212259175,
+      "calibration_sha256": "d54c68323d16179d8e78a125cabaa247d1303c8f3867871f1967ec1996827501",
+      "early_stop_natural_bce": 0.13981524284945593,
+      "elapsed_seconds": 3.986985800002003,
+      "epochs_run": 19,
+      "fallback_tolerance": 1e-12,
+      "model_sha256": "7b60f0f4d9ef5fc63941ed61398086ee7c82abf3c928a0db7b8c905f27c20996",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.13635519031436594,
+      "raw_brier": 0.038681898408322056,
+      "seed": 530102,
+      "temperature": 1.017592050678593
+    },
+    {
+      "best_epoch": 24,
+      "bounds": [
+        0.25,
+        4.0
+      ],
+      "calibrated_bce": 0.13583584947388105,
+      "calibrated_brier": 0.038555095674129555,
+      "calibration_sha256": "ad4805b6566ab24eb15e0b44f9a01d01908e493dd4307c27c2e52e0afd1341da",
+      "early_stop_natural_bce": 0.13943535538514454,
+      "elapsed_seconds": 5.869777500018245,
+      "epochs_run": 29,
+      "fallback_tolerance": 1e-12,
+      "model_sha256": "890cf82a9cf654d6b44816b2111d51e86ee84ba1f35050b299c3473a17d0b6b8",
+      "optimizer_message": "Solution found.",
+      "optimizer_success": true,
+      "raw_bce": 0.1358408681727706,
+      "raw_brier": 0.03855316202288974,
+      "seed": 530103,
+      "temperature": 1.0074616372046543
+    }
+  ],
+  "status": "PASS",
+  "torch_version": "2.11.0+cu128"
+}

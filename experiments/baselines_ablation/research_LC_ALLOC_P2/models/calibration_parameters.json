@@ -1,0 +1,218 @@
+{
+  "class_weights_applied_to_baseline_slot_value": false,
+  "fit_images_implied": 8000,
+  "fit_role": "FIT",
+  "fit_rows": 360000,
+  "isotonic_fit_diagnostics_on_ybar": {
+    "bce": 0.19762967437761617,
+    "brier": 0.02397606419790654,
+    "reliability_bins": [
+      {
+        "bin": 0,
+        "lower": 0.0,
+        "mean_probability": 0.030608573216521384,
+        "mean_target": 0.03060857321652064,
+        "rows": 294032,
+        "upper": 0.1
+      },
+      {
+        "bin": 1,
+        "lower": 0.1,
+        "mean_probability": 0.1427806009721609,
+        "mean_target": 0.14278060097216083,
+        "rows": 36208,
+        "upper": 0.2
+      },
+      {
+        "bin": 2,
+        "lower": 0.2,
+        "mean_probability": 0.24800934579439252,
+        "mean_target": 0.24800934579439252,
+        "rows": 10700,
+        "upper": 0.3
+      },
+      {
+        "bin": 3,
+        "lower": 0.3,
+        "mean_probability": 0.3457560627674751,
+        "mean_target": 0.34575606276747506,
+        "rows": 8412,
+        "upper": 0.4
+      },
+      {
+        "bin": 4,
+        "lower": 0.4,
+        "mean_probability": 0.4667974396035516,
+        "mean_target": 0.46679743960355147,
+        "rows": 4843,
+        "upper": 0.5
+      },
+      {
+        "bin": 5,
+        "lower": 0.5,
+        "mean_probability": 0.5588620689655174,
+        "mean_target": 0.5588620689655173,
+        "rows": 2900,
+        "upper": 0.6
+      },
+      {
+        "bin": 6,
+        "lower": 0.6,
+        "mean_probability": 0.6486509635974306,
+        "mean_target": 0.6486509635974304,
+        "rows": 2335,
+        "upper": 0.7
+      },
+      {
+        "bin": 7,
+        "lower": 0.7,
+        "mean_probability": 0.7346534653465345,
+        "mean_target": 0.7346534653465346,
+        "rows": 505,
+        "upper": 0.8
+      },
+      {
+        "bin": 8,
+        "lower": 0.8,
+        "mean_probability": 0.8078125,
+        "mean_target": 0.8078125,
+        "rows": 64,
+        "upper": 0.9
+      },
+      {
+        "bin": 9,
+        "lower": 0.9,
+        "mean_probability": 0.999999999999,
+        "mean_target": 1.0,
+        "rows": 1,
+        "upper": 1.0
+      }
+    ]
+  },
+  "isotonic_knot_count": 327,
+  "isotonic_parameters_npz": "external_assets/research_LC_ALLOC_P2/models/calibration_parameters.npz",
+  "isotonic_parameters_npz_sha256": "244a052564fe5ba55514fa2a51e7e5f8ccf6d63253532201cc97e7f190f22ff5",
+  "isotonic_unique_output_count": 164,
+  "restricted_split_access": 0,
+  "score_clip": [
+    1e-06,
+    0.999999
+  ],
+  "score_max": 0.9213482737541199,
+  "score_min": 0.02256089262664318,
+  "target": "mean of ten frozen maximum-matching prefix marginal labels",
+  "target_columns": [
+    "y_iou_0_50",
+    "y_iou_0_55",
+    "y_iou_0_60",
+    "y_iou_0_65",
+    "y_iou_0_70",
+    "y_iou_0_75",
+    "y_iou_0_80",
+    "y_iou_0_85",
+    "y_iou_0_90",
+    "y_iou_0_95"
+  ],
+  "target_positive_prevalence": 0.07097666666666666,
+  "temperature": 0.389210829318298,
+  "temperature_fit": {
+    "bounds": [
+      0.25,
+      4.0
+    ],
+    "calibrated_bce": 0.2755850101429729,
+    "calibrated_brier": 0.0796005850952296,
+    "fallback_tolerance": 1e-12,
+    "optimizer_message": "Solution found.",
+    "optimizer_success": true,
+    "raw_bce": 0.38009622110064056,
+    "raw_brier": 0.10851295462107402,
+    "temperature": 0.389210829318298
+  },
+  "temperature_fit_diagnostics_on_ybar": {
+    "bce": 0.27558501014297276,
+    "brier": 0.049650251761896184,
+    "reliability_bins": [
+      {
+        "bin": 0,
+        "lower": 0.0,
+        "mean_probability": 0.038479811313872306,
+        "mean_target": 0.020628623873962044,
+        "rows": 229899,
+        "upper": 0.1
+      },
+      {
+        "bin": 1,
+        "lower": 0.1,
+        "mean_probability": 0.1411161061366142,
+        "mean_target": 0.0602894544271892,
+        "rows": 49196,
+        "upper": 0.2
+      },
+      {
+        "bin": 2,
+        "lower": 0.2,
+        "mean_probability": 0.24466906842991762,
+        "mean_target": 0.09173033917256801,
+        "rows": 21464,
+        "upper": 0.3
+      },
+      {
+        "bin": 3,
+        "lower": 0.3,
+        "mean_probability": 0.3470885756065921,
+        "mean_target": 0.12582582582582583,
+        "rows": 12987,
+        "upper": 0.4
+      },
+      {
+        "bin": 4,
+        "lower": 0.4,
+        "mean_probability": 0.44772635601105415,
+        "mean_target": 0.15808846929033626,
+        "rows": 9427,
+        "upper": 0.5
+      },
+      {
+        "bin": 5,
+        "lower": 0.5,
+        "mean_probability": 0.5485756773865954,
+        "mean_target": 0.18888295029396043,
+        "rows": 7484,
+        "upper": 0.6
+      },
+      {
+        "bin": 6,
+        "lower": 0.6,
+        "mean_probability": 0.648887013924249,
+        "mean_target": 0.23424112119764293,
+        "rows": 6279,
+        "upper": 0.7
+      },
+      {
+        "bin": 7,
+        "lower": 0.7,
+        "mean_probability": 0.7497379641572032,
+        "mean_target": 0.2825532628753565,
+        "rows": 5961,
+        "upper": 0.8
+      },
+      {
+        "bin": 8,
+        "lower": 0.8,
+        "mean_probability": 0.8522217308854415,
+        "mean_target": 0.354244626565641,
+        "rows": 6467,
+        "upper": 0.9
+      },
+      {
+        "bin": 9,
+        "lower": 0.9,
+        "mean_probability": 0.9538859312499764,
+        "mean_target": 0.543576965669989,
+        "rows": 10836,
+        "upper": 1.0
+      }
+    ]
+  }
+}
