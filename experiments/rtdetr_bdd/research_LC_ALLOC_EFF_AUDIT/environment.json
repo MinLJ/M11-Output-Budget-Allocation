@@ -1,0 +1,70 @@
+{
+  "autocast": false,
+  "batch_size": 1,
+  "cpu": "AMD Ryzen AI 9 HX 370 w/ Radeon 890M",
+  "cuda": "12.8",
+  "cuda_synchronize_at_boundaries": true,
+  "cudnn": 91900,
+  "driver_and_gpu_post": {
+    "clocks.current.graphics": "1432",
+    "clocks.current.memory": "11101",
+    "driver_version": "610.74",
+    "memory.total": "16303",
+    "memory.used": "1078",
+    "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "power.draw": "81.30",
+    "pstate": "P2",
+    "temperature.gpu": "87",
+    "utilization.gpu": "73"
+  },
+  "driver_and_gpu_pre": {
+    "clocks.current.graphics": "1635",
+    "clocks.current.memory": "810",
+    "driver_version": "610.74",
+    "memory.total": "16303",
+    "memory.used": "1036",
+    "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "power.draw": "63.45",
+    "pstate": "P5",
+    "temperature.gpu": "64",
+    "utilization.gpu": "38"
+  },
+  "excluded": [
+    "disk read",
+    "JPEG decode",
+    "resize/to-tensor",
+    "model/PCA/scaler load",
+    "hook registration",
+    "GT evaluation",
+    "result save"
+  ],
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "gpu_memory_bytes": 17094475776,
+  "host_tensor_start": true,
+  "inference_mode": true,
+  "input_resolution": [
+    640,
+    640
+  ],
+  "logical_cpu_count": 24,
+  "measurement_environment_note": "A manual spot check during the randomized measured phase observed 86 C, P2, and a 1882 MHz graphics clock. The pre snapshot was taken before warm-up and the post snapshot after measurement; these are not a per-sample thermal trace. Absolute latency is session-specific, and the reported p95/std retain the observed variability.",
+  "mid_measurement_manual_spot_check": {
+    "clocks.current.graphics": "1882",
+    "memory.used": "1080",
+    "pstate": "P2",
+    "temperature.gpu": "86",
+    "utilization.gpu": "38"
+  },
+  "model_eval": true,
+  "os": "Windows-10-10.0.26200-SP0",
+  "physical_cpu_count": 12,
+  "precision": "FP32",
+  "preprocessed_host_tensor_seconds_excluded": 0.8493210000451654,
+  "profile_image_count_loaded": 80,
+  "profile_manifest_sha256": "3841aaf4de5e2de031b3fa2154c5a353b6bb1f9f17527f25a47b2f07562b0b47",
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+  "pytorch": "2.11.0+cu128",
+  "ram_bytes": 33412722688,
+  "tf32": false,
+  "timing_clock": "time.perf_counter_ns wall clock"
+}

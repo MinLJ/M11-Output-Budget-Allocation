@@ -1,0 +1,11 @@
+scope,unit,repeats,mean_ms,median_ms,p95_ms,min_ms,max_ms,notes
+full_DEV_total_prediction_allocation_and_save,DEV2000,1,67451.37669998803,67451.37669998803,67451.37669998803,67451.37669998803,67451.37669998803,Actual frozen run; excludes detector and GT evaluation.
+full_DEV_release_read_plus_feature,DEV2000,1,20153.520299994852,20153.520299994852,20153.520299994852,20153.520299994852,20153.520299994852,Actual frozen run combined scope.
+full_DEV_three_model_shared_inference,DEV2000,1,170.89760000817478,170.89760000817478,170.89760000817478,170.89760000817478,170.89760000817478,One forward per seed; MICRO/QUALITY share it.
+full_DEV_exact_DP_all_policies,50 frozen groups,1,26823.055599990766,26823.055599990766,26823.055599990766,26823.055599990766,26823.055599990766,TABLE plus six learned target/seed policies.
+full_DEV_selection_materialization_and_save_residual,DEV2000,1,20303.903199994238,20303.903199994238,20303.903199994238,20303.903199994238,20303.903199994238,"Residual wall time; includes allocation dataframe/materialization and Parquet save, not a separately instrumented causal component."
+DEV_release_read_adapter_postrun_warm_cache,DEV2000,1,2272.604900004808,2272.604900004808,2272.604900004808,2272.604900004808,2272.604900004808,"Separate read/validation traversal measured after the scientific run; OS cache state differs, so do not subtract from the frozen combined scope."
+cached_40_feature_construction,fixed 40-image group,20,273.7549349971232,273.1567000009818,285.79123999370495,261.41189999179915,289.0124999976251,"In-memory candidate/native arrays; includes PCA/scaler, excludes disk."
+cached_40_three_model_shared_inference,fixed 40-image group,20,5.431094997038599,4.204399985610507,12.738735003222247,2.1557000000029802,16.495699994266033,CUDA synchronized; both value definitions reuse each seed forward.
+cached_40_utility_and_exact_DP,fixed 40-image group,20,466.35357000195654,467.250449990388,482.4118450138485,436.6188000130933,488.86890002177097,"Eight TABLE/learned policies, five exact capacities each."
+cached_40_total_policy_processing,fixed 40-image group,20,753.8232550024986,747.5757000211161,799.246095000126,729.3512000178453,858.2390999945346,Feature + three models + utilities + exact DP; CUDA synchronized.

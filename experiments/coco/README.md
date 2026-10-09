@@ -62,3 +62,11 @@ The recorded selection stack is Python 3.10.20, torch 2.11.0+cu128, CUDA 12.8,
 numpy 2.2.6, pandas 2.3.3, pyarrow 24.0.0, scikit-learn 1.7.2, joblib 1.5.3,
 RTX 5080 Laptop GPU. Some historical stages used a separate existing pycocotools
 site; its exact version is unrecorded. This upload does not run any of the stages.
+
+The follow-up adds `research_LC_ALLOC_COCO_CANONICAL_EXPORT/` runner/validator
+source and existing small runtime records, together with the historical schema,
+config and identity contracts in `research_LC_ALLOC_COCO_EXPORT_FREEZE/`.
+These additional files are unmodified historical copies. Their original local
+path defaults and hash-bound contracts are retained, not recast as public
+download endpoints or newly validated portable configurations. No detector
+code, checkpoint, images, annotations or candidate/native shards are bundled.

@@ -1,0 +1,583 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aop-detr:coco2017-road8:candidate-native-schema:v1",
+  "title": "COCO2017 Road8 RT-DETRv2 candidate and native-state asset, v1",
+  "description": "Logical per-image validation view for the COCO2017 Road8 export. A candidate record is an output-budget record, not a unique decoder query. The physical candidate table and native sidecar are stored separately and joined only by canonical_image_id plus query_index.",
+  "schema_version": "1.0.0",
+  "version": "COCO2017_Road8_CandidateSchema_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_version",
+    "split",
+    "coco_image_id",
+    "image_id",
+    "canonical_image_id",
+    "image_sha256",
+    "candidate_asset_id",
+    "detector_id",
+    "checkpoint_sha256",
+    "export_config_sha256",
+    "schema_sha256",
+    "raw_hypothesis_count",
+    "stored_candidate_count",
+    "native_query_count",
+    "candidate_records",
+    "native_rows"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "dataset_version": {
+      "const": "COCO2017-Road8-v1"
+    },
+    "split": {
+      "enum": [
+        "TRAIN2017",
+        "VAL2017"
+      ]
+    },
+    "coco_image_id": {
+      "$ref": "#/$defs/coco_image_id"
+    },
+    "image_id": {
+      "$ref": "#/$defs/canonical_image_id"
+    },
+    "canonical_image_id": {
+      "$ref": "#/$defs/canonical_image_id"
+    },
+    "image_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "candidate_asset_id": {
+      "$ref": "#/$defs/sha256"
+    },
+    "detector_id": {
+      "const": "RT-DETRv2-R18VD"
+    },
+    "checkpoint_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "export_config_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "schema_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "raw_hypothesis_count": {
+      "const": 2400
+    },
+    "stored_candidate_count": {
+      "const": 300
+    },
+    "native_query_count": {
+      "const": 300
+    },
+    "candidate_records": {
+      "type": "array",
+      "minItems": 300,
+      "maxItems": 300,
+      "items": {
+        "$ref": "#/$defs/candidate_record"
+      }
+    },
+    "native_rows": {
+      "type": "array",
+      "minItems": 300,
+      "maxItems": 300,
+      "items": {
+        "$ref": "#/$defs/native_row"
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "coco_image_id": {
+      "type": "integer",
+      "minimum": 1,
+      "x-physical-dtype": "int64"
+    },
+    "canonical_image_id": {
+      "type": "string",
+      "pattern": "^coco2017:(TRAIN2017|VAL2017):[0-9]{12}$",
+      "x-physical-dtype": "utf8"
+    },
+    "bbox_xyxy": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "number"
+      },
+      "x-component-order": [
+        "x1",
+        "y1",
+        "x2",
+        "y2"
+      ],
+      "x-physical-dtype": "fixed_size_list<float64>[4]",
+      "x-source-semantics": "Lossless widening of original-image continuous xyxy derived from the detector float32 normalized L3 box; no clipping or repair."
+    },
+    "bbox_cxcywh": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "number"
+      },
+      "x-component-order": [
+        "cx",
+        "cy",
+        "w",
+        "h"
+      ],
+      "x-physical-dtype": "fixed_size_list<float64>[4]",
+      "x-source-semantics": "Derived in float64 from exported xyxy; w=x2-x1 and h=y2-y1 without clipping."
+    },
+    "candidate_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dataset_version",
+        "split",
+        "coco_image_id",
+        "image_id",
+        "canonical_image_id",
+        "image_sha256",
+        "candidate_asset_id",
+        "detector_id",
+        "checkpoint_sha256",
+        "export_config_sha256",
+        "schema_sha256",
+        "candidate_record_id",
+        "road8_rank",
+        "source_order",
+        "query_index",
+        "predicted_road8_class_id",
+        "predicted_road8_class_name",
+        "predicted_coco_category_id",
+        "detector_class_index",
+        "score",
+        "bbox_x1",
+        "bbox_y1",
+        "bbox_x2",
+        "bbox_y2",
+        "bbox_cx",
+        "bbox_cy",
+        "bbox_w",
+        "bbox_h",
+        "bbox_xyxy",
+        "bbox_cxcywh"
+      ],
+      "properties": {
+        "dataset_version": {
+          "const": "COCO2017-Road8-v1"
+        },
+        "split": {
+          "enum": [
+            "TRAIN2017",
+            "VAL2017"
+          ]
+        },
+        "coco_image_id": {
+          "$ref": "#/$defs/coco_image_id"
+        },
+        "image_id": {
+          "$ref": "#/$defs/canonical_image_id"
+        },
+        "canonical_image_id": {
+          "$ref": "#/$defs/canonical_image_id"
+        },
+        "image_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "candidate_asset_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "detector_id": {
+          "const": "RT-DETRv2-R18VD"
+        },
+        "checkpoint_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "export_config_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "schema_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "candidate_record_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "road8_rank": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 300,
+          "x-physical-dtype": "int32"
+        },
+        "source_order": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2399,
+          "x-physical-dtype": "int32"
+        },
+        "query_index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 299,
+          "x-physical-dtype": "int32"
+        },
+        "predicted_road8_class_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8,
+          "x-physical-dtype": "int16"
+        },
+        "predicted_road8_class_name": {
+          "enum": [
+            "person",
+            "bicycle",
+            "car",
+            "motorcycle",
+            "bus",
+            "train",
+            "truck",
+            "traffic light"
+          ],
+          "x-physical-dtype": "utf8"
+        },
+        "predicted_coco_category_id": {
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            10
+          ],
+          "x-physical-dtype": "int16"
+        },
+        "detector_class_index": {
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            9
+          ],
+          "x-physical-dtype": "int16"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "x-physical-dtype": "float64",
+          "x-source-dtype": "float32",
+          "x-score-semantics": "Exact widening of sigmoid(l3_road8_logit[query_index, predicted_road8_class_id-1]); never softmaxed, recalibrated or thresholded."
+        },
+        "bbox_x1": {"type": "number", "x-physical-dtype": "float64"},
+        "bbox_y1": {"type": "number", "x-physical-dtype": "float64"},
+        "bbox_x2": {"type": "number", "x-physical-dtype": "float64"},
+        "bbox_y2": {"type": "number", "x-physical-dtype": "float64"},
+        "bbox_cx": {"type": "number", "x-physical-dtype": "float64"},
+        "bbox_cy": {"type": "number", "x-physical-dtype": "float64"},
+        "bbox_w": {"type": "number", "minimum": 0, "x-physical-dtype": "float64"},
+        "bbox_h": {"type": "number", "minimum": 0, "x-physical-dtype": "float64"},
+        "bbox_xyxy": {
+          "$ref": "#/$defs/bbox_xyxy"
+        },
+        "bbox_cxcywh": {
+          "$ref": "#/$defs/bbox_cxcywh"
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "predicted_road8_class_id": {"const": 1},
+            "predicted_road8_class_name": {"const": "person"},
+            "predicted_coco_category_id": {"const": 1},
+            "detector_class_index": {"const": 0}
+          }
+        },
+        {
+          "properties": {
+            "predicted_road8_class_id": {"const": 2},
+            "predicted_road8_class_name": {"const": "bicycle"},
+            "predicted_coco_category_id": {"const": 2},
+            "detector_class_index": {"const": 1}
+          }
+        },
+        {
+          "properties": {
+            "predicted_road8_class_id": {"const": 3},
+            "predicted_road8_class_name": {"const": "car"},
+            "predicted_coco_category_id": {"const": 3},
+            "detector_class_index": {"const": 2}
+          }
+        },
+        {
+          "properties": {
+            "predicted_road8_class_id": {"const": 4},
+            "predicted_road8_class_name": {"const": "motorcycle"},
+            "predicted_coco_category_id": {"const": 4},
+            "detector_class_index": {"const": 3}
+          }
+        },
+        {
+          "properties": {
+            "predicted_road8_class_id": {"const": 5},
+            "predicted_road8_class_name": {"const": "bus"},
+            "predicted_coco_category_id": {"const": 6},
+            "detector_class_index": {"const": 5}
+          }
+        },
+        {
+          "properties": {
+            "predicted_road8_class_id": {"const": 6},
+            "predicted_road8_class_name": {"const": "train"},
+            "predicted_coco_category_id": {"const": 7},
+            "detector_class_index": {"const": 6}
+          }
+        },
+        {
+          "properties": {
+            "predicted_road8_class_id": {"const": 7},
+            "predicted_road8_class_name": {"const": "truck"},
+            "predicted_coco_category_id": {"const": 8},
+            "detector_class_index": {"const": 7}
+          }
+        },
+        {
+          "properties": {
+            "predicted_road8_class_id": {"const": 8},
+            "predicted_road8_class_name": {"const": "traffic light"},
+            "predicted_coco_category_id": {"const": 10},
+            "detector_class_index": {"const": 9}
+          }
+        }
+      ]
+    },
+    "native_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dataset_version",
+        "split",
+        "coco_image_id",
+        "image_id",
+        "canonical_image_id",
+        "image_sha256",
+        "candidate_asset_id",
+        "detector_id",
+        "checkpoint_sha256",
+        "export_config_sha256",
+        "schema_sha256",
+        "query_index",
+        "l3_road8_logits",
+        "l3_road8_scores",
+        "l3_query_embedding",
+        "l3_pred_box_cxcywh"
+      ],
+      "properties": {
+        "dataset_version": {
+          "const": "COCO2017-Road8-v1"
+        },
+        "split": {
+          "enum": [
+            "TRAIN2017",
+            "VAL2017"
+          ]
+        },
+        "coco_image_id": {
+          "$ref": "#/$defs/coco_image_id"
+        },
+        "image_id": {
+          "$ref": "#/$defs/canonical_image_id"
+        },
+        "canonical_image_id": {
+          "$ref": "#/$defs/canonical_image_id"
+        },
+        "image_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "candidate_asset_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "detector_id": {
+          "const": "RT-DETRv2-R18VD"
+        },
+        "checkpoint_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "export_config_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "schema_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "query_index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 299,
+          "x-physical-dtype": "int32"
+        },
+        "l3_road8_logits": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items": {
+            "type": "number"
+          },
+          "x-physical-dtype": "float32[8]",
+          "x-class-order": [
+            "person",
+            "bicycle",
+            "car",
+            "motorcycle",
+            "bus",
+            "train",
+            "truck",
+            "traffic light"
+          ]
+        },
+        "l3_road8_scores": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "x-physical-dtype": "float32[8]",
+          "x-class-order": [
+            "person",
+            "bicycle",
+            "car",
+            "motorcycle",
+            "bus",
+            "train",
+            "truck",
+            "traffic light"
+          ],
+          "x-source-semantics": "Materialized by torch.sigmoid on the corresponding float32 L3 Road8 logits during the same canonical forward. Candidate score is an exact float64 widening of the indexed stored float32 score."
+        },
+        "l3_query_embedding": {
+          "type": "array",
+          "minItems": 256,
+          "maxItems": 256,
+          "items": {
+            "type": "number"
+          },
+          "x-physical-dtype": "float16[256]",
+          "x-cast-semantics": "Canonical export casts the captured float32 embedding once to float16; later float32 model input does not restore original precision."
+        },
+        "l3_pred_box_cxcywh": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "number"
+          },
+          "x-physical-dtype": "float32[4]",
+          "x-coordinate-system": "normalized detector L3 final cxcywh, query order 0..299"
+        }
+      }
+    }
+  },
+  "x-road8-id-mapping": [
+    {
+      "road8_id": 1,
+      "name": "person",
+      "coco_category_id": 1,
+      "detector_class_index": 0
+    },
+    {
+      "road8_id": 2,
+      "name": "bicycle",
+      "coco_category_id": 2,
+      "detector_class_index": 1
+    },
+    {
+      "road8_id": 3,
+      "name": "car",
+      "coco_category_id": 3,
+      "detector_class_index": 2
+    },
+    {
+      "road8_id": 4,
+      "name": "motorcycle",
+      "coco_category_id": 4,
+      "detector_class_index": 3
+    },
+    {
+      "road8_id": 5,
+      "name": "bus",
+      "coco_category_id": 6,
+      "detector_class_index": 5
+    },
+    {
+      "road8_id": 6,
+      "name": "train",
+      "coco_category_id": 7,
+      "detector_class_index": 6
+    },
+    {
+      "road8_id": 7,
+      "name": "truck",
+      "coco_category_id": 8,
+      "detector_class_index": 7
+    },
+    {
+      "road8_id": 8,
+      "name": "traffic light",
+      "coco_category_id": 10,
+      "detector_class_index": 9
+    }
+  ],
+  "x-nullability": {
+    "required_fields_nullable": false,
+    "query_index_nullable": false,
+    "rule": "No required identity, asset, candidate or native field may be null. Missing native evidence is a hard failure; it is never zero-filled."
+  },
+  "x-cross-record-constraints": [
+    "image_id is the compatibility identity consumed by the frozen record-ID/reader contract and must exactly equal canonical_image_id at bundle and row level.",
+    "Every child row repeats and exactly equals the parent identity and asset fields.",
+    "bbox_xyxy exactly equals [bbox_x1,bbox_y1,bbox_x2,bbox_y2], and bbox_cxcywh exactly equals [bbox_cx,bbox_cy,bbox_w,bbox_h].",
+    "bbox_cx=(bbox_x1+bbox_x2)/2, bbox_cy=(bbox_y1+bbox_y2)/2, bbox_w=bbox_x2-bbox_x1 and bbox_h=bbox_y2-bbox_y1 in float64 without clipping.",
+    "candidate_records contain exactly road8_rank 1..300 with no gaps or duplicates.",
+    "native_rows contain exactly one row for each query_index 0..299.",
+    "candidate query_index is deliberately not unique: records for different Road8 classes may share a query and must be retained.",
+    "candidate/native join is exactly (canonical_image_id, query_index); joining by road8_rank, source_order, array position or reshape is forbidden.",
+    "source_order is exactly query_index*8+(predicted_road8_class_id-1), the unique query-major and Road8-class-minor ordinal from the 2400 raw hypotheses.",
+    "The Road8 ID, class name, COCO category ID and detector class index must match x-road8-id-mapping.",
+    "All numeric values are finite. Candidate score must exactly equal the float64 widening of the indexed stored l3_road8_scores value, and l3_road8_scores must reconstruct from l3_road8_logits under the frozen torch.float32 sigmoid QA tolerance.",
+    "No query deduplication, NMS, thresholding, score modification, box modification or class replacement is allowed."
+  ],
+  "x-serialization": {
+    "schema_hash": "SHA256 of the exact binary bytes of this JSON file; no parsing or reserialization.",
+    "candidate_storage": "Parquet shards. One flat row per stored candidate record; required candidate_record fields, including the eight frozen scalar bbox columns and the two fixed-size-list aliases, are physical columns. UTF-8 strings, little-endian numeric semantics, no nullable required columns.",
+    "native_storage": "Image-aligned flat NPZ query rows with R=images_in_shard*300: image_ids fixed-width Unicode [R] (each canonical image_id repeated for its 300-row block), query_index int32 [R], l3_road8_logits float32 [R,8], l3_road8_scores float32 [R,8], l3_query_embedding float16 [R,256], l3_pred_box_cxcywh float32 [R,4]. Query rows within each image are exactly 0..299. No pickle or object arrays; allow_pickle=False.",
+    "native_index_storage": "Parquet index keyed by canonical_image_id plus query_index with shard_id and row_offset locators.",
+    "manifest_storage": "UTF-8 JSON with LF and deterministic key ordering selected by the export implementation; the exact saved bytes are entered in the SHA ledger.",
+    "candidate_sort": [
+      "score descending",
+      "query_index ascending",
+      "predicted_road8_class_id ascending",
+      "source_order ascending"
+    ],
+    "raw_to_stored": "Generate exactly 300 queries x 8 Road8 hypotheses = 2400 raw records, perform the frozen total ordering, and store exactly the first 300. M11 consumes exactly stored road8_rank 1..100."
+  }
+}

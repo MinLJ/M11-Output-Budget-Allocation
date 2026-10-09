@@ -1,0 +1,198 @@
+{
+  "candidate_asset_id": "5ff6497669d5b02c888f90451882d3c8e594b74a3aedd136639a9c0c8621c707",
+  "contract_type": "COCO2017_VAL2017_CANONICAL_EXPORT_RUN_V1",
+  "created_at_utc": "2026-09-26T06:31:56.723670Z",
+  "created_before_model_load": true,
+  "dataset_root": "D:\\COCO2017",
+  "dataset_version": "COCO2017-Road8-v1",
+  "detector_runtime": {
+    "TF32": false,
+    "autocast": false,
+    "batch_size": 1,
+    "checkpoint_state_key": "ema.module",
+    "cuda": "12.8",
+    "cuda_runtime": "12.8",
+    "cudnn": 91900,
+    "dependency_fallback_site_packages": "D:\\miniconada\\envs\\aop_detr\\Lib\\site-packages",
+    "detector_id": "RT-DETRv2-R18VD",
+    "device": "cuda:0",
+    "eval": true,
+    "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "gpu_driver": "610.74",
+    "inference_mode": true,
+    "model_dtype": "float32",
+    "numpy": "2.2.6",
+    "pillow": "12.2.0",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "preprocess": {
+      "EXIF_transpose": false,
+      "antialias": true,
+      "input": "RGB PIL image",
+      "letterbox": false,
+      "normalization_mean_std": null,
+      "resize": "PIL BILINEAR [640,640] via torchvision Resize",
+      "scale": "divide by255",
+      "tensor_dtype": "float32"
+    },
+    "pyarrow": "24.0.0",
+    "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+    "reference_runtime": {
+      "Pillow": "12.2.0",
+      "numpy": "2.2.6",
+      "pyarrow": "24.0.0",
+      "python": "3.10.20",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128"
+    },
+    "reference_runtime_exact_match": true,
+    "repository_commit": "1c8ac3f7ba84f14bd5651ab7b1b70d69a5f55f47",
+    "repository_path": "D:/AOP_DETR/code/external/rtdetr_official",
+    "strict_checkpoint_load": true,
+    "torch": "2.11.0+cu128"
+  },
+  "determinism": {
+    "comparison": "exact stored native arrays, candidate semantic records, order and record IDs",
+    "repeat_forward_count": 20,
+    "sample_count": 20,
+    "sample_image_ids": [
+      "coco2017:VAL2017:000000052412",
+      "coco2017:VAL2017:000000023666",
+      "coco2017:VAL2017:000000073118",
+      "coco2017:VAL2017:000000517687",
+      "coco2017:VAL2017:000000002431",
+      "coco2017:VAL2017:000000173004",
+      "coco2017:VAL2017:000000398742",
+      "coco2017:VAL2017:000000492362",
+      "coco2017:VAL2017:000000488673",
+      "coco2017:VAL2017:000000308753",
+      "coco2017:VAL2017:000000396274",
+      "coco2017:VAL2017:000000414133",
+      "coco2017:VAL2017:000000155291",
+      "coco2017:VAL2017:000000556498",
+      "coco2017:VAL2017:000000078915",
+      "coco2017:VAL2017:000000385997",
+      "coco2017:VAL2017:000000089556",
+      "coco2017:VAL2017:000000557672",
+      "coco2017:VAL2017:000000108495",
+      "coco2017:VAL2017:000000372317"
+    ],
+    "selection_namespace": "LC_ALLOC_COCO_CANONICAL_EXPORT_DETERMINISM_V1|",
+    "selection_rule": "sort SHA256(namespace+canonical_image_id), canonical_image_id; take first 20"
+  },
+  "expected_counts": {
+    "candidate_rows": 1500000,
+    "canonical_forwards": 5000,
+    "clean_run_total_forwards": 5020,
+    "determinism_repeat_forwards": 20,
+    "images": 5000,
+    "m11_top100_rows": 500000,
+    "native_rows": 1500000,
+    "queries_per_image": 300,
+    "raw_hypotheses_per_image": 2400,
+    "raw_hypotheses_total": 12000000,
+    "shards": 10,
+    "stored_candidates_per_image": 300
+  },
+  "expected_image_count": 5000,
+  "expected_shard_count": 10,
+  "forbidden_inputs": [
+    "annotation_path",
+    "ground_truth_path",
+    "evaluation_result_path",
+    "TEST",
+    "RESERVE",
+    "old_holdout"
+  ],
+  "forbidden_operations": [
+    "allocator inference or training",
+    "matching",
+    "AP/AR/Coverage/QUALITY evaluation",
+    "NMS",
+    "thresholding",
+    "query deduplication",
+    "score/box/class modification"
+  ],
+  "images_per_shard": 500,
+  "immutable_after_creation": true,
+  "input_bindings": {
+    "candidate_asset_identity": {
+      "path": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_EXPORT_FREEZE\\COCO2017_candidate_asset_identity.json",
+      "sha256": "3776105cf88fd05c4f70a2de82ea610c3e98ef8bf47b7d80e1a4f18f5b5e7a1b"
+    },
+    "candidate_schema": {
+      "path": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_EXPORT_FREEZE\\COCO2017_Road8_CandidateSchema_v1.json",
+      "sha256": "e977e02fe638a8ac44e98919d76225306eb88fa7385d3ec0793342112ec8c53b"
+    },
+    "checkpoint": {
+      "path": "D:\\AOP_DETR\\checkpoints\\official\\rtdetrv2_r18vd_120e_coco_rerun_48.1.pth",
+      "sha256": "2ace52184b620204004509b72752ac7bfe64aadaf7fc1d076b18df8ab5a5c77e"
+    },
+    "detector_snapshot": {
+      "path": "D:\\AOP_DETR\\shared_benchmark\\AOP_ROAD8_LARGECLEAN_V1\\P1_SHARED_EXPORT\\scripts\\detector_snapshot.py",
+      "sha256": "4714b925380ce62075318331d4078ddc827c25c217788cbb81993b2c75efd1b0"
+    },
+    "export_config": {
+      "path": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_EXPORT_FREEZE\\COCO2017_Road8_RTDETRv2_R18VD_EXPORT_CONFIG.json",
+      "sha256": "f6a91e9d6879357fc10095c182689e43ee73bca2c10ec6926f93960cc68d98f2"
+    },
+    "image_manifest": {
+      "path": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_EXECUTION_GATE\\manifests\\VAL2017_images.csv",
+      "sha256": "9e0c1ac3d4a2c3b8e61246f8ec147745ca937c8830dc88b98bd4879342503ad2"
+    },
+    "model_config": {
+      "path": "D:\\AOP_DETR\\code\\external\\rtdetr_official\\rtdetrv2_pytorch\\configs\\rtdetrv2\\rtdetrv2_r18vd_120e_coco.yml",
+      "sha256": "3fc6fda05f01ac16a90cf4116bd3793682fa780979ac37b09f459a66bd21cc54"
+    },
+    "qa_spec": {
+      "path": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_EXPORT_FREEZE\\coco_export_QA_spec.md",
+      "sha256": "6ba34bc20d694533892147868020a0838872caf677626e0a07626f0ec1287e9c"
+    },
+    "qa_validator": {
+      "path": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_CANONICAL_EXPORT\\working\\canonical_export_validator.py",
+      "sha256": "6ab6be595bb195dc0b3b1a7dd388a73f3fadbf1d0787adf6df1567299296d007"
+    },
+    "runner_contract": {
+      "path": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_EXPORT_FREEZE\\export_runner_contract.md",
+      "sha256": "8c67226cd7530d982b99589ef8be0d21955d79a1098fc81d645f6567cb320f27"
+    },
+    "runner_source": {
+      "path": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_CANONICAL_EXPORT\\working\\canonical_export_runner.py",
+      "sha256": "db4c7c10415263bda39b5f19d1fa2fd09f0b361b7543e501c0a8a4d566d16782"
+    }
+  },
+  "output_root": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_CANONICAL_EXPORT",
+  "publication_policy": {
+    "final_logical_commit_marker": "CANONICAL_EXPORT_COMPLETE.json",
+    "refuse_overwrite": true,
+    "requires_all_checks_pass_true": true,
+    "validator_interface": "validate_export(staging_root: Path, run_config_path: Path)->dict"
+  },
+  "resume_policy": {
+    "committed_shard_is_never_overwritten": true,
+    "enabled": true,
+    "incomplete_staging_shard_is_rebuilt": true,
+    "skip_only_when_committed_shard_metadata_and_all_file_hashes_match": true
+  },
+  "serialization": {
+    "candidate_pattern": "candidate/VAL2017_candidates_{ordinal:04d}.parquet",
+    "candidate_rows_per_full_shard": 150000,
+    "m11_consumed_prefix": 100,
+    "native_index_pattern": "native/VAL2017_native_index_{ordinal:04d}.parquet",
+    "native_keys": [
+      "image_ids",
+      "query_index",
+      "l3_road8_logits",
+      "l3_road8_scores",
+      "l3_query_embedding",
+      "l3_pred_box_cxcywh"
+    ],
+    "native_pattern": "native/VAL2017_native_{ordinal:04d}.npz",
+    "native_rows_per_full_shard": 150000,
+    "raw_hypotheses_per_image": 2400,
+    "shard_metadata_pattern": "shards/VAL2017_shard_{ordinal:04d}.json",
+    "stored_candidates_per_image": 300
+  },
+  "split": "VAL2017",
+  "staging_root": "D:\\AOP_DETR\\research_LC_ALLOC_COCO_CANONICAL_EXPORT\\working\\staging_VAL2017_5ff6497669d5",
+  "status": "STAGING_NOT_PUBLISHED"
+}

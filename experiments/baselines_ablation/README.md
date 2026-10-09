@@ -58,9 +58,11 @@ The uploaded code includes actual allocation/evaluation/summary/profile stages,
 and the three ablation preparation/training stages. P1A/P1B/P2/BENCH/ABLATION
 depend on their specifically referenced P1 sources and historical bundles,
 R0 groups/score implementation/evaluator, prepared data and saved indices.
-Those external assets and some stage dependencies are not included. P1B's
-first submission contains the weighted-score allocation stage and saved
-comparison results, not its entire performance-development pipeline.
+Those external assets and some stage dependencies are not included. The
+follow-up also supplies P1B's saved evaluation, analysis, profiling and summary
+stages, implementation parity table, runtime samples and runtime reconciliation
+note. P1A's single-model profile and P2's calibration analysis/evaluation/profile
+stages and saved timing tables are included without running them again.
 
 Source/default paths changed only in new publication copies. Config placeholders
 and retained historical hash checks must be resolved before execution; no

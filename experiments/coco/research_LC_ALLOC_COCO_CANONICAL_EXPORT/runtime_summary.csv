@@ -1,0 +1,7 @@
+metric,value,unit,scope
+model_load,2.410035399982007,seconds,one load
+export_wall_current_invocation,399.8257307999884,seconds,resume-aware invocation
+preflight_all_image_bytes_and_dimensions,11.158794099988881,seconds,5000 images before model load
+determinism_repeat,1.3289232999959495,seconds,20 images
+detector_forward_count_current_invocation,5020,forwards,batch_size_1
+canonical_image_count,5000,images,VAL2017

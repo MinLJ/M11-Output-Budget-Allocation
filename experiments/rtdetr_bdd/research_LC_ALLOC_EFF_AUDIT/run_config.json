@@ -1,0 +1,49 @@
+{
+  "action": "fixed original-score prefix length K only",
+  "all_scientific_seeds_bound": [
+    530101,
+    530102,
+    530103
+  ],
+  "autocast": false,
+  "batch_size": 1,
+  "budgets": [
+    10,
+    20,
+    40
+  ],
+  "candidate": "LEARN_QUALITY_M11",
+  "candidate_freeze": {
+    "path": "D:\\AOP_DETR\\research_LC_ALLOC_P1A\\candidate_freeze.json",
+    "sha256": "8889fe172a90a98572fdd9e1fddced2fbf9a4bf0ded65841f5a19b1c625180d7"
+  },
+  "candidate_pool": "canonical Road8 Top300 output; allocator consumes original-rank Top100",
+  "eighty_image_note": "two independent 40-image frozen allocation groups",
+  "group_size": 40,
+  "image_counts": [
+    20,
+    40,
+    80
+  ],
+  "input_resolution": [
+    640,
+    640
+  ],
+  "input_role": "FIT only; no GT read",
+  "k_bounds": [
+    5,
+    50
+  ],
+  "measurements": 50,
+  "model_eval": true,
+  "no_grad": true,
+  "order_seed": 530004,
+  "precision": "FP32",
+  "task": "LC-ALLOC-EFF-AUDIT",
+  "test_access": 0,
+  "tf32": false,
+  "timing_seed": 530101,
+  "timing_seed_reason": "inherited P1A/P1B primary timing seed by fixed seed order; not selected by DEV",
+  "twenty_image_note": "latency scaling diagnostic only; no scientific group or result changed",
+  "warmups": 10
+}

@@ -1,0 +1,289 @@
+{
+  "contract_type": "COCO2017_ROAD8_RTDETRV2_R18VD_EXPORT_CONFIG_V1",
+  "status": "FROZEN_BEFORE_EXPORT",
+  "dataset_version": "COCO2017-Road8-v1",
+  "representation_name": "COCO2017_Road8CartesianTop300_v1",
+  "allowed_splits": [
+    "TRAIN2017",
+    "VAL2017"
+  ],
+  "split_manifest_registry": {
+    "TRAIN2017": {
+      "path": "D:/AOP_DETR/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/TRAIN2017_images.csv",
+      "sha256": "edbe4c4fe3b181a239a7390b8a21459a7d9a2bb679671cf85186487a1852d45b",
+      "image_count": 118287,
+      "image_archive_sha256": "69a8bb58ea5f8f99d24875f21416de2e9ded3178e903f1f7603e283b9e06d929",
+      "manifest_role": "detector_input_image_only"
+    },
+    "VAL2017": {
+      "path": "D:/AOP_DETR/research_LC_ALLOC_COCO_EXECUTION_GATE/manifests/VAL2017_images.csv",
+      "sha256": "9e0c1ac3d4a2c3b8e61246f8ec147745ca937c8830dc88b98bd4879342503ad2",
+      "image_count": 5000,
+      "image_archive_sha256": "4f7e2ccb2866ec5041993c9cf2a952bbed69647b115d0f74da7ce8f4bef82f05",
+      "manifest_role": "detector_input_image_only"
+    }
+  },
+  "canonical_image_id": {
+    "format": "coco2017:<SPLIT>:<12-digit COCO image id>",
+    "compatibility_alias": "image_id",
+    "alias_rule": "image_id must exactly equal canonical_image_id"
+  },
+  "detector": {
+    "detector_id": "RT-DETRv2-R18VD",
+    "repository_url": "https://github.com/lyuwenyu/RT-DETR.git",
+    "repository_path": "D:/AOP_DETR/code/external/rtdetr_official",
+    "repository_commit": "1c8ac3f7ba84f14bd5651ab7b1b70d69a5f55f47",
+    "checkpoint_path": "D:/AOP_DETR/checkpoints/official/rtdetrv2_r18vd_120e_coco_rerun_48.1.pth",
+    "checkpoint_bytes": 81198974,
+    "checkpoint_sha256": "2ace52184b620204004509b72752ac7bfe64aadaf7fc1d076b18df8ab5a5c77e",
+    "checkpoint_state_key": "ema.module",
+    "strict_checkpoint_load": true,
+    "checkpoint_internal_contract_status": "FUTURE_RUNNER_MUST_VERIFY_AFTER_LOAD_BEFORE_FORWARD",
+    "model_config_path": "D:/AOP_DETR/code/external/rtdetr_official/rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r18vd_120e_coco.yml",
+    "model_config_sha256": "3fc6fda05f01ac16a90cf4116bd3793682fa780979ac37b09f459a66bd21cc54",
+    "official_hub_binding_path": "D:/AOP_DETR/code/external/rtdetr_official/hubconf.py",
+    "official_hub_binding_sha256": "2d2e947a4d45f2dbae0b8b9d1249ced34fa35035f8055697b76537f84e37b2e1"
+  },
+  "taxonomy_and_mapping": {
+    "road8_taxonomy_sha256": "ad45b1579b74b6848c61f988e62771484247296a96fbc156519c451507e30e5c",
+    "coco2017_road8_mapping_sha256": "ee5f59eaa02c5c6f3b67f735b404ec9f94d223983d24534e24ff5682f45c300a",
+    "road8_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "road8_class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "train",
+      "truck",
+      "traffic light"
+    ],
+    "coco_category_ids": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      10
+    ],
+    "detector_class_indices": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      9
+    ]
+  },
+  "input_size": [
+    640,
+    640
+  ],
+  "preprocessing": {
+    "input": "RGB PIL image",
+    "resize": "PIL BILINEAR [640,640] via torchvision Resize",
+    "antialias": true,
+    "letterbox": false,
+    "tensor_dtype": "float32",
+    "scale": "divide by255",
+    "normalization_mean_std": null,
+    "EXIF_transpose": false
+  },
+  "preprocess_hash_contract": {
+    "payload": "merge preprocessing object with input_size, with input_size included as a peer key",
+    "canonicalization": "UTF-8 JSON; keys lexicographically sorted; separators comma and colon without spaces; ensure_ascii=false; allow_nan=false; no BOM; no final newline",
+    "sha256": "4f2b9fafa239c598f3dd70b8aa63a931c6b2bfc43b0bd0d9914c6d01e2c05290"
+  },
+  "model_execution": {
+    "deploy": true,
+    "eval": true,
+    "grad": false,
+    "inference_mode": true,
+    "autocast": false,
+    "TF32": false,
+    "cudnn_benchmark": false,
+    "pretrained_backbone_bootstrap": false,
+    "model_dtype": "float32",
+    "batch_size": 1,
+    "device": "cuda:0",
+    "seed": 20260903
+  },
+  "native_state": {
+    "num_queries": 300,
+    "query_index_domain": "integers 0..299 in detector order",
+    "decoder_layers": 3,
+    "layer_name": "L3 output",
+    "final_layer_zero_based_index": 2,
+    "native_num_classes": 80,
+    "embedding_dim": 256,
+    "fields": {
+      "l3_road8_logits": {
+        "dtype": "float32",
+        "shape_per_image": [
+          300,
+          8
+        ]
+      },
+      "l3_road8_scores": {
+        "dtype": "float32",
+        "shape_per_image": [
+          300,
+          8
+        ],
+        "definition": "torch.sigmoid(l3_road8_logits) computed during the same canonical forward"
+      },
+      "l3_query_embedding": {
+        "capture_dtype": "float32",
+        "canonical_storage_dtype": "float16",
+        "shape_per_image": [
+          300,
+          256
+        ],
+        "cast_rule": "one float32-to-float16 cast at canonical serialization; later float32 input does not restore source precision"
+      },
+      "l3_pred_box_cxcywh": {
+        "dtype": "float32",
+        "shape_per_image": [
+          300,
+          4
+        ],
+        "coordinate_system": "normalized detector L3 final cxcywh"
+      },
+      "query_index": {
+        "dtype": "int32",
+        "shape_per_image": [
+          300
+        ]
+      }
+    },
+    "reference_point_exported": false,
+    "reference_point_reason": "The frozen M11 90D feature schema does not consume a reference point; no unrelated branch field is introduced."
+  },
+  "candidate_construction": {
+    "raw_hypothesis_count_per_image": 2400,
+    "raw_hypothesis_formula": "300 queries x 8 Road8 class hypotheses",
+    "stored_top_limit": 300,
+    "m11_consumption_top_limit": 100,
+    "score_definition": "indexed l3_road8_scores = torch.sigmoid(corresponding float32 l3_road8_logit), never softmax",
+    "source_order_definition": "query_index*8+(predicted_road8_class_id-1)",
+    "source_order_domain": "integers 0..2399",
+    "sorting_rule": [
+      "score descending",
+      "query_index ascending",
+      "predicted_road8_class_id ascending",
+      "source_order ascending"
+    ],
+    "reference_sort_expression": "numpy.lexsort((source_order, road8_class_id, query_index, -score))",
+    "bbox_conversion": "normalized float32 L3 cxcywh to original-image continuous float32 xyxy using manifest width/height; no clipping; candidate scalar values stored by lossless widening to float64; cx/cy/w/h derived from exported xyxy in float64",
+    "candidate_record_is_unique_query": false,
+    "same_query_different_class_records_retained": true,
+    "confidence_threshold": null,
+    "NMS": false,
+    "query_deduplication": false,
+    "score_modification": false,
+    "box_modification": false,
+    "class_modification": false
+  },
+  "dtype_policy": {
+    "native_logits": "float32",
+    "native_scores": "float32",
+    "query_embedding_storage": "float16",
+    "native_pred_boxes": "float32",
+    "candidate_score": "exact float64 widening of indexed stored float32 native score",
+    "candidate_bbox_columns": "float64 widening/derivation under candidate_construction.bbox_conversion",
+    "query_and_rank_indices": "int32"
+  },
+  "serialization": {
+    "candidate_shards": "Parquet, image-aligned shards, one row per stored candidate record",
+    "native_shards": "compressed NPZ flat query rows, no object arrays, allow_pickle=false",
+    "native_index": "Parquet keyed only by canonical_image_id plus query_index",
+    "shard_images": 500,
+    "write_policy": "new staging directory only; no overwrite; serialized readback and aggregate QA before atomic completion publication"
+  },
+  "schema_binding": {
+    "path": "COCO2017_Road8_CandidateSchema_v1.json",
+    "sha256": "e977e02fe638a8ac44e98919d76225306eb88fa7385d3ec0793342112ec8c53b",
+    "native_schema_rule": "The same exact-byte schema binds the native row in $defs.native_row and physical NPZ projection in x-serialization; there is no second unbound native schema."
+  },
+  "runner_interface_binding": {
+    "path": "export_runner_contract.md",
+    "sha256": "8c67226cd7530d982b99589ef8be0d21955d79a1098fc81d645f6567cb320f27",
+    "runner_implementation_status": "NOT_MATERIALIZED_IN_THIS_SPEC_FREEZE",
+    "future_requirement": "Before model load or forward, bind actual COCO runner source-bundle SHA and verify it implements this interface."
+  },
+  "qa_contract_binding": {
+    "path": "coco_export_QA_spec.md",
+    "sha256": "6ba34bc20d694533892147868020a0838872caf677626e0a07626f0ec1287e9c",
+    "qa_validator_implementation_status": "NOT_MATERIALIZED_IN_THIS_SPEC_FREEZE",
+    "future_requirement": "Before export, bind actual QA validator source-bundle SHA; before publication, execute all QA and serialized readback checks."
+  },
+  "semantic_reference_only": [
+    {
+      "path": "D:/AOP_DETR/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/scripts/detector_snapshot.py",
+      "sha256": "4714b925380ce62075318331d4078ddc827c25c217788cbb81993b2c75efd1b0",
+      "role": "reference detector capture and preprocessing semantics; not the COCO runner identity"
+    },
+    {
+      "path": "D:/AOP_DETR/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/scripts/export_canonical.py",
+      "sha256": "33ad0a1541d6e137dff4c318252cfc0e887632091181a71eed6871ffd7531972",
+      "role": "reference candidate construction and serialization semantics; LC-hardcoded and not executable as the COCO runner"
+    },
+    {
+      "path": "D:/AOP_DETR/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/evaluator/candidate_asset_id.py",
+      "sha256": "e49f59abcf2aba1e5a643f4ac6833ac1a2e02f9e5b7a845fd3ff61c8d2f872a3",
+      "role": "reference identity formula semantics; not the future COCO runner"
+    },
+    {
+      "path": "D:/AOP_DETR/shared_benchmark/AOP_ROAD8_LARGECLEAN_V1/P1_SHARED_EXPORT/scripts/audit_serialized_export.py",
+      "sha256": "0636cc1a55d23408c3e69b1e386ebc695e339727f2ba6233aa75b2045e8b4b5c",
+      "role": "reference serialized readback semantics; not the future COCO QA validator identity"
+    }
+  ],
+  "reference_runtime": {
+    "python": "3.10.20",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.2.6",
+    "pyarrow": "24.0.0",
+    "Pillow": "12.2.0",
+    "rule": "Future run records exact actual versions and hardware. Any runtime deviation requires preflight compatibility review and a newly hash-bound export config; it is not silently accepted."
+  },
+  "forbidden_inputs": [
+    "annotation_path",
+    "ground_truth_path",
+    "evaluation_result_path",
+    "TEST",
+    "RESERVE",
+    "old_holdout"
+  ],
+  "forbidden_operations": [
+    "detector checkpoint substitution",
+    "candidate thresholding",
+    "NMS",
+    "query deduplication",
+    "score calibration or modification",
+    "bbox clipping or modification",
+    "class replacement",
+    "GT-conditioned export",
+    "partial-asset publication"
+  ],
+  "scientific_access": {
+    "annotation_or_GT_input_allowed": false,
+    "TEST_scientific_access_authorized": false,
+    "RESERVE_scientific_access_authorized": false,
+    "old_holdout_scientific_access_authorized": false
+  }
+}

@@ -49,3 +49,8 @@ pycocotools version and original shell details remain incomplete. Do not replace
 that record with a current machine's package list.
 Entry points also import joblib, matplotlib and pycocotools; their exact
 historical versions are not all established.
+
+The follow-up includes P1's original `scripts/profile_runtime.py` and saved
+runtime summary. The separate `research_LC_ALLOC_EFF_AUDIT/` directory contains
+the historical full-pipeline profile source, configuration, environment record
+and saved runtime table. These are different timing boundaries, not a rerun.
