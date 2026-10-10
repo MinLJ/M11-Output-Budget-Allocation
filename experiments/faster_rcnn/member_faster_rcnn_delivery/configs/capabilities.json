@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "reference": {
+    "detector": "RT-DETRv2-R18VD",
+    "status": "REFERENCE_IMPLEMENTED",
+    "native_schema_id": "rtdetrv2_r18vd_l3_logits8_embedding256_v1"
+  },
+  "faster_rcnn": {
+    "status": "ADAPTED",
+    "native_schema_id": "frcnn_r18fpn_road8_roihead1024_logits9_v1",
+    "export_implemented": true,
+    "candidate_export_point": {
+      "primary_pre_nms_topn100": "RoI head 完成分类与框回归、裁剪与去背景之后, **最终 RoI 分数筛选 / 退化框过滤 / NMS / top-N 之前**; 按原分数取前缀 top-100。这是 M11 主用候选流。",
+      "secondary_post_nms_topn300": "官方 postprocess_detections 的最终输出, 逐位等于 model(images); 只作登记备查, 不参与 M11 比较。",
+      "note": "两条流出自**同一次前向**, 导出点各自登记, 不是两次推理。"
+    },
+    "required_next_step": "None for this detector. RT-DETR PCA/scaler/model assets must never be cross-loaded."
+  },
+  "yolo": {
+    "status": "SCAFFOLD_ONLY",
+    "export_implemented": false,
+    "required_next_step": "Freeze a concrete YOLO version and declare pre/post-NMS records, score semantics, native layer, and stable source_id."
+  }
+}

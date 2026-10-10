@@ -485,6 +485,105 @@
       "checksum_source": "Previously saved asset binding; not rehashed during this upload",
       "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
       "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/assets/models/marginal_mlp_seed_730101.pt",
+      "purpose": "marginal_mlp_seed_730101.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "3ffb574018abcb310d04689917936f6c149943bf2d15a12359bbb634a2c7e395",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/assets/models/marginal_mlp_seed_730102.pt",
+      "purpose": "marginal_mlp_seed_730102.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "0e4b6b076eec1d680e773d85013068ad452f0881e1936131ab407489ef9e5652",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/assets/models/marginal_mlp_seed_730103.pt",
+      "purpose": "marginal_mlp_seed_730103.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "c0756453007cc96647f346f7283ed40ba45bbd2e60dd280ef886cb4d1499793d",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/assets/pca32.joblib",
+      "purpose": "pca32.joblib",
+      "size_bytes": 136506,
+      "existing_sha256": "87ae79ae4b179c100f042174ddbee22804a85028aaa1075ef39eac4eb7be5af1",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/assets/scaler.joblib",
+      "purpose": "scaler.joblib",
+      "size_bytes": 4731,
+      "existing_sha256": "1fed41329d553ccc6716485a5fc42adec8d7e5d4911b5bc3ecdeb1e46df25e0b",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/configs/roles.csv",
+      "purpose": "roles.csv",
+      "size_bytes": 943929,
+      "existing_sha256": "0e0f51c7b2b1d6062aa746a502c4a218ed0f6f2b4730a8068c24b1494ae59650",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/results/allocations.parquet",
+      "purpose": "allocations.parquet",
+      "size_bytes": 67891,
+      "existing_sha256": "e29d0623b3bdffe1263c3e5ffe8987cdd2273a0532e2a2ae5c3185928be31c2e",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/results/per_image_results.csv",
+      "purpose": "per_image_results.csv",
+      "size_bytes": 3784896,
+      "existing_sha256": "cd39a00903974a87e55f979bbcfd48d5b0787fe0257e4f37d1f29539fc4d55f3",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/results/post_nms_counts.csv",
+      "purpose": "post_nms_counts.csv",
+      "size_bytes": 11841119,
+      "existing_sha256": "d823ee5556ae83cb8bc5e10409c885126ea0648c2de66cf05504105eb34fdad6",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/results/predicted_utility.parquet",
+      "purpose": "predicted_utility.parquet",
+      "size_bytes": 47980064,
+      "existing_sha256": "30bb33b6b31908de67967df036270e178f2139deedc7e1c6f3aaab02c48ba832",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "frcnn_m11/delivery_out/member_faster_rcnn_delivery/results/selected_record_ids.parquet",
+      "purpose": "selected_record_ids.parquet",
+      "size_bytes": 2403160,
+      "existing_sha256": "2ae9b625c766eeed53bb9ffef0830af6b6dbf8430d03e3654b657743dfc86e48",
+      "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
     }
   ],
   "download_status": "No public asset download is established in this batch. Exact missing payloads must be obtained under their original permissions."

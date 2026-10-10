@@ -1,0 +1,259 @@
+{
+  "scope": "Zhaolin Dong initial Faster R-CNN arm publication copy; historical delivery package retained by branch",
+  "source_identity_convention": "Historical delivery-package SHA (member_faster_rcnn_delivery/manifest.csv) and release-copy SHA are separate; path-normalized copies are archival templates.",
+  "placeholder": "M11_EXPERIMENT_ROOT = external asset workspace (code: os.environ.get fallback \"external_assets\"; JSON/MD: literal external_assets or M11_EXPERIMENT_ROOT prefix)",
+  "files": [
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/README_CN.md",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/README_CN.md",
+      "historical_source_sha256": "d5ca51f3d7ce598d6bd0d552e2ce72526f9f6fb11c07766401f627937e99af76",
+      "release_copy_sha256": "59737f26ff6c156424f9cb1e4ad425e964c88d85051b9ed4db9a4bb30e53c912",
+      "bytes": 14221,
+      "changes": [
+        {
+          "field": "reproduction commands (line 121)",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": "reproduction commands (line 132)",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/code/eval_ap.py",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/code/eval_ap.py",
+      "historical_source_sha256": "c0cff8f064d170bae9738b9bdd0b90267dbfe7a09318d5770ec8e15fa08de364",
+      "release_copy_sha256": "1b5cece9fc6774202ab4bb4c4cddf0f5d9c605e82853a93ccfabf89e7d7b2e96",
+      "bytes": 11258,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".RELEASE",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/code/export_frcnn.py",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/code/export_frcnn.py",
+      "historical_source_sha256": "1eb4169d805cf98017143faf5aea38d99cf5c79cc76091f84d7df27095d3fa33",
+      "release_copy_sha256": "b5bfd8241143f5d332c750fba8cc530b8831a86ef14ef3e65c624f8237a8e82b",
+      "bytes": 26378,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".RELEASE, .IMAGE_ROOT",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/code/pfx_then_nms.py",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/code/pfx_then_nms.py",
+      "historical_source_sha256": "a8a6c83cd5592e2c512044afa1555deb504d491556a92655c0f4043c8b099f16",
+      "release_copy_sha256": "47ed2f66ad543fc182342803237046bec3adcef8f9afc930e537eea4a74171bb",
+      "bytes": 9987,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".ROAD8",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/code/prepare_inputs.py",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/code/prepare_inputs.py",
+      "historical_source_sha256": "4360db322b76c8b4ee13a5653593be5ea316471655a1a06e387a74bcce2832bf",
+      "release_copy_sha256": "a5bbb787eca1ecb1b2be06aaae4713af4388aa23d3bf87e4a7da1782ce737ed6",
+      "bytes": 15295,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11_ROOT, .HANDOFF, .EXPORT_ROOT",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": "inline GT path (convert_gt, line 267)",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/code/qa_closed_loop.py",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/code/qa_closed_loop.py",
+      "historical_source_sha256": "7cab38aed03cda6cac59a84f8ddae8cd8cc787a6360a7bd652f703a400f5e90d",
+      "release_copy_sha256": "8eba83c46489e57cf9d464adece0bd0e90f6dabdf5b60d8f0a3890b1ccceb470",
+      "bytes": 61103,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".HANDOFF, .DECLARATION",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/code/qa_small_sample.py",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/code/qa_small_sample.py",
+      "historical_source_sha256": "4bdfef0c1a38170107b492ad4a04914a10e596e1baa6f5dae9a072e903587a64",
+      "release_copy_sha256": "9578f71caf359d9a6e27700edf26f441d3feb8dc0a960c00e5157b10f18e54f5",
+      "bytes": 11565,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".HANDOFF",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": "inline export-summary default (line 51)",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/code/run_pipeline.py",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/code/run_pipeline.py",
+      "historical_source_sha256": "a3267cd47df22236281b134e16eba89f949bed285c6d11184c41803dcc09d644",
+      "release_copy_sha256": "374ec6dda82963b4c722b24a838db30fd7fea35b531d7a5fbf43ba191f174920",
+      "bytes": 37819,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".HANDOFF",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".RELEASE",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/code/train_frcnn.py",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/code/train_frcnn.py",
+      "historical_source_sha256": "611107ec74f8bb9222ed84bb21377a7c79dfb5dae91ba2f1679e5f00b8a42b1f",
+      "release_copy_sha256": "a3b8abc4a5141e609b60997947eafe63675e607f2ee8c6bc659d486dffff5fa0",
+      "bytes": 11019,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".RELEASE, .IMAGE_ROOT, .ROLECSV",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/configs/evaluator.json",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/configs/evaluator.json",
+      "historical_source_sha256": "c638efa60679904ff029c6ab81e1a9d87e487a32d4eeec0a1ec41cc7f72ba537",
+      "release_copy_sha256": "8838a6d99641c0880078bc2fbac9aad0211c4ca6bb0960c7e424174544ded20c",
+      "bytes": 8461,
+      "changes": [
+        {
+          "field": ".entry_identity.ground_truth.package_normalized.path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".entry_identity.ground_truth.release_original.path, .shared_implementation.package_root",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": ".ground_truth_equivalence.evidence_script",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/references/README_CN.md",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/references/README_CN.md",
+      "historical_source_sha256": "7371bd910ff50e580bd46f16d0ba50555a4dd9f8fb0d59caa8c7eed80f8dbd60",
+      "release_copy_sha256": "ae7f9812c4217bc57de74dcc2c0dc3b93fe96505b87c4f66e28a5120976fa7ea",
+      "bytes": 3750,
+      "changes": [
+        {
+          "field": "controlled-path list",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": "controlled-path list",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/faster_rcnn/member_faster_rcnn_delivery/results/pfx_then_nms_summary.json",
+      "source_project": "frcnn_m11",
+      "source_relative_path": "delivery_out/member_faster_rcnn_delivery/results/pfx_then_nms_summary.json",
+      "historical_source_sha256": "0018be99dc61dc8afa4bc328474de814b2afcba34cd46cc6d67163a81fa7f855",
+      "release_copy_sha256": "49e65c2977efc7c604cb08d360a02b28af1df05e92c776b68f4b1b84227f4c32",
+      "bytes": 13830,
+      "changes": [
+        {
+          "field": ".nms.source",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    }
+  ]
+}
