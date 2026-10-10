@@ -1,0 +1,60 @@
+{
+  "protocol_id_prefix_exact": "PFX_EXACT",
+  "protocol_id_prefix_then_nms": "PFX_THEN_NMS",
+  "project_metrics": {
+    "Coverage_i(K)": "m_i^{0.50}(K)  -- max-cardinality same-class matching at IoU=0.50 ONLY (single threshold)",
+    "QUALITY_i(K)": "mean_tau sum_c w_c * m_{i,c}^{tau}(K)  -- 10 thresholds 0.50:0.05:0.95, class-weighted",
+    "delta_{i,k}^{tau}": "m_i^{tau}(k) - m_i^{tau}(k-1), k = 6..50  (label for training)",
+    "note": "m = max-cardinality same-class matching, no candidate/GT reuse. Coverage uses IoU=0.50 only; QUALITY averages 10 thresholds. Empty-GT images are KEPT in the evaluation set."
+  },
+  "thresholds": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "k_min": 5,
+  "k_max": 50,
+  "group_size": 40,
+  "budgets": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "weight_ids": {
+    "allocation_weight_id": "yolo_class_weights_fit_v1",
+    "evaluation_weight_id": "yolo_class_weights_fit_v1"
+  },
+  "weight_note": "allocation and evaluation weights are the SAME object here; they are stored under two names because the guideline requires the ids be separable",
+  "coco_eval": {
+    "iouType": "bbox",
+    "useCats": 1,
+    "iouThrs": "0.50:0.05:0.95 (10)",
+    "recThrs": "101 points",
+    "maxDets": [
+      1,
+      10,
+      100
+    ],
+    "areaRng": "all (default)",
+    "library": "pycocotools COCOeval"
+  },
+  "coco_eval_note": "AP/AR are computed per seed on the FULL 2000-image DEV set; per-40-image-group AP is never averaged. No effective-GT category is silently treated as 0.",
+  "bootstrap": {
+    "unit": "group of 40 images",
+    "resamples": 5000,
+    "seed": 530002,
+    "paired": true,
+    "shared_draw_index": true,
+    "ci_note": "per-seed intervals are reported separately; endpoints are never averaged across seeds. Coverage/QUALITY intervals do not establish significance for AP/AR."
+  },
+  "units": "AP/AR/recall are stored as 0-1 in the raw CSVs; multiply by 100 for percent."
+}

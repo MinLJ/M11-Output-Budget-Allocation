@@ -1,0 +1,43 @@
+{
+  "asset_id": "yolo6cb829be3caf51a0",
+  "asset_name": "YOLOv8n BDD100K M11 cross-detector (3 independent seeds)",
+  "class_signal_dimension": 8,
+  "feature_dimension": 90,
+  "files": {
+    "class_weights": {
+      "path": "class_weights.json",
+      "sha256": "6cb829be3caf51a02f837409391ea6066efc0e6fb12c7c07f4785f477c55f1f4"
+    },
+    "pca": {
+      "path": "pca32.joblib",
+      "sha256": "040f75414dd8672ca2fba0aba22d71705c4d23dd8bae343fc83688dbc550afc3"
+    },
+    "scaler": {
+      "path": "scaler.joblib",
+      "sha256": "b702c05491f91083d5d52cafe1deb0a7ef32193c74ddf45bfd097c2a5aecb21d"
+    }
+  },
+  "models": {
+    "830101": {
+      "path": "models/marginal_mlp_seed_830101.pt",
+      "sha256": "18b57db4e1726db2b4c34849a009d518a74a8daf04305f07a8401b7f1bc78fef",
+      "temperature": 0.9774986645501408
+    },
+    "830102": {
+      "path": "models/marginal_mlp_seed_830102.pt",
+      "sha256": "7300148a7b9e601788decb58a36661c65d0392dcf311b871e384980b9fd17dcc",
+      "temperature": 0.9798393839562751
+    },
+    "830103": {
+      "path": "models/marginal_mlp_seed_830103.pt",
+      "sha256": "556eb08b1e3cf718c87e0b15c8e744c02eedf8182a1eb80c54b62baa0b029bce",
+      "temperature": 0.9850516077455058
+    }
+  },
+  "models_are_independent_not_ensemble": true,
+  "native_schema_id": "yolov8n_detect_head_raw84_road8_scores_v1",
+  "native_vector_dimension": 84,
+  "output_dimension": 10,
+  "reference_detector_only": false,
+  "scientific_source": "YOLOv8n BDD100K cross-detector M11 validation"
+}

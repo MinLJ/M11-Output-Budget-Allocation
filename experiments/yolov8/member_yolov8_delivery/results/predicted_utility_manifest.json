@@ -1,0 +1,14 @@
+{
+  "persisted": true,
+  "note": "replayed from frozen assets; k=1..5 are the mandatory constant prefix and carry NO model prediction (curve anchors at Uhat(5)=0)",
+  "asset_id": "yolo6cb829be3caf51a0",
+  "model_sha256": {
+    "830101": "18b57db4e1726db2b4c34849a009d518a74a8daf04305f07a8401b7f1bc78fef",
+    "830102": "7300148a7b9e601788decb58a36661c65d0392dcf311b871e384980b9fd17dcc",
+    "830103": "556eb08b1e3cf718c87e0b15c8e744c02eedf8182a1eb80c54b62baa0b029bce"
+  },
+  "weight_id": "yolo_class_weights_fit_v1",
+  "class_weights_sha256": "6cb829be3caf51a02f837409391ea6066efc0e6fb12c7c07f4785f477c55f1f4",
+  "rows": 270000,
+  "generated_utc": "2026-09-29T10:48:11+00:00"
+}
