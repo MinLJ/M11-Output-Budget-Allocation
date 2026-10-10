@@ -1,0 +1,128 @@
+{
+  "native_schema_id": "frcnn_r18fpn_road8_roihead1024_logits9_v1",
+  "detector_id": "FasterRCNN-resnet18-FPN-Road8",
+  "detector_declaration": {
+    "detector_family": "Faster R-CNN",
+    "detector_subtype": "two-stage, anchor-based RPN + RoI (Fast R-CNN) head, FPN",
+    "implementation": "torchvision.models.detection.faster_rcnn.FasterRCNN (torchvision 0.27.0+cu130)",
+    "torch": "2.12.0+cu130",
+    "backbone": "resnet18-FPN, ImageNet-pretrained init (IMAGENET1K_V1), trainable_layers=5",
+    "num_classes": 9,
+    "class_index_convention": "0 = background; 1..8 = Road8 顺序 person,bicycle,car,motorcycle,bus,train,truck,traffic light",
+    "train_dataset": "AOP-Road8-LargeClean-v1 TRAIN10K (frozen release ROAD8 GT)",
+    "preprocess": {
+      "input": "RGB PIL image (1280x720)",
+      "resize": "GeneralizedRCNNTransform: 保持长宽比, min_size=max_size=640 -> 长边 640",
+      "letterbox": false,
+      "tensor_dtype": "float32",
+      "scale": "divide by 255",
+      "normalization_mean_std": [
+        [
+          0.485,
+          0.456,
+          0.406
+        ],
+        [
+          0.229,
+          0.224,
+          0.225
+        ]
+      ]
+    },
+    "rpn_internal_pipeline_not_output_budget": {
+      "pre_nms_top_n_test": 1000,
+      "post_nms_top_n_test": 1000,
+      "nms_thresh": 0.7,
+      "note": "RPN proposal 预算是检测器内部管线, 不是本研究的最终输出记录预算。"
+    },
+    "candidate_export_point": {
+      "primary_pre_nms_topn100": "RoI head 完成分类与框回归、裁剪与去背景之后, **最终 RoI 分数筛选 / 退化框过滤 / NMS / top-N 之前**; 按原分数取前缀 top-100。这是 M11 主用候选流。",
+      "secondary_post_nms_topn300": "官方 postprocess_detections 的最终输出, 逐位等于 model(images); 只作登记备查, 不参与 M11 比较。",
+      "note": "两条流出自**同一次前向**, 导出点各自登记, 不是两次推理。"
+    },
+    "threshold_nms_topn_order": [
+      "1. 对每个 RoI 的 9 维 pre-softmax class logits 做 softmax",
+      "2. 只保留 8 个 Road8 前景类 (丢掉 background 列)",
+      "3. score threshold = 0.0 (不设阈值)",
+      "4. per-class NMS (torchvision batched_nms), IoU 阈值 = 0.5",
+      "5. 各类拼接后按 score 取 top-300"
+    ],
+    "threshold_nms_topn_scope": "上面 5 步是**官方后处理管线**, 只在备查流上执行; 主用流在它之前导出。特别地, 主用流不做逐类 NMS, 所以同一目标可能留下多条近重复记录 —— 它的 COCO AP 因此低于备查流。两条数字都要报, 不能只报高的那条。",
+    "score_semantics": "softmax(class_logits[roi])[class] —— RoI 级类别后验概率; 不是 RPN objectness, 不是任何其它量",
+    "source_id_definition": "source_id = 'roi{index:05d}', index 为该 RoI 在 box_head 输入批次中的稳定行号; 一条 RoI 可派生出多个不同类别候选记录, 它们共享同一 source_id, 不得去重",
+    "record_to_native_association": "one-to-many: 一个 native RoI 行最多对应 8 条 candidate records (每个前景类各一条)。主用流不做 NMS, 所以这个上界就是实际的 8 —— 不得按 source_id 去重或合并。",
+    "native_layer": {
+      "native_vector": "roi_heads.box_head 输出 (TwoMLPHead: 256*7*7 -> 1024 -> 1024), 每个 RoI 一行",
+      "native_vector_dimension": 1024,
+      "class_signal": "roi_heads.box_predictor.cls_score 的 **完整 pre-softmax** 输出, 9 列全存 (0=background, 1..8=Road8)",
+      "class_signal_dimension": 9,
+      "background_logit": "第 0 列必须一起存: 少了它 softmax 的分母就不完整, score = softmax(logits)[class] 就无法**正向**重建并逐条校验 —— 而用 score 的逆 sigmoid 冒充 logits 正是合同明令禁止的。特征构造时只用 1..8 列 (ROAD8_SIGNAL_SLICE), 与参照臂的 8 列 block 宽度对齐。"
+    },
+    "sorting_and_tie_break": [
+      "score descending",
+      "source_id ascending (RoI 行号小者在前)",
+      "Road8 class id ascending",
+      "原始 (RoI-major, class-minor) 次序 ascending"
+    ],
+    "bbox_policy": "box_regression 作用在 RoI 上得到的 xyxy: 沿用官方 postprocess_detections 的 clip_boxes_to_image 在 resize 后的网络输入空间裁剪, 再经 GeneralizedRCNNTransform.postprocess 逆变换映射回**原图**坐标系 (框始终落在 [0, W] × [0, H] 内)",
+    "bbox_policy_correction": {
+      "corrected_by": "frcnn_m11 覆盖层打包更正 (findings_r1 #11); 只更正措辞, 不改动任何导出参数与记录",
+      "original_text": "box_regression 作用在 RoI 上得到的 xyxy, 映射回**原图**坐标系 (GeneralizedRCNNTransform.postprocess 逆变换), 不裁剪",
+      "reason": "原措辞 (原文见 original_text) 与导出实现矛盾: code/export_frcnn.py 在 pre 导出点之前先执行官方 box_ops.clip_boxes_to_image (postprocess_detections 链路的裁剪步骤), 之后才做 transform.postprocess 逆变换; 实测候选框存在贴边 (x1=0 / x2=图像宽 / y1=0 / y2=图像高) 且无越界框。",
+      "evidence": "prepared/candidates_dev.parquet 200000 条: x1==0.0 3014 / x2==图像宽 5151 / y1==0.0 465 / y2==图像高 431; 越界 0 条; results/qa_closed_loop.md 亦报告贴边 4.9231%。",
+      "identity_note": "export_config 原件 (含更正前措辞) 的身份哈希 export_config_sha256 不因本更正改变; 逐字重算路径见交付 configs/export_config.json 的 export_config_sha256_scope。"
+    }
+  },
+  "checkpoint_sha256": "fa6c83a7b662ccdbc31010cfa418f0f202b3c76d6f93bb9a91bd49557997d95b",
+  "checkpoint_epoch": 15,
+  "dataset_version": "AOP-Road8-LargeClean-v1",
+  "source_id_definition": "source_id = 'roi{index:05d}', index 为该 RoI 在 box_head 输入批次中的稳定行号; 一条 RoI 可派生出多个不同类别候选记录, 它们共享同一 source_id, 不得去重",
+  "export_precision": {
+    "inference": "float32, autocast disabled",
+    "reason": "官方前向与逐条复刻必须同精度, 后处理的逐位一致性检查才成立",
+    "training_precision": "float16 autocast with GradScaler (只影响训练, 不影响本冻结导出)"
+  },
+  "protocols": {
+    "PRE_NMS_TOPN100": {
+      "role": "primary candidate stream for the M11 comparison",
+      "export_point": "after detection-head classification and box regression, after clipping and background removal, BEFORE the final RoI score threshold / degenerate-box filter / NMS / top-N",
+      "upstream_rpn_pipeline_preserved": {
+        "pre_nms_top_n_test": 1000,
+        "post_nms_top_n_test": 1000,
+        "nms_thresh": 0.7,
+        "note": "RPN proposal 预算是检测器内部管线, 不是本研究的最终输出记录预算。"
+      },
+      "score_space": "softmax over the complete 9-way class space, then the 8 Road8 columns; not renormalised to eight classes",
+      "box_for_each_record": "the decoded box of that record's own class (pred_boxes[:, class])",
+      "box_space": "original image xyxy, via the same transform.postprocess inverse path as the official output",
+      "order": [
+        "score descending",
+        "source_id ascending",
+        "Road8 class id ascending",
+        "original (roi, class) order"
+      ],
+      "top_n": 100
+    },
+    "POST_NMS_TOPN300": {
+      "role": "registered reference only; the M11 comparison does not use this stream",
+      "export_point": "official torchvision postprocess_detections output (threshold -> remove_small_boxes -> per-class NMS -> top-N)",
+      "bit_exact_against_official": true,
+      "order": [
+        "score descending",
+        "source_id ascending",
+        "Road8 class id ascending",
+        "original (roi, class) order"
+      ],
+      "top_n": 300
+    }
+  },
+  "native_policy": {
+    "native_vector": "box_head 输出 (进 box_predictor 之前), 1024 维, float32 计算 -> float16 存储",
+    "class_signal": "box_predictor.cls_score 的 pre-softmax 输出, 9 维 (0=background, 1..8=Road8), float32; 存完整 9 列而非只 8 个 Road8 列, 这样 softmax 分母不缺项, detector score 可正向重建并逐条校验",
+    "stored_rows": "只存被两条候选流引用到的 RoI 行 (source_id 并集); 按 (image_id, source_id) 唯一, 不做任何去重",
+    "shared_source_policy": "同一个 RoI 的不同类别记录共享 native 向量, 但其 decoded 框可能不同; 不得按 source_id 合并记录"
+  },
+  "export_config_sha256": "d5423501e18374641ff6c0cdc1d98c29ff1864e87276f56192a3f7ebbe475792",
+  "export_config_sha256_scope": "export_config_sha256 覆盖**导出运行时冻结原件**除 split / export_config_sha256 / export_config_sha256_scope 三键外的全部内容 (原件与源文件逐字节相同)。本交付副本是覆盖层打包更正版 (findings_r1 #11): 相对原件只有一处措辞更正 —— detector_declaration.bbox_policy 的源措辞按实际实现更正为官方 clip_boxes_to_image (resize 后空间裁剪, 再经 transform.postprocess 逆变换回原图坐标), 并新增同处的 bbox_policy_correction 说明键; 其余字段值与原件相同。重算路径: 用 bbox_policy_correction.original_text 覆盖 bbox_policy、删除 bbox_policy_correction 键、再去掉上述三个键后即逐字复原原件, 其 SHA256 就是 export_config_sha256。split 是本次运行的取图范围, 不计入配置身份, 因此 DEV2K 与 TRAIN10K 共享同一个 export_config_sha256; 记录级 export_config_sha256 也因此可比。",
+  "split": "DEV2K"
+}

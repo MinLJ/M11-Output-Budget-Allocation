@@ -1,0 +1,97 @@
+{
+  "detector_family": "Faster R-CNN",
+  "detector_subtype": "two-stage, anchor-based RPN + RoI (Fast R-CNN) head, FPN",
+  "implementation": "torchvision.models.detection.faster_rcnn.FasterRCNN (torchvision 0.27.0+cu130)",
+  "torch": "2.12.0+cu130",
+  "backbone": "resnet18-FPN, ImageNet-pretrained init (IMAGENET1K_V1), trainable_layers=5",
+  "num_classes": 9,
+  "class_index_convention": "0 = background; 1..8 = Road8 顺序 person,bicycle,car,motorcycle,bus,train,truck,traffic light",
+  "train_dataset": "AOP-Road8-LargeClean-v1 TRAIN10K (frozen release ROAD8 GT)",
+  "preprocess": {
+    "input": "RGB PIL image (1280x720)",
+    "resize": "GeneralizedRCNNTransform: 保持长宽比, min_size=max_size=640 -> 长边 640",
+    "letterbox": false,
+    "tensor_dtype": "float32",
+    "scale": "divide by 255",
+    "normalization_mean_std": [
+      [
+        0.485,
+        0.456,
+        0.406
+      ],
+      [
+        0.229,
+        0.224,
+        0.225
+      ]
+    ]
+  },
+  "rpn_internal_pipeline_not_output_budget": {
+    "pre_nms_top_n_test": 1000,
+    "post_nms_top_n_test": 1000,
+    "nms_thresh": 0.7,
+    "note": "RPN proposal 预算是检测器内部管线, 不是本研究的最终输出记录预算。"
+  },
+  "candidate_export_point": {
+    "primary_pre_nms_topn100": "RoI head 完成分类与框回归、裁剪与去背景之后, **最终 RoI 分数筛选 / 退化框过滤 / NMS / top-N 之前**; 按原分数取前缀 top-100。这是 M11 主用候选流。",
+    "secondary_post_nms_topn300": "官方 postprocess_detections 的最终输出, 逐位等于 model(images); 只作登记备查, 不参与 M11 比较。",
+    "note": "两条流出自**同一次前向**, 导出点各自登记, 不是两次推理。"
+  },
+  "threshold_nms_topn_order": [
+    "1. 对每个 RoI 的 9 维 pre-softmax class logits 做 softmax",
+    "2. 只保留 8 个 Road8 前景类 (丢掉 background 列)",
+    "3. score threshold = 0.0 (不设阈值)",
+    "4. per-class NMS (torchvision batched_nms), IoU 阈值 = 0.5",
+    "5. 各类拼接后按 score 取 top-300"
+  ],
+  "threshold_nms_topn_scope": "上面 5 步是**官方后处理管线**, 只在备查流上执行; 主用流在它之前导出。特别地, 主用流不做逐类 NMS, 所以同一目标可能留下多条近重复记录 —— 它的 COCO AP 因此低于备查流。两条数字都要报, 不能只报高的那条。",
+  "score_semantics": "softmax(class_logits[roi])[class] —— RoI 级类别后验概率; 不是 RPN objectness, 不是任何其它量",
+  "source_id_definition": "source_id = 'roi{index:05d}', index 为该 RoI 在 box_head 输入批次中的稳定行号; 一条 RoI 可派生出多个不同类别候选记录, 它们共享同一 source_id, 不得去重",
+  "record_to_native_association": "one-to-many: 一个 native RoI 行最多对应 8 条 candidate records (每个前景类各一条)。主用流不做 NMS, 所以这个上界就是实际的 8 —— 不得按 source_id 去重或合并。",
+  "native_layer": {
+    "native_vector": "roi_heads.box_head 输出 (TwoMLPHead: 256*7*7 -> 1024 -> 1024), 每个 RoI 一行",
+    "native_vector_dimension": 1024,
+    "class_signal": "roi_heads.box_predictor.cls_score 的 **完整 pre-softmax** 输出, 9 列全存 (0=background, 1..8=Road8)",
+    "class_signal_dimension": 9,
+    "background_logit": "第 0 列必须一起存: 少了它 softmax 的分母就不完整, score = softmax(logits)[class] 就无法**正向**重建并逐条校验 —— 而用 score 的逆 sigmoid 冒充 logits 正是合同明令禁止的。特征构造时只用 1..8 列 (ROAD8_SIGNAL_SLICE), 与参照臂的 8 列 block 宽度对齐。"
+  },
+  "sorting_and_tie_break": [
+    "score descending",
+    "source_id ascending (RoI 行号小者在前)",
+    "Road8 class id ascending",
+    "原始 (RoI-major, class-minor) 次序 ascending"
+  ],
+  "bbox_policy": "box_regression 作用在 RoI 上得到的 xyxy: 沿用官方 postprocess_detections 的 clip_boxes_to_image 在 resize 后的网络输入空间裁剪, 再经 GeneralizedRCNNTransform.postprocess 逆变换映射回**原图**坐标系 (框始终落在 [0, W] × [0, H] 内)",
+  "parameters": 28309756,
+  "trainable_parameters": 28309756,
+  "box_head": "TwoMLPHead(\n  (fc6): Linear(in_features=12544, out_features=1024, bias=True)\n  (fc7): Linear(in_features=1024, out_features=1024, bias=True)\n)",
+  "box_predictor": "FastRCNNPredictor(\n  (cls_score): Linear(in_features=1024, out_features=9, bias=True)\n  (bbox_pred): Linear(in_features=1024, out_features=36, bias=True)\n)",
+  "transform": "GeneralizedRCNNTransform(\n    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n    Resize(min_size=(640,), max_size=640, mode='bilinear')\n)",
+  "train_args": {
+    "backbone": "resnet18",
+    "epochs": 40,
+    "batch_size": 12,
+    "lr": 0.015,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "warmup_iters": 500,
+    "workers": 8,
+    "hflip": 0.5,
+    "seed": 20260929,
+    "subset": 0,
+    "train_roles": "FIT,CALIBRATION",
+    "val_role": "EARLY_STOP",
+    "val_every": 2,
+    "val_images": 1000,
+    "no_val": false,
+    "out": "outputs/frcnn_r18fpn_road8",
+    "resume": ""
+  },
+  "bbox_policy_correction": {
+    "corrected_by": "frcnn_m11 覆盖层打包更正 (findings_r1 #11); 只更正措辞, 不改动任何导出参数与记录",
+    "original_text": "box_regression 作用在 RoI 上得到的 xyxy, 映射回**原图**坐标系 (GeneralizedRCNNTransform.postprocess 逆变换), 不裁剪",
+    "reason": "原措辞 (原文见 original_text) 与导出实现矛盾: code/export_frcnn.py 在 pre 导出点之前先执行官方 box_ops.clip_boxes_to_image (postprocess_detections 链路的裁剪步骤), 之后才做 transform.postprocess 逆变换; 实测候选框存在贴边 (x1=0 / x2=图像宽 / y1=0 / y2=图像高) 且无越界框。",
+    "evidence": "prepared/candidates_dev.parquet 200000 条: x1==0.0 3014 / x2==图像宽 5151 / y1==0.0 465 / y2==图像高 431; 越界 0 条; results/qa_closed_loop.md 亦报告贴边 4.9231%。",
+    "identity_note": "export_config 原件 (含更正前措辞) 的身份哈希 export_config_sha256 不因本更正改变; 逐字重算路径见交付 configs/export_config.json 的 export_config_sha256_scope。"
+  }
+}

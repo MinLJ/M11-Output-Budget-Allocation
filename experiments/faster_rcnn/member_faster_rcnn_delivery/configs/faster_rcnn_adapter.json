@@ -1,0 +1,77 @@
+{
+  "status": "ADAPTED",
+  "detector_family": "Faster R-CNN",
+  "detector_version": "torchvision 0.27.0 FasterRCNN(backbone=resnet18-FPN, weights=IMAGENET1K_V1, min_size=max_size=640)",
+  "detector_id": "FasterRCNN-resnet18-FPN-Road8",
+  "implementation": "torchvision.models.detection.faster_rcnn.FasterRCNN (torchvision 0.27.0+cu130)",
+  "backbone": "resnet18-FPN, ImageNet-pretrained init (IMAGENET1K_V1), trainable_layers=5",
+  "num_classes": 9,
+  "class_index_convention": "0 = background; 1..8 = Road8 顺序 person,bicycle,car,motorcycle,bus,train,truck,traffic light",
+  "config_identity": {
+    "declaration_sha256": "aa24c7a49dc97880814b4887400770acb5b9e9904592b465d9e894b08dcde68c",
+    "declaration_sha256_note": "对更正后声明 (交付 configs/detector_declaration.json; 与源声明只差 bbox_policy 一处措辞, 见其 bbox_policy_correction 键) 的规范化 JSON (sort_keys) SHA256; 更正前源声明同算法哈希为 82645f5f8d0951b4f538efa5d3c30700d9727430f33e5362eff2182994cd55a9。",
+    "export_config_sha256": "d5423501e18374641ff6c0cdc1d98c29ff1864e87276f56192a3f7ebbe475792"
+  },
+  "checkpoint_sha256": "fa6c83a7b662ccdbc31010cfa418f0f202b3c76d6f93bb9a91bd49557997d95b",
+  "preprocess": {
+    "input": "RGB PIL image (1280x720)",
+    "resize": "GeneralizedRCNNTransform: 保持长宽比, min_size=max_size=640 -> 长边 640",
+    "letterbox": false,
+    "tensor_dtype": "float32",
+    "scale": "divide by 255",
+    "normalization_mean_std": [
+      [
+        0.485,
+        0.456,
+        0.406
+      ],
+      [
+        0.229,
+        0.224,
+        0.225
+      ]
+    ]
+  },
+  "candidate_export_point": {
+    "primary_pre_nms_topn100": "RoI head 完成分类与框回归、裁剪与去背景之后, **最终 RoI 分数筛选 / 退化框过滤 / NMS / top-N 之前**; 按原分数取前缀 top-100。这是 M11 主用候选流。",
+    "secondary_post_nms_topn300": "官方 postprocess_detections 的最终输出, 逐位等于 model(images); 只作登记备查, 不参与 M11 比较。",
+    "note": "两条流出自**同一次前向**, 导出点各自登记, 不是两次推理。"
+  },
+  "rpn_internal_pipeline_not_output_budget": {
+    "pre_nms_top_n_test": 1000,
+    "post_nms_top_n_test": 1000,
+    "nms_thresh": 0.7,
+    "note": "RPN proposal 预算是检测器内部管线, 不是本研究的最终输出记录预算。"
+  },
+  "threshold_nms_topn_order": [
+    "1. 对每个 RoI 的 9 维 pre-softmax class logits 做 softmax",
+    "2. 只保留 8 个 Road8 前景类 (丢掉 background 列)",
+    "3. score threshold = 0.0 (不设阈值)",
+    "4. per-class NMS (torchvision batched_nms), IoU 阈值 = 0.5",
+    "5. 各类拼接后按 score 取 top-300"
+  ],
+  "score_semantics": "softmax(class_logits[roi])[class] —— RoI 级类别后验概率; 不是 RPN objectness, 不是任何其它量",
+  "source_id_definition": "source_id = 'roi{index:05d}', index 为该 RoI 在 box_head 输入批次中的稳定行号; 一条 RoI 可派生出多个不同类别候选记录, 它们共享同一 source_id, 不得去重",
+  "native_layer": {
+    "native_vector": "roi_heads.box_head 输出 (TwoMLPHead: 256*7*7 -> 1024 -> 1024), 每个 RoI 一行",
+    "native_vector_dimension": 1024,
+    "class_signal": "roi_heads.box_predictor.cls_score 的 **完整 pre-softmax** 输出, 9 列全存 (0=background, 1..8=Road8)",
+    "class_signal_dimension": 9,
+    "background_logit": "第 0 列必须一起存: 少了它 softmax 的分母就不完整, score = softmax(logits)[class] 就无法**正向**重建并逐条校验 —— 而用 score 的逆 sigmoid 冒充 logits 正是合同明令禁止的。特征构造时只用 1..8 列 (ROAD8_SIGNAL_SLICE), 与参照臂的 8 列 block 宽度对齐。"
+  },
+  "native_dimension": 1024,
+  "class_signal_dimension": 9,
+  "native_dtype": "float16 stored on disk (RoI-head feature) / float32 stored on disk (pre-softmax class logits)",
+  "record_to_native_association": "one-to-many: 一个 native RoI 行最多对应 8 条 candidate records (每个前景类各一条)。主用流不做 NMS, 所以这个上界就是实际的 8 —— 不得按 source_id 去重或合并。",
+  "record_to_native_cardinality": "one native row per RoI; several class records may share one source_id",
+  "native_schema_id": "frcnn_r18fpn_road8_roihead1024_logits9_v1",
+  "sorting_and_tie_break": [
+    "score descending",
+    "source_id ascending (RoI 行号小者在前)",
+    "Road8 class id ascending",
+    "原始 (RoI-major, class-minor) 次序 ascending"
+  ],
+  "bbox_policy": "box_regression 作用在 RoI 上得到的 xyxy: 沿用官方 postprocess_detections 的 clip_boxes_to_image 在 resize 后的网络输入空间裁剪, 再经 GeneralizedRCNNTransform.postprocess 逆变换映射回**原图**坐标系 (框始终落在 [0, W] × [0, H] 内)",
+  "candidate_export_implemented": true,
+  "native_export_implemented": true
+}

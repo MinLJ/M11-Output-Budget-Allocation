@@ -1,0 +1,52 @@
+path,bytes,sha256,purpose
+README_CN.md,14221,d5ca51f3d7ce598d6bd0d552e2ce72526f9f6fb11c07766401f627937e99af76,环境、入口、边界、复现顺序; 表内数字全部从真实产物读出
+code/adapter.py,9491,868713f6ca8e3024d5c786f64671d23cdb0ef32dc22802e4296b4f4c6b4d490d,"FasterRCNNAdapter, 可直接 drop-in 替换交接包里的 SCAFFOLD_ONLY"
+code/features_frcnn.py,13460,ef642ec5139f96a1e7d735014699ca778f1328d1e545830f198d4e52e37597f4,本检测器的 native -> 90 维特征构造器与冻结 schema
+code/prepare_inputs.py,15248,4360db322b76c8b4ee13a5653593be5ea316471655a1a06e387a74bcce2832bf,"导出分片 -> M11 输入格式转换 (纯格式搬运, 不重算科学量)"
+code/run_pipeline.py,37750,a3267cd47df22236281b134e16eba89f949bed285c6d11184c41803dcc09d644,M11 全流程: 标签/特征/训练/校准/资产/分配/评价/bootstrap
+code/coco_eval.py,6448,24b60a45d6fac6a5b9d0e74fa64c5ea61046457436370641bed74c0434ba5ca1,"标准 COCO bbox 评价, 跑在冻结选集上"
+code/qa_small_sample.py,11496,4bdfef0c1a38170107b492ad4a04914a10e596e1baa6f5dae9a072e903587a64,合同要求的候选/native 小样本 schema 与 join QA
+code/make_adapter_config.py,8334,84910552af4c1f1d8ef416002270f7e6f3938eecb0983ecb9127bdb90a2764de,从真实产出物生成 adapter 配置与 capabilities
+code/config_corrections.py,6139,e086be3207a2761e5ab7b354e14f0675b118a8ade6c3a53f6ad97da0ea448fc1,r1 #11 的 bbox_policy 措辞更正定义 (交付配置与 adapter 配置共用的唯一定义)
+code/pfx_then_nms.py,9907,a8a6c83cd5592e2c512044afa1555deb504d491556a92655c0f4043c8b099f16,§07 的 PFX_THEN_NMS 参考协议与计数表
+code/qa_closed_loop.py,61034,7cab38aed03cda6cac59a84f8ddae8cd8cc787a6360a7bd652f703a400f5e90d,"§04 的小样本闭环硬检查 (7 节, 重复运行一致性)"
+code/lc_alloc_adapters_faster_rcnn.py,9491,868713f6ca8e3024d5c786f64671d23cdb0ef32dc22802e4296b4f4c6b4d490d,"drop-in 版 adapter, 与 code/adapter.py 字节相同, 可直接覆盖交接包路径"
+code/model.py,8930,26fcf9294d9f4b10a6c611b1d27e83f7f583c1ea22dee33dee70000771a2cfe4,检测器冻结声明式构造; declaration() 就是那份冻结契约
+code/road8_data.py,4605,3696176d1238cab14c76070d2f84b11808272294861f2a12efdf787830be2310,冻结 Road8 GT -> 检测数据集
+code/train_frcnn.py,10961,611107ec74f8bb9222ed84bb21377a7c79dfb5dae91ba2f1679e5f00b8a42b1f,"检测器训练 (FIT+CALIBRATION 训, EARLY_STOP 选)"
+code/export_frcnn.py,26309,1eb4169d805cf98017143faf5aea38d99cf5c79cc76091f84d7df27095d3fa33,"候选 + 原生 sidecar 导出 (两流一次前向, 逐位校验)"
+code/eval_ap.py,11178,c0cff8f064d170bae9738b9bdd0b90267dbfe7a09318d5770ec8e15fa08de364,本臂自己的 COCO AP vs 前缀预算 K
+configs/detector_declaration.json,6358,d271bfe57d900321b6a2f81e8c46310cb3aab08b925fdeab146a74cff402abad,"检测器冻结声明 (§03 要求固定的参数); bbox_policy 措辞已按实际实现更正 (r1 #11, 见文件内 bbox_policy_correction)"
+configs/export_config.json,9628,7b9a29939ac33ef5a46d8ba6dff7e7260251499d9b9355b048d973cf0613e1a7,"导出点/协议/精度/分数语义声明; detector_declaration.bbox_policy 措辞按实际实现更正 (r1 #11), export_config_sha256_scope 给出原件身份哈希的重算路径"
+configs/roles.csv,943929,0e0f51c7b2b1d6062aa746a502c4a218ed0f6f2b4730a8068c24b1494ae59650,"FIT/EARLY_STOP/CALIBRATION 角色清单 (复用主线 LC, 未改动)"
+configs/groups_dev.csv,49137,de3e7b38fe9a716fff64899d145cad34c079eefb9318cbec3d4f720f84d66568,DEV2K 的 50 个冻结 40 图组 (检测器无关)
+configs/class_weights.json,326,787f48678395b6c4e345f0bee1befa9c7586af026545e190ad510bfd88c77858,本分支在 FIT 上重算的类别权重 evaluation_weight_id=56b293f30948a1cb
+configs/evaluator.json,8495,c638efa60679904ff029c6ab81e1a9d87e487a32d4eeec0a1ec41cc7f72ba537,"标准 COCO 评价实际生效的参数 + §06 三条项目定义 (Coverage/QUALITY/边际收益) 与匹配口径 (evaluator_definitions 块); 验收补充: category_mapping / iouThrs_values / score_source / exported_metrics; entry_identity: 两个 GT 各自绑定实际消费者 (发布原件 DEV2K_ROAD8_GT.json -> COCO AP/AR; 包内归一化副本 -> Coverage/QUALITY), 各带 path/bytes/sha256 与交付包内 file:line, 附两 GT 逐条等价性实测声明, 及共享评价实现 lc_alloc/evaluation/ 全部 4 个 .py 文件的逐文件身份"
+configs/feature_schema.json,35705,b3e3607c74c8bcbd83f7d822cd899a6db6751123fd577d7548494b5e463e47b4,90 维输入的逐列 schema 与变换声明
+configs/faster_rcnn_adapter.json,4962,355cf0397953a79aea602e10a427988c077be710d175eab85736e6747e1e4209,"检测器适配配置: 族/版本/SHA/预处理/导出点/score 语义/source_id/基数 (§08 configs); bbox_policy 措辞已按实际实现更正 (r1 #11, 见 config_identity.declaration_sha256_note)"
+configs/capabilities.json,1222,50f1d90f7ad65824668250272a48ea77793d2714d89ad6c7c7cd35a2004c30d8,三族能力矩阵: 参照臂已实现 / Faster R-CNN 已适配 / YOLO 仍为脚手架
+assets/asset.json,1916,91c21de09ece3fc73eefbff44aa0b65bf0ce9be01b5e8ab691c6e1caf59b15e8,资产身份: SHA 绑定、维度、native schema id
+assets/class_weights.json,326,787f48678395b6c4e345f0bee1befa9c7586af026545e190ad510bfd88c77858,"FIT 类别权重, 即 asset.json files.class_weights.path 声明的相对路径"
+assets/pca32.joblib,136506,87ae79ae4b179c100f042174ddbee22804a85028aaa1075ef39eac4eb7be5af1,FIT-only PCA32 (本分支重新拟合)
+assets/scaler.joblib,4731,1fed41329d553ccc6716485a5fc42adec8d7e5d4911b5bc3ecdeb1e46df25e0b,FIT-only scaler
+assets/temperatures.json,1143,99b945f79439994ca96ae987f13b687d3ae0a22f37f6e449ed0e9ac5ddbea889,逐 seed 温度 (只在 CALIBRATION 上拟合); §08 资产项之一
+assets/models/marginal_mlp_seed_730101.pt,87163,3ffb574018abcb310d04689917936f6c149943bf2d15a12359bbb634a2c7e395,独立训练的一个分配器模型 (marginal_mlp_seed_730101.pt); 三 seed 不是集成; 保留 models/ 子目录以匹配 asset.json 声明的相对路径
+assets/models/marginal_mlp_seed_730102.pt,87163,0e4b6b076eec1d680e773d85013068ad452f0881e1936131ab407489ef9e5652,独立训练的一个分配器模型 (marginal_mlp_seed_730102.pt); 三 seed 不是集成; 保留 models/ 子目录以匹配 asset.json 声明的相对路径
+assets/models/marginal_mlp_seed_730103.pt,87163,c0756453007cc96647f346f7283ed40ba45bbd2e60dd280ef886cb4d1499793d,独立训练的一个分配器模型 (marginal_mlp_seed_730103.pt); 三 seed 不是集成; 保留 models/ 子目录以匹配 asset.json 声明的相对路径
+results/main_results.csv,14106,10681ff89441515700ce76ffa8fa20ed1bdbe35609196de9450192b7e312b220,"25 行主结果 (5 方法 × 5 预算); Coverage/QUALITY 为每图均值, AP/AR 来自冻结选集"
+results/class_results.csv,51910,261dc3b8c98bd95ecfc7de4d72433ea0923ea1ad1975b763836f02b9734a6bfb,逐条件逐类: GT support、含类图数、matched_count、coverage_recall、class AP/AR
+results/per_image_results.csv,3784896,cd39a00903974a87e55f979bbcfd48d5b0787fe0257e4f37d1f29539fc4d55f3,"逐条件逐图原表, 供成对统计与对账"
+results/per_group_results.csv,160703,5b027791c60db23040300c0fda1297e851993f736c5f5427d7ae787cb3c5d706,"逐条件逐 40 图组汇总, 供配对 bootstrap; 不用组 AP 替代全体 AP"
+results/coco_ap_results.csv,5326,238eb6701ac9490be84b240bddd7a2b501b85537c7c9f4fcd7aef0b3bcf6a8fd,标准 COCO AP/AP50/AP75/AR100 逐条件
+results/bootstrap_results.csv,9077,c1d42ee20c99e833d2778e5a6a731d04cbab490d4e8bb250c8bb67dfd23f0d1b,"配对 bootstrap: 三 seed 汇总行 (逐预算 + K10/15/20 等权) 与逐 seed 行 (seed_summary=per_seed, training_seed 列), seed=530002, 5000 次, 共享抽样索引"
+results/bootstrap_core_summary.csv,1744,88529b02aa9e26e7d4d239e3da494aa29a5174a53b34fee85d298919d4468193,K10/15/20 等权平均的核心汇总 (三 seed 汇总 + 逐 seed; bootstrap_results.csv 内同一批汇总行的单独副本)
+results/predicted_utility.parquet,47980064,30bb33b6b31908de67967df036270e178f2139deedc7e1c6f3aaab02c48ba832,每 seed/每图/k=6..50 的十维 logits、温度后概率、delta_hat、Uhat
+results/pfx_then_nms_by_condition.csv,2089,e8a25eee9503290bee47d22a097f6b388b216c46f7e0b723acf5d8f36b2e909b,§07 计数表: 逐条件 n_before/n_after/removed/空输出图数 (PFX_THEN_NMS 参考协议)
+results/pfx_then_nms_by_group.csv,51853,f33756c296a7d905773f84fe6ba35dc78e8d17452658f376f3d397c4c30f85c8,§07 计数表按 40 图组汇总
+results/post_nms_counts.csv,11841119,d823ee5556ae83cb8bc5e10409c885126ea0648c2de66cf05504105eb34fdad6,§08 规定的计数表 (逐 method/seed/budget/image): 前后条数、删减数、NMS 后保留 record IDs
+results/pfx_then_nms_summary.json,13839,0018be99dc61dc8afa4bc328474de814b2afcba34cd46cc6d67163a81fa7f855,PFX_THEN_NMS 协议声明、NMS 参数来源与不变量核验
+results/allocations.parquet,67891,e29d0623b3bdffe1263c3e5ffe8987cdd2273a0532e2a2ae5c3185928be31c2e,每条件每图的 group_id/K_i/candidate_asset_id; selected_record_ids 可由冻结候选+rank 严格重建
+results/selected_record_ids.parquet,2403160,2ae9b625c766eeed53bb9ffef0830af6b6dbf8430d03e3654b657743dfc86e48,"选中记录 ID 的显式清单 (与 allocations 一致, 可交叉核对)"
+references/README_CN.md,3786,7371bd910ff50e580bd46f16d0ba50555a4dd9f8fb0d59caa8c7eed80f8dbd60,大文件引用说明
+results/qa_small_sample.md,4389,727adaa2f322876664c36505f13b91db7f6d58818004280634420da916baaab8,工程验证报告 (§04 的小样本闭环)
+results/qa_closed_loop.md,20043,4c26a4938870c2029b01a4d700486e70d00cecf644df69f414c0c422d7b1421b,工程验证报告 (§04 的小样本闭环)

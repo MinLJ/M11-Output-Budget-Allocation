@@ -1,0 +1,9 @@
+method_a,method_b,metric,budget_summary,budget,group_count,point_estimate,ci95_low,ci95_high,positive_resample_fraction,resamples,seed,seed_summary,training_seed,resampling
+M11,S_ADAPT,coverage,K10_15_20_equal_weight,,50,1.1581666666666666,1.1128874999999998,1.2052263888888888,1.0,5000,530002,three_seeds_averaged_per_group,,nonparametric bootstrap over 50 complete 40-image groups
+M11,S_ADAPT,quality,K10_15_20_equal_weight,,50,0.7588463051557173,0.7171519439523169,0.8032529182347485,1.0,5000,530002,three_seeds_averaged_per_group,,nonparametric bootstrap over 50 complete 40-image groups
+M11,S_ADAPT,coverage,K10_15_20_equal_weight,,50,1.1539999999999997,1.1088333333333333,1.2005041666666665,1.0,5000,530002,per_seed,730101,nonparametric bootstrap over 50 complete 40-image groups
+M11,S_ADAPT,quality,K10_15_20_equal_weight,,50,0.7578791630263383,0.7169459560110238,0.801962933200867,1.0,5000,530002,per_seed,730101,nonparametric bootstrap over 50 complete 40-image groups
+M11,S_ADAPT,coverage,K10_15_20_equal_weight,,50,1.1601666666666666,1.1143249999999998,1.2078333333333333,1.0,5000,530002,per_seed,730102,nonparametric bootstrap over 50 complete 40-image groups
+M11,S_ADAPT,quality,K10_15_20_equal_weight,,50,0.7578144922509098,0.7155851923547305,0.8028785065768392,1.0,5000,530002,per_seed,730102,nonparametric bootstrap over 50 complete 40-image groups
+M11,S_ADAPT,coverage,K10_15_20_equal_weight,,50,1.1603333333333332,1.114,1.2080041666666668,1.0,5000,530002,per_seed,730103,nonparametric bootstrap over 50 complete 40-image groups
+M11,S_ADAPT,quality,K10_15_20_equal_weight,,50,0.7608452601899036,0.718911172881694,0.8054976716524,1.0,5000,530002,per_seed,730103,nonparametric bootstrap over 50 complete 40-image groups

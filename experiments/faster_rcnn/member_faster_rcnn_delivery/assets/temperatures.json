@@ -1,0 +1,20 @@
+{
+  "730101": {
+    "applied_to": "allocation-time probabilities: sigmoid(logits / T) applied independently to each of the ten IoU-threshold outputs; see prob_* columns in predicted_utility.parquet",
+    "fitted_on": "CALIBRATION split (1000 images); DEV2K never used for tuning",
+    "source": "calib_seed_730101/temperature.json",
+    "temperature": 1.033442756344889
+  },
+  "730102": {
+    "applied_to": "allocation-time probabilities: sigmoid(logits / T) applied independently to each of the ten IoU-threshold outputs; see prob_* columns in predicted_utility.parquet",
+    "fitted_on": "CALIBRATION split (1000 images); DEV2K never used for tuning",
+    "source": "calib_seed_730102/temperature.json",
+    "temperature": 1.006195397391025
+  },
+  "730103": {
+    "applied_to": "allocation-time probabilities: sigmoid(logits / T) applied independently to each of the ten IoU-threshold outputs; see prob_* columns in predicted_utility.parquet",
+    "fitted_on": "CALIBRATION split (1000 images); DEV2K never used for tuning",
+    "source": "calib_seed_730103/temperature.json",
+    "temperature": 1.0018357748361026
+  }
+}

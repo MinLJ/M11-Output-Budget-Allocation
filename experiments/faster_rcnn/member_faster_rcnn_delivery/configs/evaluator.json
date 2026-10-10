@@ -1,0 +1,190 @@
+{
+  "areaRng": "pycocotools default all/small/medium/large",
+  "category_mapping": {
+    "background_id": 0,
+    "background_in_exported_records": false,
+    "categories": [
+      {
+        "id": 1,
+        "name": "person"
+      },
+      {
+        "id": 2,
+        "name": "bicycle"
+      },
+      {
+        "id": 3,
+        "name": "car"
+      },
+      {
+        "id": 4,
+        "name": "motorcycle"
+      },
+      {
+        "id": 5,
+        "name": "bus"
+      },
+      {
+        "id": 6,
+        "name": "train"
+      },
+      {
+        "id": 7,
+        "name": "truck"
+      },
+      {
+        "id": 8,
+        "name": "traffic light"
+      }
+    ],
+    "class_index_convention": "0 = background; 1..8 = Road8 顺序 person,bicycle,car,motorcycle,bus,train,truck,traffic light",
+    "evaluated_id_mapping": "identity: 预测字段 predicted_road8_class_id 与 GT category_id 同为 Road8 的 1..8, 评价按 id 直接对齐, 不做重映射",
+    "source": "gt_dev_normalized.json:categories (冻结 Road8 GT) + detector_declaration.json:class_index_convention"
+  },
+  "entry_identity": {
+    "ground_truth": {
+      "package_normalized": {
+        "bytes": 5340532,
+        "format": "M11-package-normalized JSON, box_xyxy=[x1,y1,x2,y2]; 由 prepare_inputs.convert_gt 从发布原件转换 (xywh->xyxy, 跳过 iscrowd/ignore 非零的标注)",
+        "path": "external_assets\\frcnn_m11\\prepared\\gt_dev_normalized.json",
+        "sha256": "4c4c9d4cefcac9cbcb2d768ceabcd2388042d49bdfe8760be4e16d9ca522d1b8",
+        "used_for": "Coverage / QUALITY: code/run_pipeline.py:392 (gt_format=normalized -> command_evaluate; 实际打开于共享实现 lc_alloc/cli.py:259 的 load_normalized_gt)"
+      },
+      "release_original": {
+        "bytes": 6595827,
+        "format": "COCO detection JSON, bbox=[x,y,w,h] (xywh); 标注含 iscrowd/ignore 字段, 评价时原样交给 pycocotools",
+        "path": "external_assets\\AOP_Road8_LC_v1_RTDERTv2_R18VD_RELEASE_v1\\gt\\DEV2K_ROAD8_GT.json",
+        "sha256": "aead664f74c3618ee56f9ab9d0408161f7cc1dd3973d25ef5317a9baf942b437",
+        "used_for": "COCO AP/AR: code/run_pipeline.py:400 构造路径、:404 调 code/coco_eval.py (打开点 coco_eval.py:81); code/eval_ap.py:41 登记同一发布文件名 (打开点 eval_ap.py:80)"
+      }
+    },
+    "ground_truth_equivalence": {
+      "evidence_script": "external_assets/frcnn_m11/tools/_fix3_gt_equiv.py (输出 tools/_fix3_gt_equiv.json)",
+      "measured": "2026-10-04 本机实跑: 图像 id 集合 2000 = 2000 (无单边独有); categories 8 类逐条相等; release 标注共 29,966 条, iscrowd 非零 0 条、ignore 非零 0 条 (按口径实际跳过 0 条), 过滤后 29,966 键与副本 29,966 键集合相等、两侧均 0 重复键; 框 29,966/29,966 精确相等 (最大绝对差 0.0); area 29,966/29,966 精确相等 (最大绝对差 0.0); 逐类计数逐类相等 (1:2771, 2:244, 3:20453, 4:95, 5:350, 6:6, 7:889, 8:5158)。逐条实测差异总数 = 0",
+      "protocol": "逐条比对 (tools/_fix3_gt_equiv.py): ① 图像 id 集合; ② categories 逐条; ③ 标注键集合, 键=(str(image_id), source_object_index), release 侧按归一化口径先跳过 iscrowd 或 ignore 非零的标注; ④ 框: release bbox [x,y,w,h] -> [x,y,x+w,y+h] 对副本 box_xyxy, float 精确相等; ⑤ area 逐条 float 精确相等"
+    },
+    "shared_implementation": {
+      "files": [
+        {
+          "bytes": 150,
+          "relative_path": "lc_alloc/evaluation/__init__.py",
+          "role": "导入闭包入口 (package __init__): re-export evaluate_prefix_allocations / load_official_coco_road8_gt",
+          "sha256": "43fd9e4696397a9fb2a3b9362837e6097a032da25bde69b35c308d150ae52483"
+        },
+        {
+          "bytes": 853,
+          "relative_path": "lc_alloc/evaluation/bootstrap.py",
+          "role": "计算实现: paired_group_bootstrap (配对 bootstrap)",
+          "sha256": "90c9ee966cf41d8a6c38c808e1b5eb782821a292ee22bbd8e020e204bcddb5c9"
+        },
+        {
+          "bytes": 3093,
+          "relative_path": "lc_alloc/evaluation/coco.py",
+          "role": "计算实现: evaluate_coco_bbox (包内可选 COCO bbox 评价; 本臂未采用, 见 code/coco_eval.py 头部说明)",
+          "sha256": "ecf686064dbfd9c12f0a2cae8493bf8953097647c7f744e846ab68ac55d14e55"
+        },
+        {
+          "bytes": 6759,
+          "relative_path": "lc_alloc/evaluation/core.py",
+          "role": "计算实现: evaluate_prefix_allocations (Coverage/QUALITY 支撑) 与 load_official_coco_road8_gt (发布 COCO GT 读取, 含 crowd/ignore 过滤)",
+          "sha256": "74162e53e638cd1e0e4a4e628c9bf193a710badc2b1c7e193b1d978037c5bafc"
+        }
+      ],
+      "note": "登记冻结交接包 lc_alloc/evaluation/ 目录全部 4 个 .py 文件 (相对路径 + role + bytes + sha256): core.py / coco.py / bootstrap.py 为计算实现文件, __init__.py 为导入闭包入口 (re-export); evaluator_definitions.implementation 指向的正是该目录的符号。文件集合与 glob 实测逐名核对; bytes/sha256 于打包时本机重算, 冻结交接包只读, 交付包不复制其代码",
+      "package_root": "external_assets\\LC_ALLOC_M11_HANDOFF_v1\\handoff_LC_ALLOC_M11_v1"
+    }
+  },
+  "evaluator_definitions": {
+    "conventions": {
+      "coverage_iou": "Coverage 仅取 IoU=0.50",
+      "empty_gt_images": "空 GT 图像保留在评价集合中",
+      "matching": "同类最大基数匹配 (允许增广路径重配已有匹配; 单候选/单 GT 不重复使用), 不是逐候选孤立可匹配标签",
+      "quality_averaging": "QUALITY 取十阈值 (tau=0.50:0.05:0.95) 类别加权平均; w_c 取自 assets/class_weights.json"
+    },
+    "definitions": {
+      "Coverage_i(K)": "Coverage_i(K) = m_i^0.50(K)",
+      "QUALITY_i(K)": "QUALITY_i(K) = mean_tau sum_c w_c * m_i,c^tau(K)",
+      "marginal_benefit": "y_i,k^tau = m_i^tau(k) - m_i^tau(k-1), k=6,...,50"
+    },
+    "implementation": "lc_alloc.evaluation.core.evaluate_prefix_allocations (共享实现; 本交付不做修改)",
+    "spec_section": "§06 评价与统计的统一口径: 三个定义写在 evaluator 配置中"
+  },
+  "exported_metrics": {
+    "metrics": [
+      {
+        "column": "AP",
+        "definition": "AP @ IoU=0.50:0.95, area=all, maxDets=100",
+        "stats_index": 0
+      },
+      {
+        "column": "AP50",
+        "definition": "AP @ IoU=0.50, area=all, maxDets=100",
+        "stats_index": 1
+      },
+      {
+        "column": "AP75",
+        "definition": "AP @ IoU=0.75, area=all, maxDets=100",
+        "stats_index": 2
+      },
+      {
+        "column": "AP_small",
+        "definition": "AP @ IoU=0.50:0.95, area=small, maxDets=100",
+        "stats_index": 3
+      },
+      {
+        "column": "AP_medium",
+        "definition": "AP @ IoU=0.50:0.95, area=medium, maxDets=100",
+        "stats_index": 4
+      },
+      {
+        "column": "AP_large",
+        "definition": "AP @ IoU=0.50:0.95, area=large, maxDets=100",
+        "stats_index": 5
+      },
+      {
+        "column": "AR1",
+        "definition": "AR @ IoU=0.50:0.95, area=all, maxDets=1",
+        "stats_index": 6
+      },
+      {
+        "column": "AR10",
+        "definition": "AR @ IoU=0.50:0.95, area=all, maxDets=10",
+        "stats_index": 7
+      },
+      {
+        "column": "AR100",
+        "definition": "AR @ IoU=0.50:0.95, area=all, maxDets=100",
+        "stats_index": 8
+      }
+    ],
+    "not_exported": "stats[9..11] = AR small/medium/large (pycocotools 共 12 项汇总量, 本交付只导出前 9 项)",
+    "source": "pycocotools COCOeval.summarize() stats 顺序 (_summarizeDets); 与 results/coco_ap_results.csv 的 9 个指标列逐列核对"
+  },
+  "iouThrs": "0.50:0.05:0.95 (10 thresholds)",
+  "iouThrs_values": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "iouType": "bbox",
+  "maxDets": [
+    1,
+    10,
+    100
+  ],
+  "recThrs": "101 points (pycocotools default)",
+  "score_source": {
+    "field": "original_score",
+    "protocol": "PRE_NMS_TOPN100",
+    "score_space": "softmax over the complete 9-way class space, then the 8 Road8 columns; not renormalised to eight classes"
+  },
+  "score_threshold": "original detector score, no rescaling, no re-ranking",
+  "useCats": 1
+}
