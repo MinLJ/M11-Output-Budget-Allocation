@@ -1,0 +1,9 @@
+comparison,budget_pool,seed_summary,metric,point_estimate,ci95_low,ci95_high,resamples,bootstrap_seed,resample_unit,paired,ci_note
+M11 - S_ADAPT,10_15_20_equal_weight,mean_of_3_seeds,Coverage,0.7370000000000002,0.7070000000000002,0.7670013888888889,5000,530002,group_40_images,True,"core summary: equal-weight mean over budgets 10/15/20, 3-seed summary"
+M11 - S_ADAPT,10_15_20_equal_weight,seed_830101,Coverage,0.7418333333333333,0.7116666666666667,0.7713375000000001,5000,530002,group_40_images,True,"core summary: equal-weight mean over budgets 10/15/20, per-seed interval"
+M11 - S_ADAPT,10_15_20_equal_weight,seed_830102,Coverage,0.7373333333333334,0.7068291666666665,0.7681666666666667,5000,530002,group_40_images,True,"core summary: equal-weight mean over budgets 10/15/20, per-seed interval"
+M11 - S_ADAPT,10_15_20_equal_weight,seed_830103,Coverage,0.7318333333333333,0.7015000000000002,0.762,5000,530002,group_40_images,True,"core summary: equal-weight mean over budgets 10/15/20, per-seed interval"
+M11 - S_ADAPT,10_15_20_equal_weight,mean_of_3_seeds,QUALITY,0.4849814844314674,0.45641964882703456,0.5133120585715418,5000,530002,group_40_images,True,"core summary: equal-weight mean over budgets 10/15/20, 3-seed summary"
+M11 - S_ADAPT,10_15_20_equal_weight,seed_830101,QUALITY,0.485550265123576,0.4566942204857345,0.5139836907130014,5000,530002,group_40_images,True,"core summary: equal-weight mean over budgets 10/15/20, per-seed interval"
+M11 - S_ADAPT,10_15_20_equal_weight,seed_830102,QUALITY,0.4854442256049879,0.4569647623026747,0.51345771699292,5000,530002,group_40_images,True,"core summary: equal-weight mean over budgets 10/15/20, per-seed interval"
+M11 - S_ADAPT,10_15_20_equal_weight,seed_830103,QUALITY,0.4839499625658386,0.4552869559211128,0.5126289392685252,5000,530002,group_40_images,True,"core summary: equal-weight mean over budgets 10/15/20, per-seed interval"
