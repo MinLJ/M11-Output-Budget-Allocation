@@ -1,0 +1,9 @@
+split,file,rel_path,size_bytes,sha256,source_path
+DEV,candidates.parquet,data/DEV/candidates.parquet,20503388,afa5e3ccea71a30d01546b3827077f793ba75e6886ec9e379322e0224a450ffb,M11_EXPERIMENT_ROOT\yolo_m11\work\DEV\candidates.parquet
+DEV,native.npz,data/DEV/native.npz,81639450,c749f174d4e7b670d818faa4d5899c9edd578a1f2a9b860cb1170c645dcd60a0,M11_EXPERIMENT_ROOT\yolo_m11\work\DEV\native.npz
+DEV,export_log.json,data/DEV/export_log.json,670,0baa3546456af9d6a09871913451ff8c09e8501b0159bc03b85b506d57df2fa6,M11_EXPERIMENT_ROOT\yolo_m11\work\DEV\export_log.json
+TRAIN,candidates.parquet,data/TRAIN/candidates.parquet,96792192,3008723a255fe0484cfd0c4a9d800870c17f601c2402514b772dc7aae2f85518,M11_EXPERIMENT_ROOT\yolo_m11\work\TRAIN\candidates.parquet
+TRAIN,native.npz,data/TRAIN/native.npz,408564722,d769cbad2919fe4806aba4502c15c8f1efc9844f1ed0e231a229ee9f2de2cee8,M11_EXPERIMENT_ROOT\yolo_m11\work\TRAIN\native.npz
+TRAIN,export_log.json,data/TRAIN/export_log.json,675,b43ff15452ccd363182978e5a9c8c554fa0728b39e35b8867abcf4e69a52745b,M11_EXPERIMENT_ROOT\yolo_m11\work\TRAIN\export_log.json
+prep,DEV_gt.json,data/prep/DEV_gt.json,4398487,d5eeec2d39128b37fbcf71f65b1cd784a556f969017b41306f209dc174988e07,M11_EXPERIMENT_ROOT\yolo_m11\work\prep\DEV_gt.json
+prep,TRAIN_gt.json,data/prep/TRAIN_gt.json,21967584,cb300bbae7c8017ece066edde4c65fd51499ba7ed119f2477f0295e6fedc96a6,M11_EXPERIMENT_ROOT\yolo_m11\work\prep\TRAIN_gt.json

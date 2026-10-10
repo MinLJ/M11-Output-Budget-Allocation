@@ -1,0 +1,259 @@
+{
+  "scope": "Ruiqi Guo initial YOLOv8 arm publication copy; historical delivery package retained by branch",
+  "source_identity_convention": "Historical delivery-package SHA (member_yolo_delivery/manifest.csv) and release-copy SHA are separate; path-normalized copies are archival templates.",
+  "placeholder": "M11_EXPERIMENT_ROOT = external asset workspace (code: os.environ.get fallback \"external_assets\"; JSON/MD: literal external_assets or M11_EXPERIMENT_ROOT prefix)",
+  "files": [
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/README_CN.md",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/README_CN.md",
+      "historical_source_sha256": "1e2f2ef1ab1d57b9f53c3eb186cdf5d2398400efd05fd7df179082f07c8fa357",
+      "release_copy_sha256": "c3e03caeb6e3ea2efb5952cd6892654c2363a3d5121c944291228c2dc1e64b5e",
+      "bytes": 16995,
+      "changes": [
+        {
+          "field": "reproduction commands (line 69)",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        },
+        {
+          "field": "package name (title/tree)",
+          "action": "renamed member_yolo_delivery -> member_yolov8_delivery to match the repo directory"
+        },
+        {
+          "field": "section 7 (large files)",
+          "action": "withheld candidate/native/GT caches noted as not uploaded; identities kept in references/candidate_native_index.csv"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/01_export.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/01_export.py",
+      "historical_source_sha256": "4148918e751b4925a8b2178e22058beda6aca5692e049ac649cdf93e0725890b",
+      "release_copy_sha256": "78b77e240f80f9d1cb14a4e4f8e27732cee69ec53324b59aab1366aa9f563402",
+      "bytes": 1875,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11, .RELEASE, .IMG_DIR",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/02_prepare.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/02_prepare.py",
+      "historical_source_sha256": "28a382d9ac1d51a377213f11456b809a56490c764fcfc335cf20d63e19d71e48",
+      "release_copy_sha256": "836e238c925f600614f6c02b7f76991e087ca3765e960af041cd19d2ead45356",
+      "bytes": 4688,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11, .RELEASE",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/03_train.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/03_train.py",
+      "historical_source_sha256": "86fe992d53236e0ec4e51fa76d1dc4fbad5ce8896ef480a8ce0eb681f1758800",
+      "release_copy_sha256": "cb49fce6705a23effd0430e89f072fc1f799633c764383f6ba340a2ec98863c3",
+      "bytes": 8518,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/04_allocate_eval.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/04_allocate_eval.py",
+      "historical_source_sha256": "47a448cacef8dc687f730ceb2a89e35db97722dd7d8a244a2f9bbd4e3eda1e2e",
+      "release_copy_sha256": "f5992c5a4931c0d28f565868b47c5a8873569b73ebaea89bf96de1307743e542",
+      "bytes": 13258,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/05_ap_ar.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/05_ap_ar.py",
+      "historical_source_sha256": "7a65c83ff84ecee6c73b874d655a27b3270dae1cf927cac749f54d5fe6f9730e",
+      "release_copy_sha256": "1ef6b0f24616c44c750ae348de226eecfce0f8b4b3bfdd999f275d30547115c1",
+      "bytes": 9204,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/06_post_nms_counts.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/06_post_nms_counts.py",
+      "historical_source_sha256": "ffe02b14b0f0f093178f509c9e212176b051b98ef63b9355b7c336772dda21b5",
+      "release_copy_sha256": "5a1fbe851b9783b50a3144b97fe58ca93cd709f1c011268fc0c1e995441333db",
+      "bytes": 5437,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/07_predicted_utility.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/07_predicted_utility.py",
+      "historical_source_sha256": "96048862a04949d3656308debd2190d85eed27a6a10f867c218b1f4fbb35de7d",
+      "release_copy_sha256": "9f8befef7bbbdf618fe8036944c707004e52d0b5890c0c9dc29bed66befa6263",
+      "bytes": 6693,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/08_build_delivery.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/08_build_delivery.py",
+      "historical_source_sha256": "ba536ebdebdf992f8c846c2860e457aae1844393ffba94eeedda0a51b00a26d9",
+      "release_copy_sha256": "227a01bf0e69ac458bcac49464ac98e1fe0c8dd1211eeee523eaecef80f54909",
+      "bytes": 20377,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".M11",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/code/m11_yolo/config.py",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/code/m11_yolo/config.py",
+      "historical_source_sha256": "049fa0af17d0dd9b0fd833b3bd85097a2cf35c208bd56e9be679ee90b7641259",
+      "release_copy_sha256": "7bd51eae3a4e95d5a6d6de224c738b4f2710c7735c058d1d059a36cdd493bce2",
+      "bytes": 3535,
+      "changes": [
+        {
+          "field": ".imports",
+          "action": "added `import os` and `from pathlib import Path` for the explicit external-asset placeholder"
+        },
+        {
+          "field": ".CHECKPOINT_PATH",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/configs/yolo_adapter.json",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/configs/yolo_adapter.json",
+      "historical_source_sha256": "cf0abab86be02acf4f5dfff4f7c052d53b9417aa80beda1faed59873017dbd7c",
+      "release_copy_sha256": "ad17afe4a258a65302fd87b88cc104bdbff827ff5a84e97cc73a1b966938c9b4",
+      "bytes": 1941,
+      "changes": [
+        {
+          "field": ".checkpoint_path",
+          "action": "machine path normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/references/README_CN.md",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/references/README_CN.md",
+      "historical_source_sha256": "6fe17b2ef7406c5d0bcbe24ac0b71f4c0e31130cb26b894fc83b5ee746ff0244",
+      "release_copy_sha256": "6d5b05908d1696ee0c710909949063394afc8403329f197a9c49f7040f0590b4",
+      "bytes": 2049,
+      "changes": [
+        {
+          "field": "withheld-cache registry",
+          "action": "rewritten to document the withheld candidate/native/GT caches and their identities (controlled-path + checksum registry)"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    },
+    {
+      "path": "experiments/yolov8/member_yolov8_delivery/references/candidate_native_index.csv",
+      "source_project": "yolo_m11",
+      "source_relative_path": "delivery_out/member_yolo_delivery/references/candidate_native_index.csv",
+      "historical_source_sha256": "2a18aabf48ef40fd65024c2aa224fd7ebb1daed1da4779a13544dcb0204ac239",
+      "release_copy_sha256": "ddddec8f5f4f49cc0d8f8877f9dddd384c7a942031e045046960f7d08c4c8c6c",
+      "bytes": 1427,
+      "changes": [
+        {
+          "field": ".source_path",
+          "action": "machine root normalized to explicit external-asset placeholder"
+        }
+      ],
+      "scientific_execution": "NOT_RUN",
+      "csv_bytes_unchanged": null
+    }
+  ]
+}

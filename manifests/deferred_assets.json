@@ -584,6 +584,114 @@
       "checksum_source": "Delivery-package manifest binding (member_faster_rcnn_delivery/manifest.csv); not rehashed during this upload",
       "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
       "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/assets/models/marginal_mlp_seed_830101.pt",
+      "purpose": "marginal_mlp_seed_830101.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "18b57db4e1726db2b4c34849a009d518a74a8daf04305f07a8401b7f1bc78fef",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/assets/models/marginal_mlp_seed_830102.pt",
+      "purpose": "marginal_mlp_seed_830102.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "7300148a7b9e601788decb58a36661c65d0392dcf311b871e384980b9fd17dcc",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/assets/models/marginal_mlp_seed_830103.pt",
+      "purpose": "marginal_mlp_seed_830103.pt",
+      "size_bytes": 87163,
+      "existing_sha256": "556eb08b1e3cf718c87e0b15c8e744c02eedf8182a1eb80c54b62baa0b029bce",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/assets/pca32.joblib",
+      "purpose": "pca32.joblib",
+      "size_bytes": 12410,
+      "existing_sha256": "040f75414dd8672ca2fba0aba22d71705c4d23dd8bae343fc83688dbc550afc3",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/assets/scaler.joblib",
+      "purpose": "scaler.joblib",
+      "size_bytes": 4731,
+      "existing_sha256": "b702c05491f91083d5d52cafe1deb0a7ef32193c74ddf45bfd097c2a5aecb21d",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/configs/roles.csv",
+      "purpose": "roles.csv",
+      "size_bytes": 245015,
+      "existing_sha256": "f68301a84e99635d015061fac4fd2adfcb191215a231a1663daac888c19f3625",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/configs/roles_raw.csv",
+      "purpose": "roles_raw.csv",
+      "size_bytes": 245015,
+      "existing_sha256": "f68301a84e99635d015061fac4fd2adfcb191215a231a1663daac888c19f3625",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/results/allocations.parquet",
+      "purpose": "allocations.parquet",
+      "size_bytes": 92809,
+      "existing_sha256": "8b08cf8e46eba83ab8c788a64adb1e760da79678ce822a78f1560f5ccfcabddb",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/results/per_image_results.csv",
+      "purpose": "per_image_results.csv",
+      "size_bytes": 3763272,
+      "existing_sha256": "320f28ede2abbb2f8f8f55af72795093c8a9681c3cf3d0dcc8f6dfa0c82b1690",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/results/post_nms_counts.csv",
+      "purpose": "post_nms_counts.csv",
+      "size_bytes": 19361619,
+      "existing_sha256": "9acac3496173d5168e2a8492e8e37ea39fd454678c67a63aede44a509e8fc500",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/results/predicted_utility.parquet",
+      "purpose": "predicted_utility.parquet",
+      "size_bytes": 48051958,
+      "existing_sha256": "0df896750a508279032243a4b951e13a9f297ee9a44e7b5010d23cdd5e156b28",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
+    },
+    {
+      "historical_project_relative_name": "yolo_m11/delivery_out/member_yolov8_delivery/results/selected_records.parquet",
+      "purpose": "selected_records.parquet",
+      "size_bytes": 56346905,
+      "existing_sha256": "91baecf417a635108f0c47490bbb76502fec94cf603fd143762b2911428db039",
+      "checksum_source": "Delivery-package manifest binding (member_yolo_delivery/manifest.csv); not rehashed during this upload",
+      "availability": "NOT_INCLUDED_IN_INITIAL_BATCH",
+      "public_download_url": null
     }
   ],
   "download_status": "No public asset download is established in this batch. Exact missing payloads must be obtained under their original permissions."
