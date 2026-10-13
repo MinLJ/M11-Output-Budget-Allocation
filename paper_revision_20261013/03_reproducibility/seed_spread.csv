@@ -1,0 +1,19 @@
+row,n_models,seeds,coverage,coverage_sd,quality,quality_sd,ap,ap_sd,ar100,ar100_sd,source
+M11 (full),3,"530101,530102,530103",8.1163,0.0123,4.8665,0.0011,17.03,0.02,25.27,0.11,ABLATION_P0/ablation_main_results.csv
+No embedding,3,"530101,530102,530103",8.0945,0.0071,4.8512,0.0011,17.00,0.00,25.20,0.04,ABLATION_P0/ablation_main_results.csv
+No prefix statistics,3,"530101,530102,530103",8.1121,0.0173,4.8615,0.0008,16.99,0.01,25.11,0.06,ABLATION_P0/ablation_main_results.csv
+Matchability target,3,"530101,530102,530103",7.9296,0.0116,4.8046,0.0033,16.96,0.01,25.14,0.04,ABLATION_P0/ablation_main_results.csv
+Next-slot greedy,3,"530101,530102,530103",7.5547,0.0030,4.4952,0.0004,16.01,0.01,22.71,0.01,ABLATION_P0/ablation_main_results.csv
+Score (S_ADAPT),1,-1,8.0228,,4.7480,,16.56,,23.83,,ABLATION_P0/ablation_main_results.csv
+M11 (full),3,"530101,530102,530103",8.1163,0.0123,4.8665,0.0011,17.03,0.02,25.27,0.11,P1A/ablation_main_results.csv
+M00: IoU 0.50,3,"530101,530102,530103",8.2541,0.0014,4.7957,0.0038,16.54,0.05,23.46,0.12,P1A/ablation_main_results.csv
+M10: weighted 0.50,3,"530101,530102,530103",8.1763,0.0026,4.8515,0.0025,16.93,0.02,24.80,0.07,P1A/ablation_main_results.csv
+M01: multi-IoU,3,"530101,530102,530103",8.2192,0.0077,4.8230,0.0027,16.70,0.04,24.04,0.16,P1A/ablation_main_results.csv
+Score (S_ADAPT),1,-1,8.0228,,4.7480,,16.56,,23.83,,P1A/ablation_main_results.csv
+Frozen LC (COCO Route B),3,"530101,530102,530103",2.6389,0.0032,3.5304,0.0025,50.98,0.03,63.48,0.11,COCO_ROUTE_B_EVALUATION/main_results.csv
+Score (S_ADAPT),1,-1,2.6570,,3.5482,,51.26,,64.36,,COCO_ROUTE_B_EVALUATION/main_results.csv
+Fixed-K,1,-1,2.3398,,3.1980,,47.77,,56.25,,COCO_ROUTE_B_EVALUATION/main_results.csv
+COCO-fitted (Route A),3,"630101,630102,630103",2.6530,0.0007,3.5538,0.0008,51.25,0.01,64.28,0.02,COCO_ROUTE_A_ADAPTATION/.../adapted_main_results.csv
+FRCNN M11,3,"730101,730102,730103",3.8233,0.0029,2.2976,0.0014,3.56,0.00,8.61,0.03,member_faster_rcnn_delivery/results/main_results.csv
+FRCNN Score,1,-1,2.6652,,1.5387,,1.59,,3.90,,member_faster_rcnn_delivery/results/main_results.csv
+FRCNN Fixed-K,1,-1,2.9067,,1.6741,,1.95,,4.87,,member_faster_rcnn_delivery/results/main_results.csv
